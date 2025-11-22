@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Editor · marjz</title>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --bg-alt: #ffffff;
+      --border: #e5e7eb;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.08);
+      --radius: 12px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      --max-width: 1100px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 1.5rem;
+    }
+    header { max-width: var(--max-width); margin: 0 auto 1.25rem; }
+    h1 { margin: 0 0 0.35rem; font-size: 1.4rem; }
+    p.subtitle { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+      gap: 1rem;
+    }
+    .panel {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 70vh;
+    }
+    .panel h2 { margin: 0 0 0.5rem; font-size: 1rem; }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    button {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    button.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    button:hover { background: #f9fafb; }
+    button.primary:hover { background: #1d4ed8; }
+    .list {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      flex: 1;
+    }
+    .list-header {
+      padding: 0.65rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: #f9fafb;
+    }
+    .items {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      overflow: auto;
+      flex: 1;
+    }
+    .items li {
+      border-bottom: 1px solid var(--border);
+    }
+    .items li:last-child { border-bottom: none; }
+    .item-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
+      padding: 0.65rem 0.8rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .item-btn:hover { background: #f9fafb; }
+    .item-btn.active {
+      background: var(--accent-soft);
+      color: var(--text);
+    }
+    .item-meta {
+      display: block;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 0.15rem;
+    }
+    form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem 0.85rem; flex: 1; }
+    form .full { grid-column: 1 / -1; }
+    label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.85rem; color: var(--muted); }
+    input, select, textarea {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.45rem 0.5rem;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--text);
+      background: #fff;
+    }
+    textarea { resize: vertical; min-height: 120px; }
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .status {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .status strong { color: var(--text); }
+    @media (max-width: 900px) {
+      .shell { grid-template-columns: 1fr; }
+      form { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Content Editor</h1>
+    <p class="subtitle">Edit <code>data/content.json</code> in the browser, then download the updated file.</p>
+  </header>
+
+  <div class="shell">
+    <section class="panel">
+      <h2>Entries</h2>
+      <div class="controls">
+        <button id="load-btn" class="primary">Load content.json</button>
+        <button id="new-btn">New entry</button>
+      </div>
+      <div class="list">
+        <div class="list-header">Title • Year · Type · Section</div>
+        <ul id="item-list" class="items"></ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Entry detail</h2>
+      <form id="entry-form">
+        <label>
+          ID (required)
+          <input id="field-id" name="id" required />
+        </label>
+        <label>
+          Title (required)
+          <input id="field-title" name="title" required />
+        </label>
+        <label>
+          Section (required)
+          <select id="field-section" name="section" required>
+            <option value="">Select section</option>
+            <option value="research">Research</option>
+            <option value="projects">Projects</option>
+            <option value="teaching">Teaching</option>
+          </select>
+        </label>
+        <label>
+          Type
+          <input id="field-type" name="type" />
+        </label>
+        <label>
+          Year
+          <input id="field-year" name="year" type="number" inputmode="numeric" />
+        </label>
+        <label>
+          Slug
+          <input id="field-slug" name="slug" />
+        </label>
+        <label class="full">
+          Summary
+          <textarea id="field-summary" name="summary"></textarea>
+        </label>
+        <label>
+          Tags (comma-separated)
+          <input id="field-tags" name="tags" placeholder="ai, art, blockchain" />
+        </label>
+        <label>
+          Images (comma-separated paths)
+          <input id="field-images" name="images" placeholder="images/a.jpg, images/b.png" />
+        </label>
+        <label>
+          Content path
+          <input id="field-contentPath" name="contentPath" placeholder="path/to/markdown.md" />
+        </label>
+        <label>
+          Link
+          <input id="field-link" name="link" placeholder="https://example.com" />
+        </label>
+      </form>
+      <div class="form-actions">
+        <button id="save-btn" class="primary">Save changes</button>
+        <button id="download-btn">Download updated content.json</button>
+      </div>
+      <div id="status" class="status">Load content to begin.</div>
+    </section>
+  </div>
+
+  <script>
+    const state = {
+      items: [],
+      selectedIndex: null,
+    };
+
+    const listEl = document.getElementById("item-list");
+    const formEl = document.getElementById("entry-form");
+    const statusEl = document.getElementById("status");
+
+    document.getElementById("load-btn").addEventListener("click", loadContent);
+    document.getElementById("new-btn").addEventListener("click", () => {
+      state.selectedIndex = null;
+      formEl.reset();
+      updateStatus("New entry started.");
+      highlightSelected();
+    });
+    document.getElementById("save-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      saveEntry();
+    });
+    document.getElementById("download-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      downloadJson();
+    });
+
+    // Fetch and load content.json into memory and list.
+    async function loadContent() {
+      try {
+        const res = await fetch("data/content.json");
+        const json = await res.json();
+        if (!Array.isArray(json)) throw new Error("content.json is not an array");
+        state.items = json.map((item) => ({ ...item }));
+        state.selectedIndex = null;
+        renderList();
+        formEl.reset();
+        updateStatus(`Loaded ${state.items.length} entr${state.items.length === 1 ? "y" : "ies"}.`);
+      } catch (err) {
+        console.error(err);
+        updateStatus("Failed to load content.json. Make sure it is accessible.", true);
+      }
+    }
+
+    // Render the left-hand list of entries.
+    function renderList() {
+      listEl.innerHTML = "";
+      if (!state.items.length) {
+        listEl.innerHTML = '<li><div class="item-btn">No items loaded yet.</div></li>';
+        return;
+      }
+
+      state.items.forEach((item, index) => {
+        const li = document.createElement("li");
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "item-btn" + (state.selectedIndex === index ? " active" : "");
+        btn.innerHTML = `<strong>${escapeHtml(item.title || "(untitled)")}</strong><span class="item-meta">${formatMeta(item)}</span>`;
+        btn.addEventListener("click", () => {
+          state.selectedIndex = index;
+          populateForm(item);
+          highlightSelected();
+          updateStatus(`Editing "${item.title || item.id}".`);
+        });
+        li.appendChild(btn);
+        listEl.appendChild(li);
+      });
+    }
+
+    // Fill the form with the chosen item's data.
+    function populateForm(item) {
+      formEl.reset();
+      setValue("field-id", item.id);
+      setValue("field-title", item.title);
+      setValue("field-section", item.section);
+      setValue("field-slug", item.slug);
+      setValue("field-type", item.type);
+      setValue("field-year", item.year);
+      setValue("field-tags", (item.tags || []).join(", "));
+      setValue("field-summary", item.summary);
+      setValue("field-contentPath", item.contentPath);
+      setValue("field-images", (item.images || []).join(", "));
+      setValue("field-link", item.link);
+    }
+
+    // Save form data into state (update existing or add new).
+    function saveEntry() {
+      const entry = readForm();
+      if (!entry) return;
+
+      const existingIndex = state.items.findIndex((i, idx) => i.id === entry.id && idx !== state.selectedIndex);
+      if (existingIndex !== -1) {
+        updateStatus(`An entry with id "${entry.id}" already exists. Choose a unique id.`, true);
+        return;
+      }
+
+      if (state.selectedIndex === null || state.selectedIndex === undefined) {
+        state.items.push(entry);
+        state.selectedIndex = state.items.length - 1;
+        updateStatus(`Added "${entry.title}".`);
+      } else {
+        state.items[state.selectedIndex] = entry;
+        updateStatus(`Updated "${entry.title}".`);
+      }
+
+      renderList();
+      highlightSelected();
+    }
+
+    // Build a JSON-ready entry from the form.
+    function readForm() {
+      const id = getValue("field-id").trim();
+      const title = getValue("field-title").trim();
+      const section = getValue("field-section").trim();
+
+      if (!id || !title || !section) {
+        updateStatus("Please fill in required fields: id, title, section.", true);
+        return null;
+      }
+
+      const entry = {
+        id,
+        title,
+        section,
+      };
+
+      const slug = getValue("field-slug").trim();
+      const type = getValue("field-type").trim();
+      const yearRaw = getValue("field-year").trim();
+      const summary = getValue("field-summary").trim();
+      const contentPath = getValue("field-contentPath").trim();
+      const link = getValue("field-link").trim();
+
+      const tags = csvToArray(getValue("field-tags"));
+      const images = csvToArray(getValue("field-images"));
+
+      if (slug) entry.slug = slug;
+      if (type) entry.type = type;
+      if (yearRaw) entry.year = Number(yearRaw);
+      if (tags.length) entry.tags = tags;
+      if (summary) entry.summary = summary;
+      if (contentPath) entry.contentPath = contentPath;
+      if (images.length) entry.images = images;
+      if (link) entry.link = link;
+
+      return entry;
+    }
+
+    // Download current state as content.json.
+    function downloadJson() {
+      if (!state.items.length) {
+        updateStatus("Nothing to download. Load or add entries first.", true);
+        return;
+      }
+      const blob = new Blob([JSON.stringify(state.items, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "content.json";
+      a.click();
+      URL.revokeObjectURL(url);
+      updateStatus("Downloaded updated content.json.");
+    }
+
+    // Helpers
+    function csvToArray(value) {
+      return value
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
+    }
+
+    function setValue(id, value) {
+      const el = document.getElementById(id);
+      if (el) el.value = value !== undefined && value !== null ? value : "";
+    }
+
+    function getValue(id) {
+      const el = document.getElementById(id);
+      return el ? el.value : "";
+    }
+
+    function formatMeta(item) {
+      const bits = [];
+      if (item.year) bits.push(item.year);
+      if (item.type) bits.push(item.type);
+      if (item.section) bits.push(item.section);
+      return bits.join(" · ") || "—";
+    }
+
+    function highlightSelected() {
+      const buttons = listEl.querySelectorAll(".item-btn");
+      buttons.forEach((btn, idx) => {
+        btn.classList.toggle("active", idx === state.selectedIndex);
+      });
+    }
+
+    function updateStatus(message, isError = false) {
+      statusEl.innerHTML = isError ? `<strong>Error:</strong> ${escapeHtml(message)}` : escapeHtml(message);
+    }
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+  </script>
+</body>
+</html>
