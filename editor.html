@@ -223,6 +223,7 @@
       </form>
       <div class="form-actions">
         <button id="save-btn" class="primary">Save changes</button>
+        <button id="delete-btn" type="button">Delete entry</button>
         <button id="download-btn">Download updated content.json</button>
       </div>
       <div id="status" class="status">Load content to begin.</div>
@@ -249,6 +250,10 @@
     document.getElementById("save-btn").addEventListener("click", (e) => {
       e.preventDefault();
       saveEntry();
+    });
+    document.getElementById("delete-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      deleteEntry();
     });
     document.getElementById("download-btn").addEventListener("click", (e) => {
       e.preventDefault();
@@ -335,6 +340,24 @@
 
       renderList();
       highlightSelected();
+    }
+
+    // Remove the currently selected entry.
+    function deleteEntry() {
+      if (state.selectedIndex === null || state.selectedIndex === undefined) {
+        updateStatus("Select an entry to delete.", true);
+        return;
+      }
+      const item = state.items[state.selectedIndex];
+      const ok = window.confirm(`Delete "${item.title || item.id}"? This cannot be undone here.`);
+      if (!ok) return;
+
+      state.items.splice(state.selectedIndex, 1);
+      state.selectedIndex = null;
+      formEl.reset();
+      renderList();
+      highlightSelected();
+      updateStatus("Entry deleted.");
     }
 
     // Build a JSON-ready entry from the form.
