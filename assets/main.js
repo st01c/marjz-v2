@@ -103,12 +103,15 @@ function renderSectionCards(containerId, items) {
       const titleSpan = document.createElement("span");
       titleSpan.className = "item-title";
 
-      if (item.link) {
+      const linkInfo = buildLinkInfo(item);
+      if (linkInfo.href) {
         const link = document.createElement("a");
-        link.href = item.link;
+        link.href = linkInfo.href;
         link.textContent = item.title;
-        link.target = "_blank";
-        link.rel = "noopener";
+        if (linkInfo.external) {
+          link.target = "_blank";
+          link.rel = "noopener";
+        }
         titleSpan.appendChild(link);
       } else {
         titleSpan.textContent = item.title;
@@ -261,12 +264,15 @@ function renderBrowseResults(items, container, activeTags, mode) {
       const titleEl = document.createElement("div");
       titleEl.className = "browse-card-title";
 
-      if (item.link) {
+      const linkInfo = buildLinkInfo(item);
+      if (linkInfo.href) {
         const link = document.createElement("a");
-        link.href = item.link;
+        link.href = linkInfo.href;
         link.textContent = item.title;
-        link.target = "_blank";
-        link.rel = "noopener";
+        if (linkInfo.external) {
+          link.target = "_blank";
+          link.rel = "noopener";
+        }
         titleEl.appendChild(link);
       } else {
         titleEl.textContent = item.title;
@@ -310,3 +316,18 @@ function renderBrowseResults(items, container, activeTags, mode) {
 }
 
 document.addEventListener("DOMContentLoaded", loadContent);
+
+// Decide whether to link internally (item.html) or externally.
+function buildLinkInfo(item) {
+  const hasDetail = Boolean(item.contentPath || item.slug);
+  if (hasDetail) {
+    const slugOrId = encodeURIComponent(item.slug || item.id);
+    return { href: `item.html?id=${slugOrId}`, external: false };
+  }
+
+  if (item.link) {
+    return { href: item.link, external: true };
+  }
+
+  return { href: "", external: false };
+}

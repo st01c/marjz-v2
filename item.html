@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail · marjz</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .detail-shell {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    .detail-header {
+      margin-bottom: 1.5rem;
+    }
+    .detail-title {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 650;
+    }
+    .detail-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+    .pill-row {
+      margin-top: 0.25rem;
+    }
+    .content-body {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.35rem 1.4rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+    .content-body img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 0.75rem 0;
+      display: block;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 0.75rem;
+    }
+    .back-link:hover { color: var(--text); text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="detail-shell">
+    <a class="back-link" href="index.html">← Back to site</a>
+    <header class="detail-header">
+      <div class="section-title" id="section-label"></div>
+      <h1 class="detail-title" id="title"></h1>
+      <div class="detail-meta" id="meta"></div>
+      <div class="pill-row" id="tags"></div>
+      <div id="external-link"></div>
+    </header>
+    <article class="content-body" id="content">
+      Loading…
+    </article>
+  </main>
+
+  <script src="assets/item.js"></script>
+</body>
+</html>
