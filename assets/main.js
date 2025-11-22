@@ -1,32 +1,78 @@
+// Entry point: fetch content, render section lists, wire up browsing controls.
 async function loadContent() {
-  // Update footer year if present
+  setYear();
+
+  const items = await fetchContent();
+  if (!items.length) return;
+
+  const sections = splitBySection(items);
+  const tagData = buildTagData(items);
+
+  renderSectionCards("research-container", sections.research);
+  renderSectionCards("projects-container", sections.projects);
+  renderSectionCards("teaching-container", sections.teaching);
+
+  setupBrowsingControls(tagData.itemsWithTags, tagData.allTags);
+}
+
+// Footer helper: keep the copyright year current.
+function setYear() {
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
-
-  let items = [];
-  try {
-    const res = await fetch("data/content.json");
-    items = await res.json();
-  } catch (e) {
-    console.error("Could not load content.json", e);
-    return;
-  }
-
-  // Split by section for the main page
-  const research = items.filter((i) => i.section === "research");
-  const projects = items.filter((i) => i.section === "projects");
-  const teaching = items.filter((i) => i.section === "teaching");
-
-  renderSectionCards("research-container", research);
-  renderSectionCards("projects-container", projects);
-  renderSectionCards("teaching-container", teaching);
-
-  // Setup browse-by-tags (including year & type)
-  setupBrowsingControls(items);
 }
 
+// Data loader: fetch structured content from disk.
+async function fetchContent() {
+  try {
+    const res = await fetch("data/content.json");
+    return await res.json();
+  } catch (e) {
+    console.error("Could not load content.json", e);
+    return [];
+  }
+}
+
+// Organizer: group items by section for easy rendering.
+function splitBySection(items) {
+  return {
+    research: items.filter((i) => i.section === "research"),
+    projects: items.filter((i) => i.section === "projects"),
+    teaching: items.filter((i) => i.section === "teaching"),
+  };
+}
+
+// Tag prep: add extended tags (base tags + year + type) per item, and collect all unique tags.
+function buildTagData(items) {
+  const tagSet = new Set();
+
+  const itemsWithTags = items.map((item) => {
+    const extended = new Set();
+
+    (item.tags || []).forEach((t) => {
+      if (t) extended.add(String(t));
+    });
+
+    if (item.year) {
+      extended.add(String(item.year));
+    }
+
+    if (item.type) {
+      extended.add(String(item.type));
+    }
+
+    const taggedItem = { ...item, _extendedTags: Array.from(extended) };
+    taggedItem._extendedTags.forEach((t) => tagSet.add(t));
+    return taggedItem;
+  });
+
+  const allTags = Array.from(tagSet).sort((a, b) => a.localeCompare(b));
+
+  return { itemsWithTags, allTags };
+}
+
+// Section cards: render simple lists for research / projects / teaching.
 function renderSectionCards(containerId, items) {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -85,55 +131,24 @@ function renderSectionCards(containerId, items) {
 }
 
 /**
- * Setup browsing:
- * - Year and type are treated as tags for browsing.
- * - One filter mode: "any" (default) or "all".
- *   - any: item matches if it has at least one selected tag
- *   - all: item matches only if it has all selected tags
+ * Browsing controls:
+ * - Tags include base tags + year + type.
+ * - Filter modes:
+ *    any: item matches if it has at least one selected tag
+ *    all: item matches only if it has every selected tag
  */
-function setupBrowsingControls(items) {
+function setupBrowsingControls(items, allTags) {
   const tagListEl = document.getElementById("tag-list");
   const resultsEl = document.getElementById("browse-results");
   const modeButtons = document.querySelectorAll(".mode-button");
 
   if (!tagListEl || !resultsEl || !modeButtons.length) return;
 
-  // Build extended tags per item (tags + year + type)
-  // and collect all possible tag values.
-  const tagSet = new Set();
-
-  items.forEach((item) => {
-    const extended = new Set();
-
-    // Existing tags
-    (item.tags || []).forEach((t) => {
-      if (t) extended.add(String(t));
-    });
-
-    // Year as tag
-    if (item.year) {
-      extended.add(String(item.year));
-    }
-
-    // Type as tag
-    if (item.type) {
-      extended.add(String(item.type));
-    }
-
-    // Store for later filtering
-    item._extendedTags = Array.from(extended);
-
-    // Add to global tag set
-    item._extendedTags.forEach((t) => tagSet.add(t));
-  });
-
-  const allTags = Array.from(tagSet).sort((a, b) => a.localeCompare(b));
-
-  // State: selected tags + mode ("any" or "all")
+  // State: selected tags + filter mode
   const activeTags = new Set();
-  let filterMode = "any"; // default
+  let filterMode = "any";
 
-  // ---- Mode buttons (Any / All) ----
+  // Mode buttons (Any / All)
   modeButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const mode = btn.dataset.mode;
@@ -157,7 +172,7 @@ function setupBrowsingControls(items) {
 
   updateModeButtons();
 
-  // ---- Tag buttons ----
+  // Tag buttons
   tagListEl.innerHTML = "";
 
   allTags.forEach((tag) => {
@@ -170,11 +185,7 @@ function setupBrowsingControls(items) {
       const t = btn.dataset.tag;
       if (!t) return;
 
-      if (activeTags.has(t)) {
-        activeTags.delete(t);
-      } else {
-        activeTags.add(t);
-      }
+      toggleTag(t, activeTags);
 
       updateTagButtons();
       renderBrowseResults(items, resultsEl, activeTags, filterMode);
@@ -193,6 +204,14 @@ function setupBrowsingControls(items) {
         btn.classList.remove("active");
       }
     });
+  }
+
+  function toggleTag(tag, set) {
+    if (set.has(tag)) {
+      set.delete(tag);
+    } else {
+      set.add(tag);
+    }
   }
 
   // Initial render: no tags selected → show all
