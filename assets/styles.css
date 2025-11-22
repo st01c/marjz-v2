@@ -80,7 +80,7 @@ a:hover {
   font-size: 2rem;
   letter-spacing: 0em;
   text-transform: uppercase;
-  color: var(--nav-hover);
+  /* color: var(--nav-hover); */
 }
 
 .nav-links {
@@ -161,7 +161,8 @@ a:hover {
 }
 
 .hero-highlight {
-  color: var(--accent);
+  color: var(--nav-hover);
+  /* color: var(--accent); */
   line-height: 1.1;
 }
 
