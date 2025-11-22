@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name · Research & Practice</title>
+  <meta name="description" content="Personal site of Your Name – research, artistic practice, teaching.">
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- Top navigation -->
+  <header class="nav-wrapper">
+    <div class="nav">
+      <div class="nav-left">
+        <div>
+          <div class="nav-name">Your Name</div>
+          <div class="nav-tagline">Research · Art · Technology</div>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#teaching" class="nav-link">Teaching</a>
+        <a href="#browse" class="nav-link">Browse by tag</a>
+        <a href="#contact" class="nav-link nav-link--primary">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- About / Hero -->
+    <section id="about" class="hero">
+      <div>
+        <div class="hero-kicker">Personal site</div>
+        <h1 class="hero-title">
+          Your Name – working across
+          <span class="hero-highlight">art, research &amp; technology.</span>
+        </h1>
+        <p class="hero-lede">
+          Short biographical line. For example: “I am a researcher, curator, and
+          artist exploring how emerging technologies reshape cultural practices,
+          labour, and digital aesthetics.”
+        </p>
+        <div class="hero-meta">
+          <div class="hero-meta-item">Based in: City / Country</div>
+          <div class="hero-meta-item">Current role: Your role / affiliation</div>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#research" class="btn btn-primary">View selected work</a>
+          <a href="#browse" class="btn">Browse by tag</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Snapshot">
+        <div class="hero-card-title">Snapshot</div>
+        <ul class="hero-card-grid">
+          <li class="hero-card-item">
+            <span class="hero-card-label">Keywords</span>
+            <span>AI &amp; culture · digital art · game studies</span>
+          </li>
+          <li class="hero-card-item">
+            <span class="hero-card-label">Current projects</span>
+            <span>Example: book, exhibition, research grant</span>
+          </li>
+          <li class="hero-card-item">
+            <span class="hero-card-label">Methods</span>
+            <span>Critical theory · practice-based research</span>
+          </li>
+          <li class="hero-card-item">
+            <span class="hero-card-label">Contact</span>
+            <span>you@example.com</span>
+          </li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Research section (auto-filled) -->
+    <section id="research" class="section">
+      <header class="section-header">
+        <div class="section-title">Research &amp; Writing</div>
+        <h2 class="section-subtitle">Selected publications &amp; essays</h2>
+      </header>
+
+      <div id="research-container" class="card-grid">
+        <!-- Filled by JavaScript from content.json -->
+      </div>
+    </section>
+
+    <!-- Projects section (auto-filled) -->
+    <section id="projects" class="section">
+      <header class="section-header">
+        <div class="section-title">Projects</div>
+        <h2 class="section-subtitle">Artistic, curatorial &amp; experimental work</h2>
+      </header>
+
+      <div id="projects-container" class="card-grid">
+        <!-- Filled by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Teaching section (auto-filled) -->
+    <section id="teaching" class="section">
+      <header class="section-header">
+        <div class="section-title">Teaching</div>
+        <h2 class="section-subtitle">Courses, workshops &amp; supervision</h2>
+      </header>
+
+      <div id="teaching-container" class="card-grid">
+        <!-- Filled by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Tag-based browsing (tags + year + type) -->
+<section id="browse" class="section">
+  <header class="section-header">
+    <div class="section-title">Browse</div>
+    <h2 class="section-subtitle">All content by tags (including year &amp; type)</h2>
+  </header>
+
+  <!-- Filter controls -->
+  <div class="filters">
+    <div class="filter-group">
+      <div class="filter-label">Match</div>
+      <div class="filter-mode">
+        <button class="mode-button active" data-mode="any">Any selected tag</button>
+        <button class="mode-button" data-mode="all">All selected tags</button>
+      </div>
+    </div>
+
+    <div class="filter-group filter-group--tags">
+      <div class="tag-filter-label">Tags (click to select)</div>
+      <div id="tag-list" class="tag-list">
+        <!-- Tag buttons inserted by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Result list -->
+  <div id="browse-results" class="browse-results">
+    <!-- Cards injected here based on filters -->
+  </div>
+</section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <header class="section-header">
+        <div class="section-title">Contact</div>
+        <h2 class="section-subtitle">Stay in touch</h2>
+      </header>
+
+      <div class="contact-card">
+        <div>
+          <p>
+            For collaborations, invitations, or questions, the best way to reach me
+            is via email. I’m also happy to hear from students, artists, and
+            researchers interested in overlapping areas of work.
+          </p>
+          <div class="contact-links">
+            <a class="contact-pill" href="mailto:you@example.com">
+              <strong>you@example.com</strong>
+              <span>Email</span>
+            </a>
+            <a class="contact-pill" href="#" target="_blank" rel="noopener">
+              <strong>Academic profile</strong>
+              <span>Institutional page</span>
+            </a>
+            <a class="contact-pill" href="#" target="_blank" rel="noopener">
+              <strong>Other link</strong>
+              <span>Portfolio / social</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p>
+            Optional short note about how you handle responses (for example:
+            that you read everything but can’t always reply quickly, or that you
+            are especially keen on hearing about particular kinds of projects).
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        &copy; <span id="year"></span> Your Name. All rights reserved.
+      </footer>
+    </section>
+  </main>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
