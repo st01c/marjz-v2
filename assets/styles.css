@@ -34,6 +34,7 @@ a {
   font-weight: 600;
   text-decoration: underline;
   text-decoration-color: var(--nav-hover);
+  text-decoration-thickness: 2px; /* adjust thickness here */
 }
 
 a:hover {
@@ -162,8 +163,9 @@ a:hover {
 
 .hero-highlight {
   color: var(--nav-hover);
-  /* color: var(--accent); */
   line-height: 1.1;
+  font-style: italic;
+  letter-spacing: 0.00em;
 }
 
 .hero-lede {
