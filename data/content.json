@@ -6,7 +6,14 @@
     "section": "research",
     "year": 2023,
     "type": "art criticism",
-    "tags": ["digital art", "blockchain", "DAOs", "NFTs", "digital commons", "token-gating"],
+    "tags": [
+      "digital art",
+      "blockchain",
+      "DAOs",
+      "NFTs",
+      "digital commons",
+      "token-gating"
+    ],
     "summary": "Essay for Aksioma's Postscriptum series that reimagines blockchains not as property infrastructure but as 'structures of belonging', foregrounding collaboration, co-ownership, and shared governance.",
     "contentPath": "content/structures-of-belonging.html",
     "link": "https://marjz.net/blog/aksioma"
@@ -18,7 +25,12 @@
     "section": "research",
     "year": 2022,
     "type": "journal article",
-    "tags": ["AI art", "visual indeterminacy", "abstraction", "image recognition"],
+    "tags": [
+      "AI art",
+      "visual indeterminacy",
+      "abstraction",
+      "image recognition"
+    ],
     "summary": "Leonardo journal essay examining Tom White’s AI-driven abstraction projects as a way to probe the politics of visual indeterminacy and the confidence of machine vision systems.",
     "link": "https://marjz.net/blog/leonardo"
   },
@@ -29,7 +41,15 @@
     "section": "research",
     "year": 2021,
     "type": "monograph",
-    "tags": ["AI", "AI art", "digital art", "intellectual property", "agency", "posthumanism", "tactical media"],
+    "tags": [
+      "AI",
+      "AI art",
+      "digital art",
+      "intellectual property",
+      "agency",
+      "posthumanism",
+      "tactical media"
+    ],
     "summary": "Monograph with meson press developing the concept of posthumanist agential assemblages in AI art, critiquing anthropocentric authorship and IP while exploring tactical entanglements of aesthetics, law, and capital.",
     "contentPath": "content/tactical-entanglements.html",
     "link": "https://marjz.net/blog/tactical-entanglements"
@@ -41,7 +61,10 @@
     "section": "research",
     "year": 2019,
     "type": "journal article",
-    "tags": ["performance art", "game art"],
+    "tags": [
+      "performance art",
+      "game art"
+    ],
     "summary": "Article in Video Game Art Reader Vol. 2 analysing performance-based interventions in GTA as critical engagements with survival tropes in game worlds, drawing on performance art traditions.",
     "link": "https://marjz.net/blog/survival-interventions-in-gta"
   },
@@ -52,7 +75,13 @@
     "section": "research",
     "year": 2018,
     "type": "journal article",
-    "tags": ["copyright", "digital art", "financialization", "blockchain", "art market"],
+    "tags": [
+      "copyright",
+      "digital art",
+      "financialization",
+      "blockchain",
+      "art market"
+    ],
     "summary": "Philosophy & Technology essay critiquing blockchain-based platforms like Monegraph as attempts to financialise digital art and reinforce IP-based enclosures.",
     "link": "https://marjz.net/blog/monetised-graphics"
   }

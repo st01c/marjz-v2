@@ -198,7 +198,7 @@
         </label>
         <label>
           Slug
-          <input id="field-slug" name="slug" />
+          <input id="field-slug" name="slug" placeholder="auto-fills from title (edit as needed)" />
         </label>
         <label class="full">
           Summary
@@ -210,11 +210,11 @@
         </label>
         <label>
           Images (comma-separated paths)
-          <input id="field-images" name="images" placeholder="images/a.jpg, images/b.png" />
+          <input id="field-images" name="images" placeholder="images/a.jpg, images/b.png (paths only)" />
         </label>
         <label>
           Content path
-          <input id="field-contentPath" name="contentPath" placeholder="path/to/markdown.md" />
+          <input id="field-contentPath" name="contentPath" placeholder="content/example.html (path only)" />
         </label>
         <label>
           Link
@@ -223,10 +223,11 @@
       </form>
       <div class="form-actions">
         <button id="save-btn" class="primary">Save changes</button>
-        <button id="delete-btn" type="button">Delete entry</button>
+        <button id="delete-btn" type="button" disabled>Delete entry</button>
+        <button id="clear-btn" type="button">Clear selection</button>
         <button id="download-btn">Download updated content.json</button>
       </div>
-      <div id="status" class="status">Load content to begin.</div>
+      <div id="status" class="status">Load content to begin (metadata only; long-form lives in /content and /images).</div>
     </section>
   </div>
 
@@ -239,11 +240,13 @@
     const listEl = document.getElementById("item-list");
     const formEl = document.getElementById("entry-form");
     const statusEl = document.getElementById("status");
+    const deleteBtn = document.getElementById("delete-btn");
 
     document.getElementById("load-btn").addEventListener("click", loadContent);
     document.getElementById("new-btn").addEventListener("click", () => {
       state.selectedIndex = null;
       formEl.reset();
+      updateButtons();
       updateStatus("New entry started.");
       highlightSelected();
     });
@@ -255,10 +258,15 @@
       e.preventDefault();
       deleteEntry();
     });
+    document.getElementById("clear-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      clearSelection();
+    });
     document.getElementById("download-btn").addEventListener("click", (e) => {
       e.preventDefault();
       downloadJson();
     });
+    document.getElementById("field-title").addEventListener("input", autoFillSlug);
 
     // Fetch and load content.json into memory and list.
     async function loadContent() {
@@ -266,11 +274,12 @@
         const res = await fetch("data/content.json");
         const json = await res.json();
         if (!Array.isArray(json)) throw new Error("content.json is not an array");
-        state.items = json.map((item) => ({ ...item }));
+        state.items = sortItems(json.map((item) => ({ ...item })));
         state.selectedIndex = null;
         renderList();
         formEl.reset();
-        updateStatus(`Loaded ${state.items.length} entr${state.items.length === 1 ? "y" : "ies"}.`);
+        updateButtons();
+        updateStatus(`Loaded ${state.items.length} entr${state.items.length === 1 ? "y" : "ies"} (metadata only).`);
       } catch (err) {
         console.error(err);
         updateStatus("Failed to load content.json. Make sure it is accessible.", true);
@@ -295,6 +304,7 @@
           state.selectedIndex = index;
           populateForm(item);
           highlightSelected();
+          updateButtons();
           updateStatus(`Editing "${item.title || item.id}".`);
         });
         li.appendChild(btn);
@@ -328,18 +338,33 @@
         updateStatus(`An entry with id "${entry.id}" already exists. Choose a unique id.`, true);
         return;
       }
+      if (entry.slug) {
+        const existingSlugIndex = state.items.findIndex((i, idx) => i.slug === entry.slug && idx !== state.selectedIndex);
+        if (existingSlugIndex !== -1) {
+          updateStatus(`An entry with slug "${entry.slug}" already exists. Choose a unique slug.`, true);
+          return;
+        }
+      }
+      if (existingIndex !== -1) {
+        updateStatus(`An entry with id "${entry.id}" already exists. Choose a unique id.`, true);
+        return;
+      }
 
       if (state.selectedIndex === null || state.selectedIndex === undefined) {
         state.items.push(entry);
-        state.selectedIndex = state.items.length - 1;
+        state.items = sortItems(state.items);
+        state.selectedIndex = state.items.findIndex((i) => i.id === entry.id);
         updateStatus(`Added "${entry.title}".`);
       } else {
         state.items[state.selectedIndex] = entry;
+        state.items = sortItems(state.items);
+        state.selectedIndex = state.items.findIndex((i) => i.id === entry.id);
         updateStatus(`Updated "${entry.title}".`);
       }
 
       renderList();
       highlightSelected();
+      updateButtons();
     }
 
     // Remove the currently selected entry.
@@ -357,7 +382,16 @@
       formEl.reset();
       renderList();
       highlightSelected();
+      updateButtons();
       updateStatus("Entry deleted.");
+    }
+
+    function clearSelection() {
+      state.selectedIndex = null;
+      formEl.reset();
+      highlightSelected();
+      updateButtons();
+      updateStatus("Selection cleared; form reset.");
     }
 
     // Build a JSON-ready entry from the form.
@@ -446,6 +480,38 @@
       buttons.forEach((btn, idx) => {
         btn.classList.toggle("active", idx === state.selectedIndex);
       });
+    }
+
+    function updateButtons() {
+      deleteBtn.disabled = state.selectedIndex === null || state.selectedIndex === undefined;
+    }
+
+    function sortItems(items) {
+      return items.slice().sort((a, b) => {
+        const ay = a.year || 0;
+        const by = b.year || 0;
+        if (ay !== by) return by - ay;
+        return (a.title || "").localeCompare(b.title || "");
+      });
+    }
+
+    function slugify(text) {
+      return text
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
+    function autoFillSlug() {
+      const title = getValue("field-title");
+      const slugEl = document.getElementById("field-slug");
+      if (!slugEl) return;
+      if (!slugEl.value || slugEl.dataset.autofill === "true") {
+        const slug = slugify(title);
+        slugEl.value = slug;
+        slugEl.dataset.autofill = "true";
+      }
     }
 
     function updateStatus(message, isError = false) {
