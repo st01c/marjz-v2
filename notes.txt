@@ -1,0 +1,13 @@
+To run local server:
+
+1) Terminal >
+cd /Users/martinzeilinger/Documents/Websites/marjz-v2 && python3 -m http.server 8000
+
+2) Browser >
+http://localhost:8000/index.html (browse draft site)
+
+3) To load pages directly:
+Detail pages: http://localhost:8000/item.html?id=... (ids/slugs from content.json)
+
+4) For editor:
+Editor: http://localhost:8000/editor.html (to load/edit/download data/content.json)
