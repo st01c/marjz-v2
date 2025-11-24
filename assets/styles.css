@@ -197,6 +197,43 @@ a:hover {
   margin-top: 1.25rem;
 }
 
+.hero-feature {
+  background: var(--bg-alt);
+  padding: 1rem 1rem 1.1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hero-feature-image {
+  background: linear-gradient(135deg, #ff8aa5, #ffe4ec);
+  width: 100%;
+  padding-top: 62%;
+}
+
+.hero-feature-body {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.hero-feature-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-feature-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hero-feature-blurb {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
