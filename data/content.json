@@ -1,5 +1,14 @@
 [
   {
+    "id": "whatsthis",
+    "title": "Test",
+    "section": "research",
+    "slug": "test",
+    "year": 2025,
+    "summary": "TEst test Test teSt",
+    "featured": true
+  },
+  {
     "id": "structures-of-belonging",
     "slug": "structures-of-belonging",
     "title": "Structures of Belonging",

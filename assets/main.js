@@ -5,12 +5,11 @@ async function loadContent() {
   const items = await fetchContent();
   if (!items.length) return;
 
-  const sections = splitBySection(items);
   const tagData = buildTagData(items);
 
-  renderSectionCards("research-container", sections.research);
-  renderSectionCards("projects-container", sections.projects);
-  renderSectionCards("teaching-container", sections.teaching);
+  const featuredItems = sortByYear(items.filter((i) => i.featured));
+
+  renderSectionCards("featured-container", featuredItems);
 
   setupBrowsingControls(tagData.itemsWithTags, tagData.allTags);
 }
@@ -54,10 +53,6 @@ function buildTagData(items) {
       if (t) extended.add(String(t));
     });
 
-    if (item.year) {
-      extended.add(String(item.year));
-    }
-
     if (item.type) {
       extended.add(String(item.type));
     }
@@ -96,6 +91,7 @@ function renderSectionCards(containerId, items) {
   list.className = "item-list";
 
   items
+    .slice()
     .sort((a, b) => (b.year || 0) - (a.year || 0))
     .forEach((item) => {
       const li = document.createElement("li");
@@ -159,6 +155,7 @@ function setupBrowsingControls(items, allTags) {
 
       filterMode = mode;
       updateModeButtons();
+      updateTagButtons();
       renderBrowseResults(items, resultsEl, activeTags, filterMode);
     });
   });
@@ -188,6 +185,11 @@ function setupBrowsingControls(items, allTags) {
       const t = btn.dataset.tag;
       if (!t) return;
 
+      if (filterMode === "all" && !activeTags.has(t)) {
+        const canAdd = combinationExists(new Set([...activeTags, t]), items);
+        if (!canAdd) return;
+      }
+
       toggleTag(t, activeTags);
 
       updateTagButtons();
@@ -199,13 +201,13 @@ function setupBrowsingControls(items, allTags) {
 
   function updateTagButtons() {
     const buttons = tagListEl.querySelectorAll(".tag-button");
+    const availableTags = computeAvailableTags(items, allTags, activeTags, filterMode);
     buttons.forEach((btn) => {
       const t = btn.dataset.tag;
-      if (t && activeTags.has(t)) {
-        btn.classList.add("active");
-      } else {
-        btn.classList.remove("active");
-      }
+      const isActive = t && activeTags.has(t);
+      btn.classList.toggle("active", isActive);
+      const enabled = t ? availableTags.has(t) : true;
+      btn.disabled = !enabled;
     });
   }
 
@@ -218,6 +220,7 @@ function setupBrowsingControls(items, allTags) {
   }
 
   // Initial render: no tags selected → show all
+  updateTagButtons();
   renderBrowseResults(items, resultsEl, activeTags, filterMode);
 }
 
@@ -253,6 +256,7 @@ function renderBrowseResults(items, container, activeTags, mode) {
   }
 
   filtered
+    .slice()
     .sort((a, b) => (b.year || 0) - (a.year || 0))
     .forEach((item) => {
       const card = document.createElement("article");
@@ -330,4 +334,41 @@ function buildLinkInfo(item) {
   }
 
   return { href: "", external: false };
+}
+
+// In "all" mode, only allow tag combinations that exist in the data.
+function computeAvailableTags(items, allTags, activeTags, mode) {
+  if (mode !== "all" || activeTags.size === 0) {
+    return new Set(allTags);
+  }
+
+  const available = new Set(activeTags);
+
+  items.forEach((item) => {
+    const tags = item._extendedTags || [];
+    const hasAllActive = Array.from(activeTags).every((t) => tags.includes(t));
+    if (hasAllActive) {
+      tags.forEach((t) => available.add(t));
+    }
+  });
+
+  return available;
+}
+
+function combinationExists(tagSet, items) {
+  const needed = Array.from(tagSet);
+  return items.some((item) => {
+    const tags = item._extendedTags || [];
+    return needed.every((t) => tags.includes(t));
+  });
+}
+
+// Shared sorter: newest year first, then title.
+function sortByYear(items) {
+  return items.slice().sort((a, b) => {
+    const ay = a.year || 0;
+    const by = b.year || 0;
+    if (ay !== by) return by - ay;
+    return (a.title || "").localeCompare(b.title || "");
+  });
 }

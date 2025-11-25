@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse · Martin Zeilinger</title>
+  <meta name="description" content="Browse all work by tags and filters.">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav-wrapper">
+    <div class="nav">
+      <div class="nav-left">
+        <div>
+          <a href="index.html" class="nav-name">martin zeilinger</a>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="about.html" class="nav-link">_about</a>
+        <a href="research.html" class="nav-link">_research</a>
+        <a href="practice.html" class="nav-link">_practice</a>
+        <a href="teaching.html" class="nav-link">_teaching</a>
+        <a href="browse.html" class="nav-link">_browse</a>
+        <a href="contact.html" class="nav-link nav-link--primary">_contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section id="browse" class="section">
+      <header class="section-header">
+        <div class="section-title">Browse</div>
+        <!-- <h1 class="section-subtitle">All content by tags (including type)</h1> -->
+      </header>
+
+      <!-- Filter controls -->
+      <div class="filters">
+        <div class="filter-group">
+          <div class="filter-label">Match</div>
+          <div class="filter-mode">
+            <button class="mode-button active" data-mode="any">Any selected tag</button>
+            <button class="mode-button" data-mode="all">All selected tags</button>
+          </div>
+        </div>
+
+        <div class="filter-group filter-group--tags">
+          <div class="filter-label tag-filter-label">Tags (click to select)</div>
+          <div id="tag-list" class="tag-list">
+            <!-- Tag buttons inserted by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Result list -->
+      <div id="browse-results" class="browse-results">
+        <!-- Cards injected here based on filters -->
+      </div>
+    </section>
+  </main>
+  <script src="assets/main.js"></script>
+</body>
+</html>

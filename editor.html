@@ -197,6 +197,10 @@
           <input id="field-year" name="year" type="number" inputmode="numeric" />
         </label>
         <label>
+          Featured on front page
+          <input id="field-featured" name="featured" type="checkbox" />
+        </label>
+        <label>
           Slug
           <input id="field-slug" name="slug" placeholder="auto-fills from title (edit as needed)" />
         </label>
@@ -326,6 +330,7 @@
       setValue("field-contentPath", item.contentPath);
       setValue("field-images", (item.images || []).join(", "));
       setValue("field-link", item.link);
+      setChecked("field-featured", Boolean(item.featured));
     }
 
     // Save form data into state (update existing or add new).
@@ -417,6 +422,7 @@
       const summary = getValue("field-summary").trim();
       const contentPath = getValue("field-contentPath").trim();
       const link = getValue("field-link").trim();
+      const featured = getChecked("field-featured");
 
       const tags = csvToArray(getValue("field-tags"));
       const images = csvToArray(getValue("field-images"));
@@ -429,6 +435,7 @@
       if (contentPath) entry.contentPath = contentPath;
       if (images.length) entry.images = images;
       if (link) entry.link = link;
+      entry.featured = featured;
 
       return entry;
     }
@@ -467,11 +474,22 @@
       return el ? el.value : "";
     }
 
+    function setChecked(id, value) {
+      const el = document.getElementById(id);
+      if (el) el.checked = Boolean(value);
+    }
+
+    function getChecked(id) {
+      const el = document.getElementById(id);
+      return el ? el.checked : false;
+    }
+
     function formatMeta(item) {
       const bits = [];
       if (item.year) bits.push(item.year);
       if (item.type) bits.push(item.type);
       if (item.section) bits.push(item.section);
+      if (item.featured) bits.push("featured");
       return bits.join(" · ") || "—";
     }
 
