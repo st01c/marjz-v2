@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Breach";
+  src: url("fonts/breach.otf.woff2") format("woff2");
+  font-display: swap;
+}
+
 :root {
   --bg: #f5f5f7;
   --bg-alt: #ffffff;
@@ -77,10 +83,17 @@ a:hover {
 }
 
 .nav-name {
-  font-weight: 700;
-  font-size: 2rem;
+  font-family: "Breach", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", "Segoe UI", sans-serif;
+  font-weight: 300;
+  font-size: 3.1rem;
+  line-height: 1;
+  min-height: 2.4rem;
+  display: flex;
+  align-items: center;
   letter-spacing: 0em;
-  text-transform: uppercase;
+  text-transform: none !important;
+  font-variant: normal;
   /* color: var(--nav-hover); */
 }
 
@@ -93,15 +106,15 @@ a:hover {
 
 .nav-link {
   padding: 0.25rem 0.75rem;
-  border-radius: 0;
-  border: 1px solid transparent;
+  border-radius: 999px;
+  /* border: 1px solid transparent; */
   color: var(--muted);
   text-decoration: none;
 }
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  border-color: var(--nav-hover);
+  border-color: #000000;
   color: #ffffff;
   background: var(--nav-hover);
   text-decoration: none;
