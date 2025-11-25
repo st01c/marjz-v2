@@ -29,31 +29,35 @@
   <main class="page">
     <section id="browse" class="section">
       <header class="section-header">
-        <div class="section-title">Browse</div>
+        <div class="section-title">_Browse</div>
         <!-- <h1 class="section-subtitle">All content by tags (including type)</h1> -->
       </header>
 
-      <!-- Filter controls -->
-      <div class="filters">
-        <div class="filter-group">
-          <div class="filter-label">Match</div>
-          <div class="filter-mode">
-            <button class="mode-button active" data-mode="any">Any selected tag</button>
-            <button class="mode-button" data-mode="all">All selected tags</button>
+      <div class="browse-layout">
+        <div class="browse-main">
+          <div id="browse-results" class="browse-results">
+            <!-- Cards injected here based on filters -->
           </div>
         </div>
 
-        <div class="filter-group filter-group--tags">
-          <div class="filter-label tag-filter-label">Tags (click to select)</div>
-          <div id="tag-list" class="tag-list">
-            <!-- Tag buttons inserted by JavaScript -->
-          </div>
-        </div>
-      </div>
+        <aside class="browse-sidebar">
+          <div class="filters">
+            <div class="filter-group">
+              <div class="filter-label">Match</div>
+              <div class="filter-mode">
+                <button class="mode-button active" data-mode="any">Any selected</button>
+                <button class="mode-button" data-mode="all">All selected</button>
+              </div>
+            </div>
 
-      <!-- Result list -->
-      <div id="browse-results" class="browse-results">
-        <!-- Cards injected here based on filters -->
+            <div class="filter-group filter-group--tags">
+              <div class="filter-label tag-filter-label">Tags (click to select)</div>
+              <div id="tag-list" class="tag-list">
+                <!-- Tag buttons inserted by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
   </main>

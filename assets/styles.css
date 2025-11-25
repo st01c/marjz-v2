@@ -590,6 +590,30 @@ footer {
   }
 }
 
+.browse-layout {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.browse-main {
+  flex: 3 1 70%;
+}
+
+.browse-sidebar {
+  flex: 1 1 28%;
+}
+
+@media (max-width: 900px) {
+  .browse-layout {
+    flex-direction: column;
+  }
+
+  .browse-sidebar {
+    width: 100%;
+  }
+}
+
 
 /* Any / All mode toggle */
 
