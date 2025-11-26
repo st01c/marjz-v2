@@ -12,7 +12,7 @@
   --muted: #6b7280;
   --accent: #2563eb;
   --accent-soft: rgba(37, 99, 235, 0.08);
-  --nav-hover: #ff5e7a;
+  --nav-hover: rgb(250, 73, 82);
   --radius: 0;
   --max-width: 920px;
 }
@@ -41,12 +41,17 @@ a {
   text-decoration: underline;
   text-decoration-color: var(--nav-hover);
   text-decoration-thickness: 2px; /* adjust thickness here */
+  padding: 0.12em 0.4em;
+  border-radius: 999px;
+  display: inline-block;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 a:hover {
   background: var(--nav-hover);
   color: #ffffff;
   text-decoration: none;
+  box-shadow: 0 0 0 1px var(--nav-hover);
 }
 
 .page {
@@ -224,7 +229,17 @@ a:hover {
 .hero-feature-image {
   background: linear-gradient(135deg, #ff8aa5, #ffe4ec);
   width: 100%;
-  padding-top: 62%;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-feature-body {
@@ -240,8 +255,8 @@ a:hover {
 }
 
 .hero-feature-title {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--text);
 }
 
@@ -249,6 +264,26 @@ a:hover {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.hero-feature-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--nav-hover);
+  color: var(--nav-hover);
+  background: #ffffff;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.hero-feature-pill:hover,
+.hero-feature-pill:focus-visible {
+  color: #ffffff;
+  background: var(--nav-hover);
+  text-decoration: none;
 }
 
 .btn {

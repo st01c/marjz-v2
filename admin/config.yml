@@ -1,0 +1,65 @@
+local_backend:
+  url: http://localhost:8081/api/v1
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+collections:
+  - name: "entries"
+    label: "Entries"
+    label_singular: "Entry"
+    identifier_field: "id"
+    folder: "content/entries"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{year}} — {{section}}"
+    fields:
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        hint: "Used for filenames and internal links; typically kebab-case."
+      - label: "Section"
+        name: "section"
+        widget: "select"
+        options:
+          - { label: "Research", value: "research" }
+          - { label: "Practice", value: "practice" }
+          - { label: "Teaching", value: "teaching" }
+      - { label: "Type", name: "type", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "number", required: false }
+      - { label: "Featured on front page", name: "featured", widget: "boolean", default: false, required: false }
+      - { label: "Pinned (homepage hero)", name: "pinned", widget: "boolean", default: false, required: false, hint: "Only one entry should be pinned; the latest pinned item becomes the homepage hero." }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        summary: "{{fields.item}}"
+        field: { label: "Tag", name: "item", widget: "string" }
+        required: false
+      - label: "Images (paths)"
+        name: "images"
+        widget: "list"
+        summary: "{{fields.item}}"
+        field: { label: "Image path", name: "item", widget: "string" }
+        required: false
+      - label: "External link"
+        name: "link"
+        widget: "string"
+        required: false
+      - label: "Override content path"
+        name: "contentPath"
+        widget: "string"
+        required: false
+        hint: "Defaults to content/<slug>.html if left empty."
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Long-form content; will be rendered to HTML for item detail pages."

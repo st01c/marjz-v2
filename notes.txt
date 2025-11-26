@@ -1,3 +1,5 @@
+For use with pure text mini CMS editor.html:
+
 To run local server:
 
 1) Terminal >
@@ -11,3 +13,22 @@ Detail pages: http://localhost:8000/item.html?id=... (ids/slugs from content.jso
 
 4) For editor:
 Editor: http://localhost:8000/editor.html (to load/edit/download data/content.json)
+
+5) Replace updated content.json file with downloaded file.
+
+===
+
+For use with Decap:
+Three-way split temrinal window
+
+Terminal 1
+npx decap-server (runs Decap UI server)
+
+Terminal 2
+python3 -m http.server 8080 (runs local site server)
+
+Terminal 3:
+node scripts/build-content.js (after saving new entries (or changed entries), run to rebuild site)
+
+
+Random temporary notes:

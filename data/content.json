@@ -1,97 +1,39 @@
 [
   {
-    "id": "whatsthis",
-    "title": "Test",
-    "section": "research",
-    "slug": "test",
+    "id": "wet-tech-04",
+    "title": "Wet Tech #4",
+    "section": "practice",
+    "slug": "wet-tech-04",
+    "type": "curatorial",
     "year": 2025,
-    "summary": "TEst test Test teSt",
-    "featured": true
-  },
-  {
-    "id": "structures-of-belonging",
-    "slug": "structures-of-belonging",
-    "title": "Structures of Belonging",
-    "section": "research",
-    "year": 2023,
-    "type": "art criticism",
     "tags": [
-      "digital art",
       "blockchain",
-      "DAOs",
-      "NFTs",
-      "digital commons",
-      "token-gating"
+      "DLT"
     ],
-    "summary": "Essay for Aksioma's Postscriptum series that reimagines blockchains not as property infrastructure but as 'structures of belonging', foregrounding collaboration, co-ownership, and shared governance.",
-    "contentPath": "content/structures-of-belonging.html",
-    "link": "https://marjz.net/blog/aksioma"
+    "summary": "Summary text",
+    "images": [
+      "assets/uploads/wet-tech-4.png"
+    ],
+    "featured": true,
+    "pinned": false,
+    "contentPath": "content/wet-tech-04.html"
   },
   {
-    "id": "politics-of-visual-indeterminacy",
-    "slug": "politics-of-visual-indeterminacy",
-    "title": "The Politics of Visual Indeterminacy in Abstract AI Art",
-    "section": "research",
-    "year": 2022,
-    "type": "journal article",
+    "id": "wettech5",
+    "title": "Wet Tech 5",
+    "section": "practice",
+    "slug": "wet-tech-5",
+    "type": "curatorial",
+    "year": 2024,
     "tags": [
-      "AI art",
-      "visual indeterminacy",
-      "abstraction",
-      "image recognition"
+      "Wet tech"
     ],
-    "summary": "Leonardo journal essay examining Tom White’s AI-driven abstraction projects as a way to probe the politics of visual indeterminacy and the confidence of machine vision systems.",
-    "link": "https://marjz.net/blog/leonardo"
-  },
-  {
-    "id": "tactical-entanglements-monograph",
-    "slug": "tactical-entanglements",
-    "title": "Tactical Entanglements: AI Art, Creative Agency, and the Limits of Intellectual Property",
-    "section": "research",
-    "year": 2021,
-    "type": "monograph",
-    "tags": [
-      "AI",
-      "AI art",
-      "digital art",
-      "intellectual property",
-      "agency",
-      "posthumanism",
-      "tactical media"
+    "summary": "Optional summary",
+    "images": [
+      "assets/uploads/wet-tech-5.png"
     ],
-    "summary": "Monograph with meson press developing the concept of posthumanist agential assemblages in AI art, critiquing anthropocentric authorship and IP while exploring tactical entanglements of aesthetics, law, and capital.",
-    "contentPath": "content/tactical-entanglements.html",
-    "link": "https://marjz.net/blog/tactical-entanglements"
-  },
-  {
-    "id": "survival-interventions-gta",
-    "slug": "survival-interventions-gta",
-    "title": "Survival Interventions in GTA & the Limits of Performance in Virtual Environments",
-    "section": "research",
-    "year": 2019,
-    "type": "journal article",
-    "tags": [
-      "performance art",
-      "game art"
-    ],
-    "summary": "Article in Video Game Art Reader Vol. 2 analysing performance-based interventions in GTA as critical engagements with survival tropes in game worlds, drawing on performance art traditions.",
-    "link": "https://marjz.net/blog/survival-interventions-in-gta"
-  },
-  {
-    "id": "monetised-graphics",
-    "slug": "monetised-graphics",
-    "title": "Digital Art as ‘Monetised Graphics:’ Enforcing IP on the Blockchain",
-    "section": "research",
-    "year": 2018,
-    "type": "journal article",
-    "tags": [
-      "copyright",
-      "digital art",
-      "financialization",
-      "blockchain",
-      "art market"
-    ],
-    "summary": "Philosophy & Technology essay critiquing blockchain-based platforms like Monegraph as attempts to financialise digital art and reinforce IP-based enclosures.",
-    "link": "https://marjz.net/blog/monetised-graphics"
+    "featured": true,
+    "pinned": true,
+    "contentPath": "content/wet-tech-5.html"
   }
 ]

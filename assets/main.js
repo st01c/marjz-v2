@@ -5,13 +5,15 @@ async function loadContent() {
   const items = await fetchContent();
   if (!items.length) return;
 
+  renderPinnedHero(items);
+
   const tagData = buildTagData(items);
 
   const featuredItems = sortByYear(items.filter((i) => i.featured));
 
   renderSectionCards("featured-container", featuredItems);
 
-  setupBrowsingControls(tagData.itemsWithTags, tagData.allTags);
+  setupBrowsingControls(tagData.itemsWithTags, tagData.allTags, tagData.allTypes);
 }
 
 // Footer helper: keep the copyright year current.
@@ -45,26 +47,28 @@ function splitBySection(items) {
 // Tag prep: add extended tags (base tags + year + type) per item, and collect all unique tags.
 function buildTagData(items) {
   const tagSet = new Set();
+  const typeSet = new Set();
 
   const itemsWithTags = items.map((item) => {
-    const extended = new Set();
+    const tagsOnly = new Set();
 
     (item.tags || []).forEach((t) => {
-      if (t) extended.add(String(t));
+      if (t) tagsOnly.add(String(t));
     });
 
     if (item.type) {
-      extended.add(String(item.type));
+      typeSet.add(String(item.type));
     }
 
-    const taggedItem = { ...item, _extendedTags: Array.from(extended) };
+    const taggedItem = { ...item, _extendedTags: Array.from(tagsOnly), _type: item.type || "" };
     taggedItem._extendedTags.forEach((t) => tagSet.add(t));
     return taggedItem;
   });
 
   const allTags = Array.from(tagSet).sort((a, b) => a.localeCompare(b));
+  const allTypes = Array.from(typeSet).sort((a, b) => a.localeCompare(b));
 
-  return { itemsWithTags, allTags };
+  return { itemsWithTags, allTags, allTypes };
 }
 
 // Section cards: render simple lists for research / projects / teaching.
@@ -129,6 +133,72 @@ function renderSectionCards(containerId, items) {
   container.appendChild(card);
 }
 
+// Homepage hero: show the newest pinned entry (if any).
+function renderPinnedHero(items) {
+  const hero = document.getElementById("hero-feature");
+  if (!hero) return;
+
+  const pinned = sortByYear(items.filter((item) => item.pinned))[0];
+  if (!pinned) {
+    hero.hidden = true;
+    return;
+  }
+
+  hero.hidden = false;
+
+  const titleEl = document.getElementById("hero-feature-title");
+  const blurbEl = document.getElementById("hero-feature-blurb");
+  const linkEl = document.getElementById("hero-feature-link");
+  const labelEl = document.getElementById("hero-feature-label");
+  const imageEl = document.getElementById("hero-feature-image");
+  const imageTag = document.getElementById("hero-feature-image-el");
+
+  if (titleEl) {
+    titleEl.textContent = pinned.title || pinned.id || "Pinned entry";
+  }
+
+  if (blurbEl) {
+    blurbEl.textContent = pinned.summary || "";
+  }
+
+  if (labelEl) {
+    const metaBits = ["Pinned entry"];
+    if (pinned.section) metaBits.push(pinned.section);
+    if (pinned.year) metaBits.push(pinned.year);
+    labelEl.textContent = metaBits.join(" · ");
+  }
+
+  if (imageEl && imageTag) {
+    const heroImage = (pinned.images || []).find(Boolean);
+    if (heroImage) {
+      imageTag.src = heroImage;
+      imageTag.alt = pinned.title || pinned.id || "Pinned entry image";
+      imageTag.hidden = false;
+    } else {
+      imageTag.removeAttribute("src");
+      imageTag.alt = "";
+      imageTag.hidden = true;
+    }
+  }
+
+  if (linkEl) {
+    const linkInfo = buildLinkInfo(pinned);
+    if (linkInfo.href) {
+      linkEl.href = linkInfo.href;
+      if (linkInfo.external) {
+        linkEl.target = "_blank";
+        linkEl.rel = "noopener";
+      } else {
+        linkEl.removeAttribute("target");
+        linkEl.removeAttribute("rel");
+      }
+      linkEl.hidden = false;
+    } else {
+      linkEl.hidden = true;
+    }
+  }
+}
+
 /**
  * Browsing controls:
  * - Tags include base tags + year + type.
@@ -136,15 +206,17 @@ function renderSectionCards(containerId, items) {
  *    any: item matches if it has at least one selected tag
  *    all: item matches only if it has every selected tag
  */
-function setupBrowsingControls(items, allTags) {
+function setupBrowsingControls(items, allTags, allTypes) {
   const tagListEl = document.getElementById("tag-list");
   const resultsEl = document.getElementById("browse-results");
+  const typeListEl = document.getElementById("type-list");
   const modeButtons = document.querySelectorAll(".mode-button");
 
-  if (!tagListEl || !resultsEl || !modeButtons.length) return;
+  if (!tagListEl || !resultsEl || !modeButtons.length || !typeListEl) return;
 
   // State: selected tags + filter mode
   const activeTags = new Set();
+  const activeTypes = new Set();
   let filterMode = "any";
 
   // Mode buttons (Any / All)
@@ -156,7 +228,7 @@ function setupBrowsingControls(items, allTags) {
       filterMode = mode;
       updateModeButtons();
       updateTagButtons();
-      renderBrowseResults(items, resultsEl, activeTags, filterMode);
+      renderBrowseResults(items, resultsEl, activeTags, activeTypes, filterMode);
     });
   });
 
@@ -186,14 +258,14 @@ function setupBrowsingControls(items, allTags) {
       if (!t) return;
 
       if (filterMode === "all" && !activeTags.has(t)) {
-        const canAdd = combinationExists(new Set([...activeTags, t]), items);
+        const canAdd = combinationExists(new Set([...activeTags, t]), items, activeTypes);
         if (!canAdd) return;
       }
 
       toggleTag(t, activeTags);
 
       updateTagButtons();
-      renderBrowseResults(items, resultsEl, activeTags, filterMode);
+      renderBrowseResults(items, resultsEl, activeTags, activeTypes, filterMode);
     });
 
     tagListEl.appendChild(btn);
@@ -201,13 +273,42 @@ function setupBrowsingControls(items, allTags) {
 
   function updateTagButtons() {
     const buttons = tagListEl.querySelectorAll(".tag-button");
-    const availableTags = computeAvailableTags(items, allTags, activeTags, filterMode);
+    const availableTags = computeAvailableTags(items, allTags, activeTags, filterMode, activeTypes);
     buttons.forEach((btn) => {
       const t = btn.dataset.tag;
       const isActive = t && activeTags.has(t);
       btn.classList.toggle("active", isActive);
       const enabled = t ? availableTags.has(t) : true;
       btn.disabled = !enabled;
+    });
+  }
+
+  // Type buttons
+  typeListEl.innerHTML = "";
+  allTypes.forEach((type) => {
+    const btn = document.createElement("button");
+    btn.textContent = type;
+    btn.className = "tag-button";
+    btn.dataset.type = type;
+
+    btn.addEventListener("click", () => {
+      const t = btn.dataset.type;
+      if (!t) return;
+      toggleTag(t, activeTypes);
+      updateTypeButtons();
+      updateTagButtons();
+      renderBrowseResults(items, resultsEl, activeTags, activeTypes, filterMode);
+    });
+
+    typeListEl.appendChild(btn);
+  });
+
+  function updateTypeButtons() {
+    const buttons = typeListEl.querySelectorAll(".tag-button");
+    buttons.forEach((btn) => {
+      const t = btn.dataset.type;
+      const isActive = t && activeTypes.has(t);
+      btn.classList.toggle("active", isActive);
     });
   }
 
@@ -221,7 +322,8 @@ function setupBrowsingControls(items, allTags) {
 
   // Initial render: no tags selected → show all
   updateTagButtons();
-  renderBrowseResults(items, resultsEl, activeTags, filterMode);
+  updateTypeButtons();
+  renderBrowseResults(items, resultsEl, activeTags, activeTypes, filterMode);
 }
 
 /**
@@ -230,15 +332,19 @@ function setupBrowsingControls(items, allTags) {
  * - mode: "any" (item has at least one of the tags)
  *         "all" (item has all of the tags)
  */
-function renderBrowseResults(items, container, activeTags, mode) {
+function renderBrowseResults(items, container, activeTags, activeTypes, mode) {
   container.innerHTML = "";
 
   const selectedTags = Array.from(activeTags);
 
   let filtered = items;
 
+  if (activeTypes.size > 0) {
+    filtered = filtered.filter((item) => item._type && activeTypes.has(item._type));
+  }
+
   if (selectedTags.length > 0) {
-    filtered = items.filter((item) => {
+    filtered = filtered.filter((item) => {
       const itemTags = item._extendedTags || [];
       if (mode === "all") {
         // Must contain all selected tags
@@ -337,14 +443,18 @@ function buildLinkInfo(item) {
 }
 
 // In "all" mode, only allow tag combinations that exist in the data.
-function computeAvailableTags(items, allTags, activeTags, mode) {
+function computeAvailableTags(items, allTags, activeTags, mode, activeTypes) {
+  const typeFiltered = activeTypes && activeTypes.size > 0
+    ? items.filter((item) => item._type && activeTypes.has(item._type))
+    : items;
+
   if (mode !== "all" || activeTags.size === 0) {
-    return new Set(allTags);
+    return new Set(allTags.filter((tag) => typeFiltered.some((item) => (item._extendedTags || []).includes(tag))));
   }
 
   const available = new Set(activeTags);
 
-  items.forEach((item) => {
+  typeFiltered.forEach((item) => {
     const tags = item._extendedTags || [];
     const hasAllActive = Array.from(activeTags).every((t) => tags.includes(t));
     if (hasAllActive) {
@@ -355,9 +465,13 @@ function computeAvailableTags(items, allTags, activeTags, mode) {
   return available;
 }
 
-function combinationExists(tagSet, items) {
+function combinationExists(tagSet, items, activeTypes) {
+  const typeFiltered = activeTypes && activeTypes.size > 0
+    ? items.filter((item) => item._type && activeTypes.has(item._type))
+    : items;
+
   const needed = Array.from(tagSet);
-  return items.some((item) => {
+  return typeFiltered.some((item) => {
     const tags = item._extendedTags || [];
     return needed.every((t) => tags.includes(t));
   });
