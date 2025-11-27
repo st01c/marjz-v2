@@ -1,5 +1,26 @@
 [
   {
+    "id": "ccs-article",
+    "title": "The many paths ahead: toward an interdisciplinary framework for Critical Cycling Studies",
+    "section": "research",
+    "slug": "ccs-article-published",
+    "type": "research article",
+    "year": 2025,
+    "tags": [
+      "cycling",
+      "CCS",
+      "interdisciplinarity",
+      "interfaces"
+    ],
+    "summary": "Bricker, A.B. and Zeilinger, M., in Humanities and Social Sciences Communications 12 (2025) (Open Access)",
+    "images": [
+      "assets/uploads/ccs.jpg"
+    ],
+    "featured": true,
+    "pinned": true,
+    "contentPath": "content/ccs-article-published.html"
+  },
+  {
     "id": "wet-tech-04",
     "title": "Wet Tech #4",
     "section": "practice",

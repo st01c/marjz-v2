@@ -42,18 +42,14 @@ function renderSectionList(container, items) {
       titleEl.textContent = item.title;
     }
 
-    const meta = document.createElement("div");
-    meta.className = "browse-card-type";
-    const parts = [];
-    if (item.year) parts.push(item.year);
-    if (item.type) parts.push(item.type);
-    meta.textContent = parts.join(" · ");
-
     header.appendChild(titleEl);
-    header.appendChild(meta);
 
-    const summary = document.createElement("p");
-    summary.textContent = item.summary || "";
+    if (item.year) {
+      const meta = document.createElement("div");
+      meta.className = "browse-card-type";
+      meta.textContent = item.year;
+      header.appendChild(meta);
+    }
 
     const tagsRow = document.createElement("div");
     tagsRow.className = "pill-row";
@@ -64,9 +60,12 @@ function renderSectionList(container, items) {
       tagsRow.appendChild(pill);
     });
 
+    const summary = document.createElement("p");
+    summary.textContent = item.summary || "";
+
     card.appendChild(header);
-    if (item.summary) card.appendChild(summary);
     if ((item.tags || []).length) card.appendChild(tagsRow);
+    if (item.summary) card.appendChild(summary);
 
     container.appendChild(card);
   });

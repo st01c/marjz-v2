@@ -14,8 +14,8 @@ collections:
     label_singular: "Entry"
     identifier_field: "id"
     folder: "content/entries"
-    extension: "json"
-    format: "json"
+    extension: "md"
+    format: "frontmatter"
     create: true
     slug: "{{slug}}"
     summary: "{{title}} — {{year}} — {{section}}"

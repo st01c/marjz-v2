@@ -85,12 +85,6 @@ function renderSectionCards(containerId, items) {
   const card = document.createElement("article");
   card.className = "card";
 
-  const title = document.createElement("h3");
-  title.textContent = "Items";
-
-  const small = document.createElement("small");
-  small.textContent = "From content.json";
-
   const list = document.createElement("ul");
   list.className = "item-list";
 
@@ -127,8 +121,6 @@ function renderSectionCards(containerId, items) {
       list.appendChild(li);
     });
 
-  card.appendChild(title);
-  card.appendChild(small);
   card.appendChild(list);
   container.appendChild(card);
 }
@@ -388,24 +380,17 @@ function renderBrowseResults(items, container, activeTags, activeTypes, mode) {
         titleEl.textContent = item.title;
       }
 
-      const typeEl = document.createElement("div");
-      typeEl.className = "browse-card-type";
-      typeEl.textContent =
-        (item.year ? item.year + " · " : "") + (item.type || "");
-
       header.appendChild(titleEl);
-      header.appendChild(typeEl);
 
-      const summaryEl = document.createElement("p");
-      summaryEl.textContent = item.summary || "";
+      const yearEl = document.createElement("div");
+      yearEl.className = "browse-card-type";
+      yearEl.textContent = item.year ? String(item.year) : "";
+      if (item.year) header.appendChild(yearEl);
 
       const tagsRow = document.createElement("div");
       tagsRow.className = "pill-row";
 
-      // Show the extended tags? Probably better to show the original tags,
-      // but you can change this if you want years/types visible here too.
       const visibleTags = item.tags || [];
-
       visibleTags.forEach((t) => {
         const span = document.createElement("span");
         span.className = "pill";
@@ -413,12 +398,15 @@ function renderBrowseResults(items, container, activeTags, activeTypes, mode) {
         tagsRow.appendChild(span);
       });
 
+      const summaryEl = document.createElement("p");
+      summaryEl.textContent = item.summary || "";
+
       card.appendChild(header);
-      if (item.summary) {
-        card.appendChild(summaryEl);
-      }
       if (visibleTags.length) {
         card.appendChild(tagsRow);
+      }
+      if (item.summary) {
+        card.appendChild(summaryEl);
       }
 
       container.appendChild(card);
