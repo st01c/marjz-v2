@@ -1,24 +1,24 @@
 [
   {
-    "id": "ccs-article",
-    "title": "The many paths ahead: toward an interdisciplinary framework for Critical Cycling Studies",
-    "section": "research",
-    "slug": "ccs-article-published",
-    "type": "research article",
+    "id": "wettech5",
+    "title": "Wet Tech #5",
+    "section": "practice",
+    "slug": "wet-tech-5",
+    "type": "curatorial",
     "year": 2025,
+    "fullDate": "2025-12-05 00:00",
     "tags": [
-      "cycling",
-      "CCS",
-      "interdisciplinarity",
-      "interfaces"
+      "electronic music",
+      "improvisation",
+      "artificial intelligence (AI)"
     ],
-    "summary": "Bricker, A.B. and Zeilinger, M., in Humanities and Social Sciences Communications 12 (2025) (Open Access)",
+    "summary": "The next installment in our occasional series of improvised electronic music and moving image events features two sets, by Jonathan Impett and Juan Parra (BE) and by Jung In Jung and Lynda Clark (UK)",
     "images": [
-      "assets/uploads/ccs.jpg"
+      "assets/uploads/wet-tech-5.png"
     ],
     "featured": true,
     "pinned": true,
-    "contentPath": "content/ccs-article-published.html"
+    "contentPath": "content/wet-tech-5.html"
   },
   {
     "id": "wet-tech-04",
@@ -27,11 +27,12 @@
     "slug": "wet-tech-04",
     "type": "curatorial",
     "year": 2025,
+    "fullDate": "2025-11-03 00:00",
     "tags": [
-      "blockchain",
-      "DLT"
+      "electronic music",
+      "improvisation"
     ],
-    "summary": "Summary text",
+    "summary": "| Wet Tech #4",
     "images": [
       "assets/uploads/wet-tech-4.png"
     ],
@@ -40,21 +41,1298 @@
     "contentPath": "content/wet-tech-04.html"
   },
   {
-    "id": "wettech5",
-    "title": "Wet Tech 5",
-    "section": "practice",
-    "slug": "wet-tech-5",
-    "type": "curatorial",
-    "year": 2024,
+    "id": "ccs-article",
+    "title": "The many paths ahead: toward an interdisciplinary framework for Critical Cycling Studies",
+    "section": "research",
+    "slug": "ccs-article-published",
+    "type": "research article",
+    "year": 2025,
+    "fullDate": "2025-10-14 00:00",
     "tags": [
-      "Wet tech"
+      "cycling",
+      "CCS",
+      "interdisciplinarity",
+      "interfaces"
     ],
-    "summary": "Optional summary",
+    "summary": "> Bricker, A.B. and Zeilinger, M., in Humanities and Social Sciences Communications 12 (2025) (Open Access)",
     "images": [
-      "assets/uploads/wet-tech-5.png"
+      "assets/uploads/ccs.jpg"
     ],
     "featured": true,
-    "pinned": true,
-    "contentPath": "content/wet-tech-5.html"
+    "pinned": false,
+    "contentPath": "content/ccs-article-published.html"
+  },
+  {
+    "id": "2025-07-09-xcoax",
+    "title": "xCoAx 2025 in Dundee!",
+    "section": "research",
+    "slug": "xcoax-2025-in-dundee-open-call",
+    "type": "event",
+    "year": 2025,
+    "fullDate": "2025-07-09 00:00",
+    "tags": [
+      "digital art",
+      "media art",
+      "sound art",
+      "exhibition",
+      "performances",
+      "conference"
+    ],
+    "summary": "We're pround and excited to be hosting xCoAx 2025 in Dundee!",
+    "images": [],
+    "featured": true,
+    "pinned": false,
+    "contentPath": "content/xcoax-2025-in-dundee-open-call.html"
+  },
+  {
+    "id": "2025-02-06-techno-futures",
+    "title": "Reimagining Techno-Futures Through Creative Practice",
+    "section": "research",
+    "slug": "reimagining-techno-futures-through-creative-practice",
+    "type": "public lecture",
+    "year": 2025,
+    "fullDate": "2025-02-06 00:00",
+    "tags": [
+      "digital art",
+      "blockchain",
+      "DAOs",
+      "NFTs",
+      "token-gating"
+    ],
+    "summary": "null",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/reimagining-techno-futures-through-creative-practice.html"
+  },
+  {
+    "id": "2024-11-01-reprint-structures-of-belonging",
+    "title": "Structures of Belonging (re-print)",
+    "section": "research",
+    "slug": "structures-of-belonging-re-print",
+    "type": "book chapter",
+    "year": 2024,
+    "fullDate": "2024-11-01 00:00",
+    "tags": [
+      "digital art",
+      "digital commons",
+      "DAOs",
+      "decentralisation",
+      "critical finance"
+    ],
+    "summary": "Published in The PostScriptUM Anthology (2010–2023) – Essays on Art, Technology, Society and the Environment (Aksioma 2024)",
+    "images": [],
+    "featured": true,
+    "pinned": false,
+    "contentPath": "content/structures-of-belonging-re-print.html"
+  },
+  {
+    "id": "2024-10-15-climate-change-ai-art",
+    "title": "From Observation to Action: Integrating Space and Satellite Data in an Ambulatory Experience of Climate Change",
+    "section": "research",
+    "slug": "from-observation-to-action-integrating-space-and-satellite-data-in-an-ambulatory-experience-of-climate-change",
+    "type": "article",
+    "year": 2024,
+    "fullDate": "2024-10-15 00:00",
+    "tags": [
+      "digital art",
+      "AI",
+      "climate change",
+      "interactive artwork"
+    ],
+    "summary": "Proceedings of the 75th International Astronautical Congress (IAC)",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/from-observation-to-action-integrating-space-and-satellite-data-in-an-ambulatory-experience-of-climate-change.html"
+  },
+  {
+    "id": "2024-09-01-decentralised-music",
+    "title": "Integrating Generative AI and Blockchain Technologies to Create Musical Objects with Agency",
+    "section": "research",
+    "slug": "integrating-generative-ai-and-blockchain-technologies-to-create-musical-objects-with-agency",
+    "type": "book chapter",
+    "year": 2024,
+    "fullDate": "2024-09-01 00:00",
+    "tags": [
+      "digital art",
+      "blockchain",
+      "music",
+      "DAOs",
+      "agency"
+    ],
+    "summary": "Decentralised Music (Eds. Paulo de Assis and Adam Lukawski)",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/integrating-generative-ai-and-blockchain-technologies-to-create-musical-objects-with-agency.html"
+  },
+  {
+    "id": "2024-06-01-NFTs-and-the-law",
+    "title": "From Exclusive Ownership to Zones of Exclusivity",
+    "section": "research",
+    "slug": "from-exclusive-ownership-to-zones-of-exclusivity",
+    "type": "book chapter",
+    "year": 2024,
+    "fullDate": "2024-06-01 00:00",
+    "tags": [
+      "digital art",
+      "digital commons",
+      "copyright",
+      "blockchain",
+      "legal theory"
+    ],
+    "summary": "NFTs, Creativity and the Law – Within and Beyond Copyright",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/from-exclusive-ownership-to-zones-of-exclusivity.html"
+  },
+  {
+    "id": "2024-05-31-symposium",
+    "title": "Symposium on the Convergence of Gamification & Financialisation",
+    "section": "research",
+    "slug": "symposium-on-the-convergence-of-gamification-financialisation",
+    "type": "conference",
+    "year": 2024,
+    "fullDate": "2024-05-01 00:00",
+    "tags": [
+      "gamification",
+      "financialisation",
+      "research network",
+      "conference"
+    ],
+    "summary": "",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/symposium-on-the-convergence-of-gamification-financialisation.html"
+  },
+  {
+    "id": "2023-10-16-RPG-workshop",
+    "title": "RPG Co-Creation Workshop on Gamification & Financialisation",
+    "section": "research",
+    "slug": "rpg-co-creation-workshop-on-gamification-financialisation",
+    "type": "workshop",
+    "year": 2023,
+    "fullDate": "2023-11-24 00:00",
+    "tags": [
+      "gamification",
+      "financialisation",
+      "RPG",
+      "workshop",
+      "research network"
+    ],
+    "summary": "",
+    "images": [
+      "assets/uploads/old/RSE-workshop-image"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/rpg-co-creation-workshop-on-gamification-financialisation.html"
+  },
+  {
+    "id": "2023-10-25-Spike-AI",
+    "title": "Copies Without Originals",
+    "section": "research",
+    "slug": "copies-without-originals",
+    "type": "art criticism",
+    "year": 2023,
+    "fullDate": "2023-10-25 00:00",
+    "tags": [
+      "AI art",
+      "intellectual property"
+    ],
+    "summary": "Spike Art Magazine",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/copies-without-originals.html"
+  },
+  {
+    "id": "2023-05-20-ISEA",
+    "title": "ISEA 2023 panel co-organised by Joseph DeLappe and Laura Leuzzi",
+    "section": "research",
+    "slug": "isea-2023-panel-co-organised-by-joseph-delappe-and-laura-leuzzi",
+    "type": "conference paper",
+    "year": 2023,
+    "fullDate": "2023-05-20 00:00",
+    "tags": [
+      "AI art",
+      "hyperobjects",
+      "anthropocene",
+      "global warming",
+      "digital art"
+    ],
+    "summary": "",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/isea-2023-panel-co-organised-by-joseph-delappe-and-laura-leuzzi.html"
+  },
+  {
+    "id": "2023-02-20-outland",
+    "title": "Taxation without Representation",
+    "section": "research",
+    "slug": "taxation-without-representation",
+    "type": "art criticism",
+    "year": 2023,
+    "fullDate": "2023-02-20 00:00",
+    "tags": [
+      "blockchain art",
+      "NFTs",
+      "digital commons",
+      "smart contracts",
+      "financialisation"
+    ],
+    "summary": "",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/taxation-without-representation.html"
+  },
+  {
+    "id": "2023-02-07-RSE",
+    "title": "A Digital Art Revolution?",
+    "section": "research",
+    "slug": "a-digital-art-revolution",
+    "type": "commentary",
+    "year": 2023,
+    "fullDate": "2023-02-07 00:00",
+    "tags": [
+      "blockchain art",
+      "NFTs",
+      "digital commons",
+      "smart contracts",
+      "financialisation"
+    ],
+    "summary": "",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/a-digital-art-revolution.html"
+  },
+  {
+    "id": "2023-03-09-RSE",
+    "title": "RSE Case study: Improving awareness of issues at the intersection of 'gamification' and 'financialisation'",
+    "section": "research",
+    "slug": "rse-case-study-improving-awareness-of-issues-at-the-intersection-of-gamification-and-financialisation",
+    "type": "case study",
+    "year": 2023,
+    "fullDate": "2023-02-07 00:00",
+    "tags": [
+      "gamification",
+      "financialisation",
+      "research"
+    ],
+    "summary": "",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/rse-case-study-improving-awareness-of-issues-at-the-intersection-of-gamification-and-financialisation.html"
+  },
+  {
+    "id": "2023-02-03-netzkunst",
+    "title": "'Structures of Belonging' launch event",
+    "section": "research",
+    "slug": "structures-of-belonging-launch-event",
+    "type": "book launch",
+    "year": 2023,
+    "fullDate": "2023-02-03 00:00",
+    "tags": [
+      "digital art",
+      "blockchain",
+      "DAOs",
+      "NFTs",
+      "token-gating"
+    ],
+    "summary": "",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/structures-of-belonging-launch-event.html"
+  },
+  {
+    "id": "2023-02-01-aksioma",
+    "title": "Structures of Belonging",
+    "section": "research",
+    "slug": "structures-of-belonging",
+    "type": "book",
+    "year": 2023,
+    "fullDate": "2023-02-01 00:00",
+    "tags": [
+      "digital art",
+      "blockchain",
+      "DAOs",
+      "digital commons",
+      "token-gating"
+    ],
+    "summary": "My essay 'Structures of Belonging', commissioned by Aksioma, is now published in the Postcriptum series and available to buy in print or read online.",
+    "images": [
+      "assets/uploads/old/zeilinger-brochure-eng.png"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/structures-of-belonging.html"
+  },
+  {
+    "id": "2023-01-12-sonia-podcast",
+    "title": "Podcast release – Radio Web MACBA, Son[i]a no. 363",
+    "section": "research",
+    "slug": "podcast-release-radio-web-macba-son-i-a-no-363",
+    "type": "podcast",
+    "year": 2023,
+    "fullDate": "2023-01-12 00:00",
+    "tags": [
+      "blockchain art",
+      "digital commons",
+      "DAOs",
+      "NFTs"
+    ],
+    "summary": " Radio Web MACBA Son[i]a podcast, featuring my research on artistic experimentation on/of the blockchain.",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/podcast-release-radio-web-macba-son-i-a-no-363.html"
+  },
+  {
+    "id": "2022-11-12-aksioma",
+    "title": "Zones of Exclusivity & Structures of Belonging",
+    "section": "research",
+    "slug": "zones-of-exclusivity-structures-of-belonging",
+    "type": "public lecture",
+    "year": 2022,
+    "fullDate": "2022-11-12 00:00",
+    "tags": [
+      "blockchain",
+      "token-gating",
+      "NFTs",
+      "blockchain art",
+      "activism",
+      "commons"
+    ],
+    "summary": "Aksioma, Ljubljana/Slovenia",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/zones-of-exclusivity-structures-of-belonging.html"
+  },
+  {
+    "id": "2022-11-11-radicalfutures",
+    "title": "Blockchain Futures Between Immutability and Radical Change",
+    "section": "research",
+    "slug": "blockchain-futures-between-immutability-and-radical-change",
+    "type": "keynote",
+    "year": 2022,
+    "fullDate": "2022-11-11 00:00",
+    "tags": [
+      "DAOs",
+      "blockchain art",
+      "anarchism",
+      "activism"
+    ],
+    "summary": "Keynote live-streamed from the symposium of the 2022 \"The Only Lasting Truth Is Change\" festival, hosted at the Bergen Center for Electronic Art (BEK), Norway.",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/blockchain-futures-between-immutability-and-radical-change.html"
+  },
+  {
+    "id": "2022-11-07-outland",
+    "title": "Blockchain Vitalism",
+    "section": "research",
+    "slug": "blockchain-vitalism",
+    "type": "art criticism",
+    "year": 2022,
+    "fullDate": "2022-11-07 00:00",
+    "tags": [
+      "blockchain art",
+      "NFTs",
+      "non-human agency"
+    ],
+    "summary": "",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/blockchain-vitalism.html"
+  },
+  {
+    "id": "2022-10-27-platform-lecture",
+    "title": "Platform Speaker Series guest lecture: Adrian Hon",
+    "section": "talk",
+    "slug": "platform-speaker-series-guest-lecture-adrian-hon",
+    "type": "Guest lecture",
+    "year": 2022,
+    "fullDate": "2022-10-27 00:00",
+    "tags": [
+      "gamification",
+      "guest speaker",
+      "game studies"
+    ],
+    "summary": "Abertay University",
+    "images": [
+      "assets/uploads/old/Hon-Platform.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/platform-speaker-series-guest-lecture-adrian-hon.html"
+  },
+  {
+    "id": "2022-10-20-leonardo",
+    "title": "The Politics of Visual Indeterminacy in Abstract AI Art",
+    "section": "writing",
+    "slug": "the-politics-of-visual-indeterminacy-in-abstract-ai-art",
+    "type": "Journal article",
+    "year": 2022,
+    "fullDate": "2022-10-20 00:00",
+    "tags": [
+      "AI art",
+      "visual indeterminacy",
+      "abstraction",
+      "image recognition"
+    ],
+    "summary": "Leonardo · Leonardo",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/the-politics-of-visual-indeterminacy-in-abstract-ai-art.html"
+  },
+  {
+    "id": "2022-08-24-freedata",
+    "title": "Thoughts on Free Data",
+    "section": "talk",
+    "slug": "thoughts-on-free-data",
+    "type": "Panel discussion",
+    "year": 2022,
+    "fullDate": "2022-08-24 00:00",
+    "tags": [
+      "commons",
+      "NFTs",
+      "blockchain art",
+      "authorship",
+      "licensing",
+      "Creative Commons"
+    ],
+    "summary": "nextmuseum.io (Online)",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/thoughts-on-free-data.html"
+  },
+  {
+    "id": "2022-08-08-chimeras",
+    "title": "Agential Assemblage & Tactical AI – Two Contributions to 'Chimeras: Inventory of Synthetic Cognition'",
+    "section": "writing",
+    "slug": "agential-assemblage-tactical-ai-two-contributions-to-chimeras-inventory-of-synthetic-cognition",
+    "type": "Book chapter",
+    "year": 2022,
+    "fullDate": "2022-08-08 00:00",
+    "tags": [
+      "AI art",
+      "agency",
+      "posthumanism",
+      "tactical AI",
+      "agential assemblages",
+      "digital art"
+    ],
+    "summary": "Chimeras (Onassis Foundation) · Onassis Foundation",
+    "images": [
+      "assets/uploads/old/chimeras.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/agential-assemblage-tactical-ai-two-contributions-to-chimeras-inventory-of-synthetic-cognition.html"
+  },
+  {
+    "id": "2022-08-03-SUP",
+    "title": "Joining the Editorial Board of the Scottish University Press (Open Access)",
+    "section": "news",
+    "slug": "joining-the-editorial-board-of-the-scottish-university-press-open-access",
+    "type": "Announcement",
+    "year": 2022,
+    "fullDate": "2022-08-03 00:00",
+    "tags": [
+      "Open Access",
+      "publishing"
+    ],
+    "summary": "Online",
+    "images": [
+      "assets/uploads/old/SUP.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/joining-the-editorial-board-of-the-scottish-university-press-open-access.html"
+  },
+  {
+    "id": "2022-07-18-metaverse",
+    "title": "Towards a Non-Totalizing Metaverse",
+    "section": "writing",
+    "slug": "towards-a-non-totalizing-metaverse",
+    "type": "Book chapter",
+    "year": 2022,
+    "fullDate": "2022-07-18 00:00",
+    "tags": [
+      "metaverse",
+      "virtual Reality",
+      "VR",
+      "interface experiments",
+      "digital art"
+    ],
+    "summary": "TBD · TBD",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/towards-a-non-totalizing-metaverse.html"
+  },
+  {
+    "id": "2022-07-08-prospectives",
+    "title": "Co-convening Prospectives 2022 – Digital Art and Activism postgraduate symposium",
+    "section": "news",
+    "slug": "co-convening-prospectives-2022-digital-art-and-activism-postgraduate-symposium",
+    "type": "Announcement",
+    "year": 2022,
+    "fullDate": "2022-07-09 00:00",
+    "tags": [
+      "symposium",
+      "postgraduate",
+      "digital art"
+    ],
+    "summary": "Online",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/co-convening-prospectives-2022-digital-art-and-activism-postgraduate-symposium.html"
+  },
+  {
+    "id": "2022-07-08-xcoax",
+    "title": "AI Art as Hyperobject-Like Portal to Global Warming",
+    "section": "talk",
+    "slug": "ai-art-as-hyperobject-like-portal-to-global-warming",
+    "type": "Conference presentation",
+    "year": 2022,
+    "fullDate": "2022-07-08 00:00",
+    "tags": [
+      "AI art",
+      "hyperobjects",
+      "anthropocene",
+      "global warming",
+      "digital art"
+    ],
+    "summary": "xCoAx 2022",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/ai-art-as-hyperobject-like-portal-to-global-warming.html"
+  },
+  {
+    "id": "2022-07-09-xcoax-proceedings",
+    "title": "AI Art as Hyperobject-Like Portal to Global Warming",
+    "section": "writing",
+    "slug": "ai-art-as-hyperobject-like-portal-to-global-warming",
+    "type": "Essay",
+    "year": 2022,
+    "fullDate": "2022-07-08 00:00",
+    "tags": [
+      "AI art",
+      "hyperobjects",
+      "anthropocene",
+      "global warming",
+      "digital art"
+    ],
+    "summary": "xCoAX 2022 Proceedings · xCoAx 2022",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/ai-art-as-hyperobject-like-portal-to-global-warming.html"
+  },
+  {
+    "id": "2021-11-15-serpentine-galleries-panel",
+    "title": "Tactical Entanglements: Creative AI Lab in conversation with Martin Zeilinger",
+    "section": "talk",
+    "slug": "tactical-entanglements-creative-ai-lab-in-conversation-with-martin-zeilinger",
+    "type": "Panel discussion",
+    "year": 2021,
+    "fullDate": "2021-11-15 00:00",
+    "tags": [
+      "AI art",
+      "posthumanism",
+      "creative agency"
+    ],
+    "summary": "Serpentine Galleries, London/UK (& online)",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/tactical-entanglements-creative-ai-lab-in-conversation-with-martin-zeilinger.html"
+  },
+  {
+    "id": "2021-11-05-contingent-systems-symposium",
+    "title": "Adversarial Images Between Abstraction and Generalization",
+    "section": "talk",
+    "slug": "adversarial-images-between-abstraction-and-generalization",
+    "type": "Symposium presentation",
+    "year": 2021,
+    "fullDate": "2021-11-05 00:00",
+    "tags": [
+      "AI art",
+      "abstract art",
+      "GANs",
+      "deepfakes",
+      "perception"
+    ],
+    "summary": "Alberta Univ. of the Arts, Calgary/CAN",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/adversarial-images-between-abstraction-and-generalization.html"
+  },
+  {
+    "id": "2021-09-09-kunstuni-linz-keynote",
+    "title": "Algorithmic Adjudication and Tactical AI",
+    "section": "talk",
+    "slug": "algorithmic-adjudication-and-tactical-ai",
+    "type": "Keynote lecture",
+    "year": 2021,
+    "fullDate": "2021-09-09 00:00",
+    "tags": [
+      "AI art",
+      "posthumanism",
+      "algorithmic governance"
+    ],
+    "summary": "Kunstuniversität Linz/AT (& online)",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/algorithmic-adjudication-and-tactical-ai.html"
+  },
+  {
+    "id": "2021-09-04-critical-legal-conference-plenary",
+    "title": "Law, AI, Oracle",
+    "section": "talk",
+    "slug": "law-ai-oracle",
+    "type": "Plenary talk",
+    "year": 2021,
+    "fullDate": "2021-09-04 00:00",
+    "tags": [
+      "law",
+      "AI",
+      "posthumanism",
+      "mystifying AI"
+    ],
+    "summary": "Dundee University, Dundee/Scotland (& online)",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/law-ai-oracle.html"
+  },
+  {
+    "id": "2021-09-01-adversarial-copy-machines",
+    "title": "Generative Adversarial Copy Machines",
+    "section": "writing",
+    "slug": "generative-adversarial-copy-machines",
+    "type": "Journal article",
+    "year": 2021,
+    "fullDate": "2021-09-01 00:00",
+    "tags": [
+      "AI art",
+      "GANs",
+      "posthumanism",
+      "agency",
+      "intellectual property"
+    ],
+    "summary": "Culture Machine (special issue on machine intelligence) · Culture Machine Vol. 20",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/generative-adversarial-copy-machines.html"
+  },
+  {
+    "id": "2021-07-15-vector-festival-crypto-art-panel",
+    "title": "On De/centralization: Blockchain Art & New Forms of Community-Building",
+    "section": "talk",
+    "slug": "on-de-centralization-blockchain-art-new-forms-of-community-building",
+    "type": "Discussion panel",
+    "year": 2021,
+    "fullDate": "2021-07-15 00:00",
+    "tags": [
+      "crypto art",
+      "NFTs",
+      "digital art",
+      "decentralised autonomous organisations"
+    ],
+    "summary": "Vector Festival, Toronto/CAN",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/on-de-centralization-blockchain-art-new-forms-of-community-building.html"
+  },
+  {
+    "id": "2021-07-01-tactical-entanglements",
+    "title": "OUT NOW: Tactical Entanglements: AI Art, Creative Agency, and the Limits of Intellectual Property",
+    "section": "writing",
+    "slug": "out-now-tactical-entanglements-ai-art-creative-agency-and-the-limits-of-intellectual-property",
+    "type": "Monograph",
+    "year": 2021,
+    "fullDate": "2021-07-01 00:00",
+    "tags": [
+      "AI",
+      "AI art",
+      "digital art",
+      "intellectual property",
+      "agency",
+      "posthumanism",
+      "tactical media"
+    ],
+    "summary": "Meson Press · Meson Press",
+    "images": [
+      "assets/uploads/old/TomWhite-for-cover.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/out-now-tactical-entanglements-ai-art-creative-agency-and-the-limits-of-intellectual-property.html"
+  },
+  {
+    "id": "2021-05-14-synthetic-realities-panel",
+    "title": "Shaping the Future Synthetic Realities panel discussion",
+    "section": "talk",
+    "slug": "shaping-the-future-synthetic-realities-panel-discussion",
+    "type": "Panel discussion",
+    "year": 2021,
+    "fullDate": "2021-05-14 00:00",
+    "tags": [
+      "AI art",
+      "posthumanism",
+      "algorithmic governance"
+    ],
+    "summary": "Uroboros Festival, Prague/CZ",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/shaping-the-future-synthetic-realities-panel-discussion.html"
+  },
+  {
+    "id": "2021-05-13-blockchain-art-conceptual-affordances",
+    "title": "On the Conceptual Affordances of Blockchain Art",
+    "section": "talk",
+    "slug": "on-the-conceptual-affordances-of-blockchain-art",
+    "type": "Keynote lecture",
+    "year": 2021,
+    "fullDate": "2021-05-13 00:00",
+    "tags": [
+      "blockchain",
+      "crypto art",
+      "conceptual art",
+      "NFTs"
+    ],
+    "summary": "Uroboros Festival, Prague/CZ",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/on-the-conceptual-affordances-of-blockchain-art.html"
+  },
+  {
+    "id": "2021-05-05-total-refusal-discussion-panel",
+    "title": "Machinima as Creative Practice & Critical Intervention",
+    "section": "talk",
+    "slug": "machinima-as-creative-practice-critical-intervention",
+    "type": "Discussion panel",
+    "year": 2021,
+    "fullDate": "2021-05-05 00:00",
+    "tags": [
+      "machinima",
+      "game art",
+      "media art"
+    ],
+    "summary": "online",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/machinima-as-creative-practice-critical-intervention.html"
+  },
+  {
+    "id": "2021-03-16-chaotic-lawful",
+    "title": "‘Chaotic Lawful’: Teaching Videogames in a Licensing and Permissions Lacuna",
+    "section": "writing",
+    "slug": "chaotic-lawful-teaching-videogames-in-a-licensing-and-permissions-lacuna",
+    "type": "Journal article",
+    "year": 2021,
+    "fullDate": "2021-03-16 00:00",
+    "tags": [
+      "game studies",
+      "COVID-19",
+      "online teaching",
+      "educational licensing",
+      "intellectual property"
+    ],
+    "summary": "Journal of Cinema and Media Studies (JCMS) Teaching Media Dossier",
+    "images": [
+      "assets/uploads/old/chaotic-lawful.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/chaotic-lawful-teaching-videogames-in-a-licensing-and-permissions-lacuna.html"
+  },
+  {
+    "id": "2020-12-20-ownership-blockchain",
+    "title": "Emerging ownership models on the blockchain",
+    "section": "writing",
+    "slug": "emerging-ownership-models-on-the-blockchain",
+    "type": "special issue",
+    "year": 2020,
+    "fullDate": "2020-12-20 00:00",
+    "tags": [
+      "blockchain",
+      "fintech",
+      "ownership",
+      "intellectual property",
+      "creative industries"
+    ],
+    "summary": "Frontiers in Blockchain",
+    "images": [
+      "assets/uploads/old/ccoins.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/emerging-ownership-models-on-the-blockchain.html"
+  },
+  {
+    "id": "2020-11-13-AI-art-and-post-anthropocentric-agency",
+    "title": "AI Art and Post-Anthropocentric Agency",
+    "section": "talk",
+    "slug": "ai-art-and-post-anthropocentric-agency",
+    "type": "conference presentation",
+    "year": 2020,
+    "fullDate": "2020-11-13 00:00",
+    "tags": [
+      "AI art",
+      "agency",
+      "posthumanism"
+    ],
+    "summary": "Indeterminate Futures conference, Dundee University",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/ai-art-and-post-anthropocentric-agency.html"
+  },
+  {
+    "id": "2020-06-22-money-lab-8",
+    "title": "Unownability on the Blockchain",
+    "section": "talk",
+    "slug": "unownability-on-the-blockchain",
+    "type": "invited lecture and discussion",
+    "year": 2020,
+    "fullDate": "2020-06-22 00:00",
+    "tags": [
+      "blockchain art",
+      "fintech",
+      "ownership",
+      "commons",
+      "activism"
+    ],
+    "summary": "Aksioma, Ljubljana/SLO",
+    "images": [
+      "assets/uploads/old/ccoins.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/unownability-on-the-blockchain.html"
+  },
+  {
+    "id": "2019-11-12-ML7-workshop",
+    "title": "MoneyLab #7 workshop: 'How Will the Tooth Fairy Pay You on Planet Cashless?''",
+    "section": "news",
+    "slug": "moneylab-7-workshop-how-will-the-tooth-fairy-pay-you-on-planet-cashless",
+    "type": [],
+    "year": 2019,
+    "fullDate": "2019-11-12 00:00",
+    "tags": [
+      "fintech",
+      "MoneyLab",
+      "cashlessness"
+    ],
+    "summary": [],
+    "images": [
+      "assets/uploads/old/cashlesstooth-1024x722.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/moneylab-7-workshop-how-will-the-tooth-fairy-pay-you-on-planet-cashless.html"
+  },
+  {
+    "id": "2019-11-04-PechaKucha",
+    "title": "AI art and creative agency: Pecha Kucha lightning talk",
+    "section": "talk",
+    "slug": "ai-art-and-creative-agency-pecha-kucha-lightning-talk",
+    "type": "invited lecture",
+    "year": 2019,
+    "fullDate": "2019-11-04 00:00",
+    "tags": [
+      "AI art",
+      "agency"
+    ],
+    "summary": "Dundee/UK",
+    "images": [
+      "assets/uploads/old/PechaKuchaDundee.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/ai-art-and-creative-agency-pecha-kucha-lightning-talk.html"
+  },
+  {
+    "id": "2019-08-23-rethinking-affordance-special-issue",
+    "title": "Rethinking Affordance",
+    "section": "writing",
+    "slug": "rethinking-affordance",
+    "type": "journal special issue",
+    "year": 2019,
+    "fullDate": "2019-08-23 00:00",
+    "tags": [
+      "affordance theory",
+      "digital art",
+      "design",
+      "media theory",
+      "media art history"
+    ],
+    "summary": "A special issue of Media Theory, co-edited with Ashley Scarlett · Media Theory",
+    "images": [
+      "assets/uploads/old/Thomson-DTML-still.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/rethinking-affordance.html"
+  },
+  {
+    "id": "2019-05-16-digital-art-research-group-talk-on-ai-ip-and-digital-art",
+    "title": "Digital Art Research Group talk on digital art, AI, and IP",
+    "section": "research",
+    "slug": "digital-art-research-group-talk-on-digital-art-ai-and-ip",
+    "type": "",
+    "year": 2019,
+    "fullDate": "2019-05-16 00:00",
+    "tags": [
+      "AI art",
+      "digital art",
+      "talk",
+      "IP"
+    ],
+    "summary": "null",
+    "images": [
+      "assets/uploads/old/basanta-print20.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/digital-art-research-group-talk-on-digital-art-ai-and-ip.html"
+  },
+  {
+    "id": "2019-04-03-cfp-tacit-engagement-in-the-digital-age-crassh",
+    "title": "CFP: Tacit Engagement in the Digital Age (CRASSH)",
+    "section": "news",
+    "slug": "cfp-tacit-engagement-in-the-digital-age-crassh",
+    "type": [],
+    "year": 2019,
+    "fullDate": "2019-04-03 00:00",
+    "tags": [
+      "CFP"
+    ],
+    "summary": [],
+    "images": [
+      "assets/uploads/old/re-colour.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/cfp-tacit-engagement-in-the-digital-age-crassh.html"
+  },
+  {
+    "id": "2019-03-25-survival-interventions-in-gta",
+    "title": "Survival Interventions in GTA & the Limits of Performance in Virtual Environments",
+    "section": "research",
+    "slug": "survival-interventions-in-gta-the-limits-of-performance-in-virtual-environments",
+    "type": "book chapter",
+    "year": 2019,
+    "fullDate": "2019-03-25 00:00",
+    "tags": [
+      "performance art",
+      "game art"
+    ],
+    "summary": "Video Game Art Reader Vol. 2",
+    "images": [
+      "assets/uploads/old/ClintEnns-747_2.jpeg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/survival-interventions-in-gta-the-limits-of-performance-in-virtual-environments.html"
+  },
+  {
+    "id": "2019-03-20-gent-doctoral-school",
+    "title": "IP, AI, and Digital Art",
+    "section": "research",
+    "slug": "ip-ai-and-digital-art",
+    "type": "null",
+    "year": 2019,
+    "fullDate": "2019-03-20 00:00:00",
+    "tags": [
+      "AI",
+      "digital art",
+      "intellectual property"
+    ],
+    "summary": "null",
+    "images": [
+      "assets/uploads/old/color-block-green.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/ip-ai-and-digital-art.html"
+  },
+  {
+    "id": "2019-03-19-twine-teaching-resources-updated",
+    "title": "Twine Resources",
+    "section": "teaching",
+    "slug": "twine-resources",
+    "type": [],
+    "year": 2019,
+    "fullDate": "2019-03-19 00:00",
+    "tags": [
+      "digital_storytelling",
+      "teaching materials",
+      "Twine"
+    ],
+    "summary": [],
+    "images": [
+      "assets/uploads/old/Twine-birdseye01.png"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/twine-resources.html"
+  },
+  {
+    "id": "2019-03-15-cfp-emerging-ownership-models-on-the-blockchain",
+    "title": "CFP: Emerging ownership models on the blockchain",
+    "section": "research",
+    "slug": "cfp-emerging-ownership-models-on-the-blockchain",
+    "type": "null",
+    "year": 2019,
+    "fullDate": "2019-03-15 00:00",
+    "tags": [
+      "blockchain",
+      "special issue",
+      "CFP"
+    ],
+    "summary": "A CFP for a special issue in the 'Blockchain for Good' series of the Frontiers in Blockchain, which I am co-editing with Marcus O'Dair",
+    "images": [
+      "assets/uploads/old/crypto-kitties-4.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/cfp-emerging-ownership-models-on-the-blockchain.html"
+  },
+  {
+    "id": "2018-11-28-post-scarcity-photography-and-the-blockchain",
+    "title": "'All Your Photo Are Belong To Us': Post-Scarcity Photography and the Blockchain",
+    "section": "talk",
+    "slug": "all-your-photo-are-belong-to-us-post-scarcity-photography-and-the-blockchain",
+    "type": "public talk",
+    "year": 2018,
+    "fullDate": "2018-11-24 00:00",
+    "tags": [
+      "photography",
+      "digital art",
+      "blockchain"
+    ],
+    "summary": "Photographers' Gallery, London/UK",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/all-your-photo-are-belong-to-us-post-scarcity-photography-and-the-blockchain.html"
+  },
+  {
+    "id": "2018-11-10-plotting-critical-researchpractice-in-digital-art",
+    "title": "Plotting Critical Research Practice in Digital Art",
+    "section": "research",
+    "slug": "plotting-critical-research-practice-in-digital-art",
+    "type": "book chapter",
+    "year": 2018,
+    "fullDate": "2018-11-10 00:00",
+    "tags": [
+      "digital art",
+      "computer art",
+      "creative coding"
+    ],
+    "summary": "Parsing Digital",
+    "images": [
+      "assets/uploads/old/parsing-digital.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/plotting-critical-research-practice-in-digital-art.html"
+  },
+  {
+    "id": "2018-10-15-first-as-snapshot-then-as-decentralised-digital-asset",
+    "title": "First as Snapshot, Then as Decentralised Digital Asset",
+    "section": "research",
+    "slug": "first-as-snapshot-then-as-decentralised-digital-asset",
+    "type": "art criticism",
+    "year": 2018,
+    "fullDate": "2018-10-15 00:00",
+    "tags": [
+      "digital art",
+      "photography",
+      "blockchain art"
+    ],
+    "summary": "Unthinking.Photography (online journal)",
+    "images": [
+      "assets/uploads/old/kodakcoin.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/first-as-snapshot-then-as-decentralised-digital-asset.html"
+  },
+  {
+    "id": "2018-05-15-rethinking-affordance-schloss-post",
+    "title": "Rethinking Affordance Issue launched on Schloss-Post",
+    "section": "research",
+    "slug": "rethinking-affordance-issue-launched-on-schloss-post",
+    "type": "special issue",
+    "year": 2018,
+    "fullDate": "2018-05-15 00:00",
+    "tags": [
+      "special issue",
+      "affordance theory"
+    ],
+    "summary": "Schlosspost",
+    "images": [
+      "assets/uploads/old/JolThompsonDMML.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/rethinking-affordance-issue-launched-on-schloss-post.html"
+  },
+  {
+    "id": "2018-01-20-algomysticism-and-fintech-activism",
+    "title": "Digital Art Between Algomysticism & Fintech Activism",
+    "section": "research",
+    "slug": "digital-art-between-algomysticism-fintech-activism",
+    "type": "book chapter",
+    "year": 2018,
+    "fullDate": "2018-01-20 00:00",
+    "tags": [
+      "digital art",
+      "blockchain art"
+    ],
+    "summary": "MoneyLab Reader Vol. 2",
+    "images": [
+      "assets/uploads/old/moneylab-reader-2.png"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/digital-art-between-algomysticism-fintech-activism.html"
+  },
+  {
+    "id": "2018-03-1-monetised-graphics",
+    "title": "Digital Art as ‘Monetised Graphics:’ Enforcing IP on the Blockchain",
+    "section": "research",
+    "slug": "digital-art-as-monetised-graphics-enforcing-ip-on-the-blockchain",
+    "type": "journal article",
+    "year": 2018,
+    "fullDate": "2018-03-1 19:17",
+    "tags": [
+      "copyright",
+      "digital art",
+      "financialization",
+      "blockchain",
+      "art market"
+    ],
+    "summary": "Philosophy & Technology",
+    "images": [
+      "assets/uploads/old/monetised.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/digital-art-as-monetised-graphics-enforcing-ip-on-the-blockchain.html"
+  },
+  {
+    "id": "2017-10-10-metic-action-digital-culture",
+    "title": "Métic Action in Digital Culture",
+    "section": "research",
+    "slug": "m-tic-action-in-digital-culture",
+    "type": "journal article",
+    "year": 2017,
+    "fullDate": "2017-10-10 00:00",
+    "tags": [
+      "cunning",
+      "biopower",
+      "activism",
+      "digital art"
+    ],
+    "summary": "Platform Journal",
+    "images": [
+      "assets/uploads/old/cunning.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/m-tic-action-in-digital-culture.html"
+  },
+  {
+    "id": "2017-09-10-blockchain-conceptual-art",
+    "title": "Everything You’ve Always Wanted to Know about the Blockchain* (*But Were Afraid to Ask Mel Ramsden)",
+    "section": "research",
+    "slug": "everything-you-ve-always-wanted-to-know",
+    "type": "book chapter",
+    "year": 2017,
+    "fullDate": "2017-09-10 00:00",
+    "tags": [
+      "digital art",
+      "conceptual art",
+      "blockchain art"
+    ],
+    "summary": "Artists Re:Thinking the Blockchain",
+    "images": [
+      "assets/uploads/old/rethinking-blockchain.png"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/everything-you-ve-always-wanted-to-know.html"
+  },
+  {
+    "id": "2014-02-10-live-coding-the-law",
+    "title": "Live Coding the Law: Improvisation, Code & Copyright",
+    "section": "research",
+    "slug": "live-coding-the-law-improvisation-code-copyright",
+    "type": "journal article",
+    "year": 2014,
+    "fullDate": "2014-02-10 00:00",
+    "tags": [
+      "music",
+      "live coding",
+      "copyright",
+      "intellectual property"
+    ],
+    "summary": "Computer Music Journal 38:1 (2014)",
+    "images": [
+      "assets/uploads/old/live_coding.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/live-coding-the-law-improvisation-code-copyright.html"
+  },
+  {
+    "id": "2013-03-25-chiptuning-intellectual-property",
+    "title": "Chiptuning IP Between Creative Commons and Moral Economy",
+    "section": "research",
+    "slug": "chiptuning-ip-between-creative-commons-and-moral-economy",
+    "type": "journal article",
+    "year": 2013,
+    "fullDate": "2013-03-25 00:00",
+    "tags": [
+      "music",
+      "copyright",
+      "Creative Commons",
+      "intellectual property"
+    ],
+    "summary": "IASPM Journal",
+    "images": [
+      "assets/uploads/old/color-block-green.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/chiptuning-ip-between-creative-commons-and-moral-economy.html"
   }
 ]

@@ -88,38 +88,34 @@ function renderSectionCards(containerId, items) {
   const list = document.createElement("ul");
   list.className = "item-list";
 
-  items
-    .slice()
-    .sort((a, b) => (b.year || 0) - (a.year || 0))
-    .forEach((item) => {
-      const li = document.createElement("li");
+  sortByYear(items).forEach((item) => {
+    const li = document.createElement("li");
 
-      const titleSpan = document.createElement("span");
-      titleSpan.className = "item-title";
+    const titleSpan = document.createElement("span");
+    titleSpan.className = "item-title";
 
-      const linkInfo = buildLinkInfo(item);
-      if (linkInfo.href) {
-        const link = document.createElement("a");
-        link.href = linkInfo.href;
-        link.textContent = item.title;
-        if (linkInfo.external) {
-          link.target = "_blank";
-          link.rel = "noopener";
-        }
-        titleSpan.appendChild(link);
-      } else {
-        titleSpan.textContent = item.title;
+    const linkInfo = buildLinkInfo(item);
+    if (linkInfo.href) {
+      const link = document.createElement("a");
+      link.href = linkInfo.href;
+      link.textContent = item.title;
+      if (linkInfo.external) {
+        link.target = "_blank";
+        link.rel = "noopener";
       }
+      titleSpan.appendChild(link);
+    } else {
+      titleSpan.textContent = item.title;
+    }
 
-      const metaSpan = document.createElement("span");
-      metaSpan.className = "item-meta";
-      metaSpan.textContent =
-        (item.year ? item.year + " · " : "") + (item.summary || "");
+    const metaSpan = document.createElement("span");
+    metaSpan.className = "item-meta";
+    metaSpan.textContent = (item.year ? item.year + " · " : "") + (item.summary || "");
 
-      li.appendChild(titleSpan);
-      li.appendChild(metaSpan);
-      list.appendChild(li);
-    });
+    li.appendChild(titleSpan);
+    li.appendChild(metaSpan);
+    list.appendChild(li);
+  });
 
   card.appendChild(list);
   container.appendChild(card);
@@ -353,64 +349,61 @@ function renderBrowseResults(items, container, activeTags, activeTypes, mode) {
     return;
   }
 
-  filtered
-    .slice()
-    .sort((a, b) => (b.year || 0) - (a.year || 0))
-    .forEach((item) => {
-      const card = document.createElement("article");
-      card.className = "browse-card";
+  sortByYear(filtered).forEach((item) => {
+    const card = document.createElement("article");
+    card.className = "browse-card";
 
-      const header = document.createElement("div");
-      header.className = "browse-card-header";
+    const header = document.createElement("div");
+    header.className = "browse-card-header";
 
-      const titleEl = document.createElement("div");
-      titleEl.className = "browse-card-title";
+    const titleEl = document.createElement("div");
+    titleEl.className = "browse-card-title";
 
-      const linkInfo = buildLinkInfo(item);
-      if (linkInfo.href) {
-        const link = document.createElement("a");
-        link.href = linkInfo.href;
-        link.textContent = item.title;
-        if (linkInfo.external) {
-          link.target = "_blank";
-          link.rel = "noopener";
-        }
-        titleEl.appendChild(link);
-      } else {
-        titleEl.textContent = item.title;
+    const linkInfo = buildLinkInfo(item);
+    if (linkInfo.href) {
+      const link = document.createElement("a");
+      link.href = linkInfo.href;
+      link.textContent = item.title;
+      if (linkInfo.external) {
+        link.target = "_blank";
+        link.rel = "noopener";
       }
+      titleEl.appendChild(link);
+    } else {
+      titleEl.textContent = item.title;
+    }
 
-      header.appendChild(titleEl);
+    header.appendChild(titleEl);
 
-      const yearEl = document.createElement("div");
-      yearEl.className = "browse-card-type";
-      yearEl.textContent = item.year ? String(item.year) : "";
-      if (item.year) header.appendChild(yearEl);
+    const yearEl = document.createElement("div");
+    yearEl.className = "browse-card-type";
+    yearEl.textContent = item.year ? String(item.year) : "";
+    if (item.year) header.appendChild(yearEl);
 
-      const tagsRow = document.createElement("div");
-      tagsRow.className = "pill-row";
+    const tagsRow = document.createElement("div");
+    tagsRow.className = "pill-row";
 
-      const visibleTags = item.tags || [];
-      visibleTags.forEach((t) => {
-        const span = document.createElement("span");
-        span.className = "pill";
-        span.textContent = t;
-        tagsRow.appendChild(span);
-      });
-
-      const summaryEl = document.createElement("p");
-      summaryEl.textContent = item.summary || "";
-
-      card.appendChild(header);
-      if (visibleTags.length) {
-        card.appendChild(tagsRow);
-      }
-      if (item.summary) {
-        card.appendChild(summaryEl);
-      }
-
-      container.appendChild(card);
+    const visibleTags = item.tags || [];
+    visibleTags.forEach((t) => {
+      const span = document.createElement("span");
+      span.className = "pill";
+      span.textContent = t;
+      tagsRow.appendChild(span);
     });
+
+    const summaryEl = document.createElement("p");
+    summaryEl.textContent = item.summary || "";
+
+    card.appendChild(header);
+    if (visibleTags.length) {
+      card.appendChild(tagsRow);
+    }
+    if (item.summary) {
+      card.appendChild(summaryEl);
+    }
+
+    container.appendChild(card);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", loadContent);
@@ -465,12 +458,38 @@ function combinationExists(tagSet, items, activeTypes) {
   });
 }
 
-// Shared sorter: newest year first, then title.
+// Shared sorter: newest full date (or year) first, then title.
 function sortByYear(items) {
   return items.slice().sort((a, b) => {
-    const ay = a.year || 0;
-    const by = b.year || 0;
-    if (ay !== by) return by - ay;
+    const ad = dateValue(a);
+    const bd = dateValue(b);
+    if (ad !== bd) return (bd ?? -Infinity) - (ad ?? -Infinity);
     return (a.title || "").localeCompare(b.title || "");
   });
+}
+
+function dateValue(item) {
+  const ts = toTimestamp(item.fullDate);
+  if (ts !== null) return ts;
+
+  if (item.year) {
+    const fallback = Date.parse(`${item.year}-01-01T00:00:00Z`);
+    if (!Number.isNaN(fallback)) return fallback;
+  }
+
+  return null;
+}
+
+function toTimestamp(fullDate) {
+  if (!fullDate) return null;
+  const trimmed = String(fullDate).trim();
+  if (!trimmed) return null;
+
+  const withT = trimmed.includes("T") ? trimmed : trimmed.replace(/\s+/, "T");
+  const hasTime = withT.includes("T");
+  const hasZone = /[zZ]|[+-]\d{2}:?\d{2}$/.test(withT);
+  const iso = hasZone ? withT : `${withT}${hasTime ? "Z" : "T00:00:00Z"}`;
+
+  const ts = Date.parse(iso);
+  return Number.isNaN(ts) ? null : ts;
 }

@@ -5,17 +5,17 @@ slug: wet-tech-04
 section: practice
 type: curatorial
 year: 2025
+fullDate: 2025-11-03 00:00
 featured: true
 pinned: false
-summary: Summary text
+summary: |
+  Wet Tech #4
 tags:
-  - blockchain
-  - DLT
+  - electronic music
+  - improvisation
 images:
   - assets/uploads/wet-tech-4.png
 ---
-Main body text!
 
-This now has an image and is on the front page agin
 
 ![](assets/uploads/wet-tech-4.png)

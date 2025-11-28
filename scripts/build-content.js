@@ -45,6 +45,9 @@ async function main() {
     const bodyMarkdown = body || "";
     const html = markdownToHtml(bodyMarkdown);
 
+    const fullDate = entry.fullDate ? String(entry.fullDate) : "";
+    const derivedYear = entry.year || deriveYear(fullDate);
+
     const images = Array.isArray(entry.images)
       ? entry.images.filter(Boolean)
       : [];
@@ -68,7 +71,8 @@ async function main() {
       section: entry.section,
       slug,
       type: entry.type,
-      year: entry.year,
+      year: derivedYear,
+      fullDate: fullDate || undefined,
       tags: entry.tags,
       summary: entry.summary,
       images,
@@ -233,11 +237,44 @@ function parseImageTarget(target) {
 
 function sortEntries(items) {
   return items.slice().sort((a, b) => {
-    const ay = a.year || 0;
-    const by = b.year || 0;
-    if (ay !== by) return by - ay;
+    const ad = dateValue(a);
+    const bd = dateValue(b);
+    if (ad !== bd) return (bd ?? -Infinity) - (ad ?? -Infinity);
     return (a.title || "").localeCompare(b.title || "");
   });
+}
+
+function dateValue(item) {
+  const ts = toTimestamp(item.fullDate);
+  if (ts !== null) return ts;
+
+  if (item.year) {
+    const fallback = Date.parse(`${item.year}-01-01T00:00:00Z`);
+    if (!Number.isNaN(fallback)) return fallback;
+  }
+
+  return null;
+}
+
+function toTimestamp(fullDate) {
+  if (!fullDate) return null;
+  const trimmed = String(fullDate).trim();
+  if (!trimmed) return null;
+
+  const withT = trimmed.includes("T") ? trimmed : trimmed.replace(/\s+/, "T");
+  const hasTime = withT.includes("T");
+  const hasZone = /[zZ]|[+-]\d{2}:?\d{2}$/.test(withT);
+  const iso = hasZone ? withT : `${withT}${hasTime ? "Z" : "T00:00:00Z"}`;
+
+  const ts = Date.parse(iso);
+  return Number.isNaN(ts) ? null : ts;
+}
+
+function deriveYear(fullDate) {
+  const match = String(fullDate || "").trim().match(/^(\d{4})/);
+  if (!match) return undefined;
+  const yearNum = Number(match[1]);
+  return Number.isNaN(yearNum) ? undefined : yearNum;
 }
 
 function parseFrontmatter(text) {

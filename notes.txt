@@ -31,4 +31,8 @@ Terminal 3:
 node scripts/build-content.js (after saving new entries (or changed entries), run to rebuild site)
 
 
-Random temporary notes:
+Access:
+http://localhost:8080/ [site]
+
+http://localhost:8080/admin/ [admin UI]
+

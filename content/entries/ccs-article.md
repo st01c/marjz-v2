@@ -6,9 +6,11 @@ slug: ccs-article-published
 section: research
 type: research article
 year: 2025
+fullDate: 2025-10-14 00:00
 featured: true
-pinned: true
-summary: Bricker, A.B. and Zeilinger, M., in Humanities and Social Sciences
+pinned: false
+summary: >
+  Bricker, A.B. and Zeilinger, M., in Humanities and Social Sciences
   Communications 12 (2025) (Open Access)
 tags:
   - cycling

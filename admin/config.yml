@@ -18,7 +18,8 @@ collections:
     format: "frontmatter"
     create: true
     slug: "{{slug}}"
-    summary: "{{title}} — {{year}} — {{section}}"
+    summary: "{{title}} — {{fullDate}} — {{section}}"
+    sortable_fields: ["commit_date", "fullDate", "year", "title"]
     fields:
       - { label: "ID", name: "id", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
@@ -33,16 +34,174 @@ collections:
           - { label: "Research", value: "research" }
           - { label: "Practice", value: "practice" }
           - { label: "Teaching", value: "teaching" }
-      - { label: "Type", name: "type", widget: "string", required: false }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        required: false
+        options:
+          - Announcement
+          - Book chapter
+          - Conference presentation
+          - Discussion panel
+          - Essay
+          - Guest lecture
+          - Journal article
+          - Keynote lecture
+          - Monograph
+          - Panel discussion
+          - Plenary talk
+          - Symposium presentation
+          - art criticism
+          - article
+          - book
+          - book chapter
+          - book launch
+          - case study
+          - commentary
+          - conference
+          - conference paper
+          - conference presentation
+          - curatorial
+          - event
+          - invited lecture
+          - invited lecture and discussion
+          - journal article
+          - journal special issue
+          - keynote
+          - podcast
+          - public lecture
+          - public talk
+          - research article
+          - special issue
+          - workshop
+        allow_add: true
       - { label: "Year", name: "year", widget: "number", required: false }
+      - label: "Full date (for ordering)"
+        name: "fullDate"
+        widget: "datetime"
+        required: false
+        date_format: "YYYY-MM-DD"
+        time_format: "HH:mm"
+        format: "YYYY-MM-DD HH:mm"
+        picker_utc: true
+        hint: "Sorting uses this; include time if you want precise ordering."
       - { label: "Featured on front page", name: "featured", widget: "boolean", default: false, required: false }
       - { label: "Pinned (homepage hero)", name: "pinned", widget: "boolean", default: false, required: false, hint: "Only one entry should be pinned; the latest pinned item becomes the homepage hero." }
       - { label: "Summary", name: "summary", widget: "text", required: false }
       - label: "Tags"
         name: "tags"
-        widget: "list"
-        summary: "{{fields.item}}"
-        field: { label: "Tag", name: "item", widget: "string" }
+        widget: "select"
+        multiple: true
+        options:
+          - AI
+          - AI art
+          - CCS
+          - CFP
+          - COVID-19
+          - Creative Commons
+          - DAOs
+          - GANs
+          - IP
+          - MoneyLab
+          - NFTs
+          - Open Access
+          - RPG
+          - Twine
+          - VR
+          - abstract art
+          - abstraction
+          - activism
+          - affordance theory
+          - agency
+          - agential assemblages
+          - algorithmic governance
+          - anarchism
+          - anthropocene
+          - art market
+          - artificial intelligence (AI)
+          - authorship
+          - biopower
+          - blockchain
+          - blockchain art
+          - cashlessness
+          - climate change
+          - commons
+          - computer art
+          - conceptual art
+          - conference
+          - copyright
+          - creative agency
+          - creative coding
+          - creative industries
+          - critical finance
+          - crypto
+          - crypto art
+          - cunning
+          - cycling
+          - decentralisation
+          - decentralised autonomous organisations
+          - deepfakes
+          - design
+          - digital art
+          - digital commons
+          - digital_storytelling
+          - educational licensing
+          - electronic music
+          - exhibition
+          - financialisation
+          - financialization
+          - fintech
+          - game art
+          - game studies
+          - gamification
+          - global warming
+          - guest speaker
+          - hyperobjects
+          - image recognition
+          - improvisation
+          - intellectual property
+          - interactive artwork
+          - interdisciplinarity
+          - interface experiments
+          - interfaces
+          - law
+          - legal theory
+          - licensing
+          - live coding
+          - machinima
+          - media art
+          - media art history
+          - media theory
+          - metaverse
+          - metis
+          - music
+          - mystifying AI
+          - non-human agency
+          - online teaching
+          - ownership
+          - perception
+          - performance art
+          - performances
+          - photography
+          - postgraduate
+          - posthumanism
+          - publishing
+          - research
+          - research network
+          - research-practice
+          - smart contracts
+          - sound art
+          - special issue
+          - symposium
+          - tactical AI
+          - tactical media
+          - talk
+          - teaching materials
+          - token-gating
+          - virtual Reality
+          - visual indeterminacy
+          - workshop
+        allow_add: true
         required: false
       - label: "Images (paths)"
         name: "images"
