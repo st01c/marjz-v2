@@ -56,11 +56,15 @@ function buildTagData(items) {
       if (t) tagsOnly.add(String(t));
     });
 
-    if (item.type) {
-      typeSet.add(String(item.type));
-    }
+    const normalizedType = normalizeType(item.type);
+    const typeLabel = normalizedType || "uncategorised";
+    typeSet.add(typeLabel);
 
-    const taggedItem = { ...item, _extendedTags: Array.from(tagsOnly), _type: item.type || "" };
+    const taggedItem = {
+      ...item,
+      _extendedTags: Array.from(tagsOnly),
+      _type: typeLabel,
+    };
     taggedItem._extendedTags.forEach((t) => tagSet.add(t));
     return taggedItem;
   });
@@ -76,49 +80,83 @@ function renderSectionCards(containerId, items) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
+  container.innerHTML = "";
+
   if (!items.length) {
     container.innerHTML = "<p>No items yet.</p>";
     return;
   }
 
-  // Simple card listing all items in this section
-  const card = document.createElement("article");
-  card.className = "card";
+  const columnCount = Number(container.dataset.columns) || 1;
+  const sortedItems = sortByYear(items);
+  const columns = splitIntoColumns(sortedItems, columnCount);
 
-  const list = document.createElement("ul");
-  list.className = "item-list";
+  columns.forEach((columnItems) => {
+    const card = document.createElement("article");
+    card.className = "card";
 
-  sortByYear(items).forEach((item) => {
-    const li = document.createElement("li");
+    const list = document.createElement("ul");
+    list.className = "item-list";
 
-    const titleSpan = document.createElement("span");
-    titleSpan.className = "item-title";
+    columnItems.forEach((item) => {
+      const li = document.createElement("li");
 
-    const linkInfo = buildLinkInfo(item);
-    if (linkInfo.href) {
-      const link = document.createElement("a");
-      link.href = linkInfo.href;
-      link.textContent = item.title;
-      if (linkInfo.external) {
-        link.target = "_blank";
-        link.rel = "noopener";
+      const titleSpan = document.createElement("span");
+      titleSpan.className = "item-title";
+
+      const linkInfo = buildLinkInfo(item);
+      if (linkInfo.href) {
+        const link = document.createElement("a");
+        link.href = linkInfo.href;
+        link.textContent = item.title;
+        if (linkInfo.external) {
+          link.target = "_blank";
+          link.rel = "noopener";
+        }
+        titleSpan.appendChild(link);
+      } else {
+        titleSpan.textContent = item.title;
       }
-      titleSpan.appendChild(link);
-    } else {
-      titleSpan.textContent = item.title;
-    }
 
-    const metaSpan = document.createElement("span");
-    metaSpan.className = "item-meta";
-    metaSpan.textContent = (item.year ? item.year + " · " : "") + (item.summary || "");
+      const metaSpan = document.createElement("span");
+      metaSpan.className = "item-meta";
+      const dateText = formatFullDate(item.fullDate) || (item.year ? String(item.year) : "");
+      const parts = [];
+      if (dateText) parts.push(dateText);
+      if (item.summary) parts.push(item.summary);
+      metaSpan.textContent = parts.join(" · ");
 
-    li.appendChild(titleSpan);
-    li.appendChild(metaSpan);
-    list.appendChild(li);
+      li.appendChild(titleSpan);
+      li.appendChild(metaSpan);
+      list.appendChild(li);
+    });
+
+    card.appendChild(list);
+    container.appendChild(card);
   });
+}
 
-  card.appendChild(list);
-  container.appendChild(card);
+function splitIntoColumns(items, columnCount) {
+  if (!columnCount || columnCount < 2) return [items];
+
+  const perColumn = Math.ceil(items.length / columnCount);
+  const columns = [];
+
+  for (let start = 0; start < items.length; start += perColumn) {
+    columns.push(items.slice(start, start + perColumn));
+  }
+
+  return columns;
+}
+
+function formatFullDate(fullDate) {
+  if (!fullDate) return "";
+  const match = String(fullDate)
+    .trim()
+    .match(/^(\d{4})[-/](\d{2})[-/](\d{2})/);
+  if (!match) return "";
+  const [, y, m, d] = match;
+  return `${y}/${m}/${d}`;
 }
 
 // Homepage hero: show the newest pinned entry (if any).
@@ -152,7 +190,8 @@ function renderPinnedHero(items) {
   if (labelEl) {
     const metaBits = ["Pinned entry"];
     if (pinned.section) metaBits.push(pinned.section);
-    if (pinned.year) metaBits.push(pinned.year);
+    const pinnedDate = formatFullDate(pinned.fullDate) || (pinned.year ? String(pinned.year) : "");
+    if (pinnedDate) metaBits.push(pinnedDate);
     labelEl.textContent = metaBits.join(" · ");
   }
 
@@ -492,4 +531,13 @@ function toTimestamp(fullDate) {
 
   const ts = Date.parse(iso);
   return Number.isNaN(ts) ? null : ts;
+}
+
+function normalizeType(type) {
+  if (type === null || type === undefined) return "";
+  const t = String(type).trim();
+  if (!t) return "";
+  const lower = t.toLowerCase();
+  if (lower === "null" || lower === "undefined") return "";
+  return t;
 }

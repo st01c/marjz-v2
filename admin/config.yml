@@ -38,42 +38,40 @@ collections:
         name: "type"
         widget: "select"
         required: false
+        # BEGIN_AUTO_TYPE_OPTIONS
         options:
-          - Announcement
-          - Book chapter
-          - Conference presentation
-          - Discussion panel
-          - Essay
-          - Guest lecture
-          - Journal article
-          - Keynote lecture
-          - Monograph
-          - Panel discussion
-          - Plenary talk
-          - Symposium presentation
-          - art criticism
-          - article
-          - book
-          - book chapter
-          - book launch
-          - case study
-          - commentary
-          - conference
-          - conference paper
-          - conference presentation
-          - curatorial
-          - event
-          - invited lecture
-          - invited lecture and discussion
-          - journal article
-          - journal special issue
-          - keynote
-          - podcast
-          - public lecture
-          - public talk
-          - research article
-          - special issue
-          - workshop
+          - "Announcement"
+          - "art criticism"
+          - "article"
+          - "book"
+          - "book chapter"
+          - "book launch"
+          - "case study"
+          - "commentary"
+          - "conference"
+          - "conference paper"
+          - "conference presentation"
+          - "curatorial"
+          - "Discussion panel"
+          - "Essay"
+          - "Guest lecture"
+          - "invited lecture"
+          - "invited lecture and discussion"
+          - "journal article"
+          - "journal special issue"
+          - "keynote"
+          - "Keynote lecture"
+          - "Monograph"
+          - "Panel discussion"
+          - "Plenary talk"
+          - "podcast"
+          - "public lecture"
+          - "public talk"
+          - "research article"
+          - "special issue"
+          - "Symposium presentation"
+          - "workshop"
+        # END_AUTO_TYPE_OPTIONS
         allow_add: true
       - { label: "Year", name: "year", widget: "number", required: false }
       - label: "Full date (for ordering)"
@@ -92,115 +90,113 @@ collections:
         name: "tags"
         widget: "select"
         multiple: true
+        # BEGIN_AUTO_TAG_OPTIONS
         options:
-          - AI
-          - AI art
-          - CCS
-          - CFP
-          - COVID-19
-          - Creative Commons
-          - DAOs
-          - GANs
-          - IP
-          - MoneyLab
-          - NFTs
-          - Open Access
-          - RPG
-          - Twine
-          - VR
-          - abstract art
-          - abstraction
-          - activism
-          - affordance theory
-          - agency
-          - agential assemblages
-          - algorithmic governance
-          - anarchism
-          - anthropocene
-          - art market
-          - artificial intelligence (AI)
-          - authorship
-          - biopower
-          - blockchain
-          - blockchain art
-          - cashlessness
-          - climate change
-          - commons
-          - computer art
-          - conceptual art
-          - conference
-          - copyright
-          - creative agency
-          - creative coding
-          - creative industries
-          - critical finance
-          - crypto
-          - crypto art
-          - cunning
-          - cycling
-          - decentralisation
-          - decentralised autonomous organisations
-          - deepfakes
-          - design
-          - digital art
-          - digital commons
-          - digital_storytelling
-          - educational licensing
-          - electronic music
-          - exhibition
-          - financialisation
-          - financialization
-          - fintech
-          - game art
-          - game studies
-          - gamification
-          - global warming
-          - guest speaker
-          - hyperobjects
-          - image recognition
-          - improvisation
-          - intellectual property
-          - interactive artwork
-          - interdisciplinarity
-          - interface experiments
-          - interfaces
-          - law
-          - legal theory
-          - licensing
-          - live coding
-          - machinima
-          - media art
-          - media art history
-          - media theory
-          - metaverse
-          - metis
-          - music
-          - mystifying AI
-          - non-human agency
-          - online teaching
-          - ownership
-          - perception
-          - performance art
-          - performances
-          - photography
-          - postgraduate
-          - posthumanism
-          - publishing
-          - research
-          - research network
-          - research-practice
-          - smart contracts
-          - sound art
-          - special issue
-          - symposium
-          - tactical AI
-          - tactical media
-          - talk
-          - teaching materials
-          - token-gating
-          - virtual Reality
-          - visual indeterminacy
-          - workshop
+          - "abstract art"
+          - "abstraction"
+          - "activism"
+          - "affordance theory"
+          - "agency"
+          - "agential assemblages"
+          - "AI"
+          - "AI art"
+          - "algorithmic governance"
+          - "anarchism"
+          - "anthropocene"
+          - "art market"
+          - "authorship"
+          - "biopower"
+          - "blockchain"
+          - "blockchain art"
+          - "cashlessness"
+          - "CCS"
+          - "CFP"
+          - "climate change"
+          - "commons"
+          - "computer art"
+          - "conceptual art"
+          - "conference"
+          - "copyright"
+          - "COVID-19"
+          - "creative agency"
+          - "creative coding"
+          - "Creative Commons"
+          - "creative industries"
+          - "critical finance"
+          - "crypto art"
+          - "cunning"
+          - "cycling"
+          - "DAOs"
+          - "decentralisation"
+          - "decentralised autonomous organisations"
+          - "deepfakes"
+          - "design"
+          - "digital art"
+          - "digital commons"
+          - "digital_storytelling"
+          - "educational licensing"
+          - "electronic music"
+          - "exhibition"
+          - "financialisation"
+          - "financialization"
+          - "fintech"
+          - "game art"
+          - "game studies"
+          - "gamification"
+          - "GANs"
+          - "global warming"
+          - "guest speaker"
+          - "hyperobjects"
+          - "image recognition"
+          - "improvisation"
+          - "intellectual property"
+          - "interactive artwork"
+          - "interdisciplinarity"
+          - "interface experiments"
+          - "interfaces"
+          - "IP"
+          - "law"
+          - "legal theory"
+          - "licensing"
+          - "live coding"
+          - "machinima"
+          - "media art"
+          - "media art history"
+          - "media theory"
+          - "metaverse"
+          - "MoneyLab"
+          - "music"
+          - "mystifying AI"
+          - "NFTs"
+          - "non-human agency"
+          - "online teaching"
+          - "Open Access"
+          - "ownership"
+          - "perception"
+          - "performance art"
+          - "performances"
+          - "photography"
+          - "postgraduate"
+          - "posthumanism"
+          - "publishing"
+          - "research"
+          - "research network"
+          - "RPG"
+          - "smart contracts"
+          - "sound art"
+          - "special issue"
+          - "symposium"
+          - "tactical AI"
+          - "tactical media"
+          - "talk"
+          - "teaching materials"
+          - "token-gating"
+          - "Twine"
+          - "virtual Reality"
+          - "visual indeterminacy"
+          - "VR"
+          - "workshop"
+        # END_AUTO_TAG_OPTIONS
         allow_add: true
         required: false
       - label: "Images (paths)"
