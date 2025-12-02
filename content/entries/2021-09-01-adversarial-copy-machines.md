@@ -1,21 +1,23 @@
 ---
 id: 2021-09-01-adversarial-copy-machines
 title: Generative Adversarial Copy Machines
-section: writing
 slug: generative-adversarial-copy-machines
-type: Journal article
+section: research
+type: research article
 year: 2021
 fullDate: 2021-09-01 00:00
+featured: false
+pinned: false
+summary: Culture Machine (special issue on machine intelligence) · Culture
+  Machine Vol. 20
 tags:
   - AI art
-  - GANs
   - posthumanism
   - agency
   - intellectual property
-summary: Culture Machine (special issue on machine intelligence) · Culture Machine Vol. 20
-images:
-featured: false
-pinned: false
+  - GAN
+newTags: ""
+images: []
 ---
 Published *Culture Machine* Vol. 20 (2021), special issue: "Machine Intelligences in Context: Beyond the Technological Sublime," co-edited by **Peter Jakobsson**, **Anne Kaun** and **Fredrik Stiernstedt**.
 

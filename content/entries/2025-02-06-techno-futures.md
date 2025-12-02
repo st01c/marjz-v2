@@ -15,7 +15,7 @@ tags:
   - DAOs
   - NFTs
   - token-gating
-images: null
+images: []
 ---
 I'm excited to start off the new year at what looks to be a very nice event hosted in Amsterdam at the Institute of Network Cultures, where I'll be speaking alongside a few people whose work I greatly admire: [Penny Rafferty](https://www.les-nouveaux-riches.com/interview-with-penny-rafferty/), [Sonia de Jager](https://n-o.ooo/), [Evelyn Wan](https://evelynwan.com/), and [Inte Gloerich](https://integloerich.nl/).
 

@@ -9,14 +9,13 @@ year: 2025
 fullDate: 2025-10-14 00:00
 featured: true
 pinned: false
-summary: >
-  Bricker, A.B. and Zeilinger, M., in Humanities and Social Sciences
+summary: Bricker, A.B. and Zeilinger, M., in Humanities and Social Sciences
   Communications 12 (2025) (Open Access)
 tags:
   - cycling
   - CCS
   - interdisciplinarity
-  - interfaces
+  - interface
 ---
 We are very pleased that after an arduous review process, our article "The many paths ahead: toward an interdisciplinary framework for Critical Cycling Studies" is published as a fully Open Access research essay in the journal *Humanities and Social Sciences Communications*, which is part of the *Nature* journal portfolio.
 

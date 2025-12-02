@@ -3,7 +3,7 @@ id: 2019-05-16-digital-art-research-group-talk-on-ai-ip-and-digital-art
 title: Digital Art Research Group talk on digital art, AI, and IP
 slug: digital-art-research-group-talk-on-digital-art-ai-and-ip
 section: research
-type: ""
+type: public lecture
 year: 2019
 fullDate: 2019-05-16 00:00
 featured: false
@@ -12,8 +12,7 @@ summary: null
 tags:
   - AI art
   - digital art
-  - talk
-  - IP
+  - intellectual property
 images:
   - assets/uploads/old/basanta-print20.jpg
 ---

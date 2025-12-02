@@ -1,20 +1,20 @@
 ---
 id: 2019-11-12-ML7-workshop
 title: "MoneyLab #7 workshop: 'How Will the Tooth Fairy Pay You on Planet Cashless?''"
-section: news
 slug: moneylab-7-workshop-how-will-the-tooth-fairy-pay-you-on-planet-cashless
-type: 
+section: practice
+type: workshop
 year: 2019
 fullDate: 2019-11-12 00:00
+featured: false
+pinned: false
+summary: null
 tags:
   - fintech
   - MoneyLab
   - cashlessness
-summary: 
 images:
   - assets/uploads/old/cashlesstooth-1024x722.jpg
-featured: false
-pinned: false
 ---
 ##### Join Furtherfield's Ruth Catlow and me for a workshop at MoneyLab #7 in Amsterdam next week.
 

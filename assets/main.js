@@ -416,8 +416,9 @@ function renderBrowseResults(items, container, activeTags, activeTypes, mode) {
 
     const yearEl = document.createElement("div");
     yearEl.className = "browse-card-type";
-    yearEl.textContent = item.year ? String(item.year) : "";
-    if (item.year) header.appendChild(yearEl);
+    const dateLabel = formatFullDate(item.fullDate) || (item.year ? String(item.year) : "");
+    yearEl.textContent = dateLabel;
+    if (dateLabel) header.appendChild(yearEl);
 
     const tagsRow = document.createElement("div");
     tagsRow.className = "pill-row";

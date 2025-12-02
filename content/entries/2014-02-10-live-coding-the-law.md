@@ -3,7 +3,7 @@ id: 2014-02-10-live-coding-the-law
 title: "Live Coding the Law: Improvisation, Code & Copyright"
 slug: live-coding-the-law-improvisation-code-copyright
 section: research
-type: journal article
+type: research article
 year: 2014
 fullDate: 2014-02-10 00:00
 featured: false

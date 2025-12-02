@@ -13,8 +13,7 @@ tags:
   - gamification
   - financialisation
   - research network
-  - conference
-images: null
+images: []
 ---
 _**We are pleased to present the program for an interdisciplinary symposium on the problematic convergence of gamification (adding game mechanics to non-game environments) and financialisation (embedding financial processes in non-finance contexts).**_
 

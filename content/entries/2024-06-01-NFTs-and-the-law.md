@@ -14,8 +14,8 @@ tags:
   - digital commons
   - copyright
   - blockchain
-  - legal theory
-images: null
+  - law
+images: []
 ---
 I published a chapter called "From Exclusive Ownership to Zones of Exclusivity" in the volume _NFTs, Creativity and the Law: Within and Beyond Copyright_, which was co-edited by Enrico Bonadio and Caterina Sganga, and released by Routledge. The book is awfully expensive – drop me an email for an open access copy of the chapter.
 

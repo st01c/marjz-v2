@@ -12,7 +12,6 @@ summary: A CFP for a special issue in the 'Blockchain for Good' series of the
   Frontiers in Blockchain, which I am co-editing with Marcus O'Dair
 tags:
   - blockchain
-  - special issue
   - CFP
 images:
   - assets/uploads/old/crypto-kitties-4.jpg

@@ -1,22 +1,21 @@
 ---
 id: 2019-08-23-rethinking-affordance-special-issue
 title: Rethinking Affordance
-section: writing
 slug: rethinking-affordance
-type: journal special issue
+section: research
+type: special issue
 year: 2019
 fullDate: 2019-08-23 00:00
+featured: false
+pinned: false
+summary: A special issue of Media Theory, co-edited with Ashley Scarlett · Media Theory
 tags:
   - affordance theory
   - digital art
-  - design
   - media theory
   - media art history
-summary: A special issue of Media Theory, co-edited with Ashley Scarlett · Media Theory
 images:
   - assets/uploads/old/Thomson-DTML-still.jpg
-featured: false
-pinned: false
 ---
 ![](assets/uploads/old/rethinking-affordance-journalcover.jpg)
 

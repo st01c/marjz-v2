@@ -1,21 +1,20 @@
 ---
-id: 2022-07-09-xcoax-proceedings
-title: AI Art as Hyperobject-Like Portal to Global Warming
-section: writing
-slug: ai-art-as-hyperobject-like-portal-to-global-warming
-type: Essay
+id: "2022-07-09-xcoax-proceedings"
+title: "AI Art as Hyperobject-Like Portal to Global Warming"
+slug: "ai-art-as-hyperobject-like-portal-to-global-warming"
+section: "research"
+type: "conference proceedings"
 year: 2022
-fullDate: 2022-07-08 00:00
-tags:
-  - AI art
-  - hyperobjects
-  - anthropocene
-  - global warming
-  - digital art
-summary: xCoAX 2022 Proceedings · xCoAx 2022
-images:
+fullDate: "2022-07-08 00:00"
 featured: false
 pinned: false
+summary: "xCoAX 2022 Proceedings · xCoAx 2022"
+tags:
+  - "AI art"
+  - "hyperobjects"
+  - "anthropocene"
+  - "global warming"
+images: []
 ---
 Full version of my essay on AI art, hyperobjects, and global warming for this year's xCoAx conference in Coimbra, Portugal.
 

@@ -1,18 +1,17 @@
 ---
-id: 2019-04-03-cfp-tacit-engagement-in-the-digital-age-crassh
+id: "2019-04-03-cfp-tacit-engagement-in-the-digital-age-crassh"
 title: "CFP: Tacit Engagement in the Digital Age (CRASSH)"
-section: news
-slug: cfp-tacit-engagement-in-the-digital-age-crassh
-type: 
+slug: "cfp-tacit-engagement-in-the-digital-age-crassh"
+section: "research"
+type: "CFP"
 year: 2019
-fullDate: 2019-04-03 00:00
-tags:
-  - CFP
-summary: 
-images:
-  - assets/uploads/old/re-colour.jpg
+fullDate: "2019-04-03 00:00"
 featured: false
 pinned: false
+summary: "null"
+tags:
+images:
+  - "assets/uploads/old/re-colour.jpg"
 ---
 ![](assets/uploads/old/re-colour.jpg)
 

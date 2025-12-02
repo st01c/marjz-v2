@@ -44,12 +44,11 @@ function renderSectionList(container, items) {
 
     header.appendChild(titleEl);
 
-    if (item.year) {
-      const meta = document.createElement("div");
-      meta.className = "browse-card-type";
-      meta.textContent = item.year;
-      header.appendChild(meta);
-    }
+    const meta = document.createElement("div");
+    meta.className = "browse-card-type";
+    const dateLabel = formatFullDate(item.fullDate) || (item.year ? String(item.year) : "");
+    meta.textContent = dateLabel;
+    if (dateLabel) header.appendChild(meta);
 
     const tagsRow = document.createElement("div");
     tagsRow.className = "pill-row";

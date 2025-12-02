@@ -4,7 +4,7 @@ title: "'All Your Photo Are Belong To Us': Post-Scarcity Photography and the
   Blockchain"
 slug: all-your-photo-are-belong-to-us-post-scarcity-photography-and-the-blockchain
 section: talk
-type: public talk
+type: conference presentation
 year: 2018
 fullDate: 2018-11-24 00:00
 featured: false
@@ -14,7 +14,7 @@ tags:
   - photography
   - digital art
   - blockchain
-images: null
+images: []
 ---
 This was an invited talk presented at the Photographers' Gallery symposium _[Post-Capitalist Photography Now!](https://thephotographersgallery.org.uk/whats-on/talks-and-events/post-capitalist-photography-now)_. The symposium featured Nina Power, Ben Burbridge, Mike Cook, Taous R Dahmani, Constant Dullaart, Rowan Lear, Emily Rosamond, Harry Sanderson, Katrina Sluis, Kuba Szreder, and myself.
 

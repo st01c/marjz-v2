@@ -1,19 +1,18 @@
 ---
 id: 2022-10-27-platform-lecture
 title: "Platform Speaker Series guest lecture: Adrian Hon"
-section: talk
 slug: platform-speaker-series-guest-lecture-adrian-hon
-type: Guest lecture
+section: talk
+type: null
 year: 2022
 fullDate: 2022-10-27 00:00
-tags:
-  - gamification
-  - guest speaker
-  - game studies
-summary: Abertay University
-images:
 featured: false
 pinned: false
+summary: ""
+tags:
+  - gamification
+  - game studies
+images: []
 ---
 As part of the Platform lecture series at Abertay University, we're excited to welcome Adrian Hon as our first guest speaker this year.
 

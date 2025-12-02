@@ -1,22 +1,21 @@
 ---
 id: 2020-12-20-ownership-blockchain
 title: Emerging ownership models on the blockchain
-section: writing
 slug: emerging-ownership-models-on-the-blockchain
+section: research
 type: special issue
 year: 2020
 fullDate: 2020-12-20 00:00
+featured: false
+pinned: false
+summary: Frontiers in Blockchain
 tags:
   - blockchain
   - fintech
-  - ownership
   - intellectual property
   - creative industries
-summary: Frontiers in Blockchain
 images:
   - assets/uploads/old/ccoins.jpg
-featured: false
-pinned: false
 ---
 ![](assets/uploads/old/ccoins.jpg)
 

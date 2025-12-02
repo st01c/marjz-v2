@@ -1,19 +1,19 @@
 ---
 id: 2020-11-13-AI-art-and-post-anthropocentric-agency
 title: AI Art and Post-Anthropocentric Agency
-section: talk
 slug: ai-art-and-post-anthropocentric-agency
+section: research
 type: conference presentation
 year: 2020
 fullDate: 2020-11-13 00:00
+featured: false
+pinned: false
+summary: Indeterminate Futures conference, Dundee University
 tags:
   - AI art
   - agency
   - posthumanism
-summary: Indeterminate Futures conference, Dundee University
-images:
-featured: false
-pinned: false
+images: null
 ---
 This is the video from my conference presentation at the "Indeterminate Futures" conference organised by at Dundee University. The conference featured keynote lectures by **Karen Barad**, **Franco Berardi**, **Gregory Cajete**, **Leroy Little Bear**, **Sha Xin Wei**, and **Vladimir Tasić**. It was organised by was organised by Natasha Lushetich and Iain Campbell.
 

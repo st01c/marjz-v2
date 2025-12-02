@@ -1,20 +1,20 @@
 ---
-id: 2021-09-04-critical-legal-conference-plenary
-title: Law, AI, Oracle
-section: talk
-slug: law-ai-oracle
-type: Plenary talk
+id: "2021-09-04-critical-legal-conference-plenary"
+title: "Law, AI, Oracle"
+slug: "law-ai-oracle"
+section: "research"
+type: "null"
 year: 2021
-fullDate: 2021-09-04 00:00
-tags:
-  - law
-  - AI
-  - posthumanism
-  - mystifying AI
-summary: Dundee University, Dundee/Scotland (& online)
-images:
+fullDate: "2021-09-04 00:00"
 featured: false
 pinned: false
+summary: "Dundee University, Dundee/Scotland (& online)"
+tags:
+  - "law"
+  - "AI"
+  - "posthumanism"
+  - "mystification of AI"
+images: []
 ---
 On a panel with **Joseph DeLappe** and 'DrCanonical', a critical AI project devised by **Pip Thornton** and **Andrew Dwyer**, I gave a plenary talk with the title "Law, AI, Oracle" at this year's Critical Legal Conference, hosted by the University of Dundee.
 

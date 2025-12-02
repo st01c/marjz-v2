@@ -1,19 +1,20 @@
 ---
 id: 2021-05-05-total-refusal-discussion-panel
 title: Machinima as Creative Practice & Critical Intervention
-section: talk
 slug: machinima-as-creative-practice-critical-intervention
-type: Discussion panel
+section: research
+type: panel discussion
 year: 2021
 fullDate: 2021-05-05 00:00
+featured: false
+pinned: false
+summary: online
 tags:
   - machinima
   - game art
   - media art
-summary: online
-images:
-featured: false
-pinned: false
+  - video
+images: null
 ---
 As part of a critical practice & innovation postgraduate seminar for our [MProf in Games Development at Abertay University](https://www.abertay.ac.uk/course-search/postgraduate-taught/professional-masters-in-games-development/), on 5 May I convened a very casual panel discussion that saw the Austrian machinima collective [Total Refusal](http://leonhardmuellner.at/total-refusal/) in conversation with game art pioneer Joseph DeLappe.
 

@@ -11,7 +11,6 @@ featured: false
 pinned: false
 summary: Artists Re:Thinking the Blockchain
 tags:
-  - digital art
   - conceptual art
   - blockchain art
 images:

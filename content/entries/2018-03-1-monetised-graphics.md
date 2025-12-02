@@ -3,7 +3,7 @@ id: 2018-03-1-monetised-graphics
 title: Digital Art as ‘Monetised Graphics:’ Enforcing IP on the Blockchain
 slug: digital-art-as-monetised-graphics-enforcing-ip-on-the-blockchain
 section: research
-type: journal article
+type: research article
 year: 2018
 fullDate: 2018-03-1 19:17
 featured: false

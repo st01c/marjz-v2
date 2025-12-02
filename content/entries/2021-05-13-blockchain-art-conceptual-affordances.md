@@ -1,25 +1,22 @@
 ---
+"0":
+  Update: The video for my talk is now embedded at the bottom of the page.
 id: 2021-05-13-blockchain-art-conceptual-affordances
 title: On the Conceptual Affordances of Blockchain Art
-section: talk
 slug: on-the-conceptual-affordances-of-blockchain-art
-type: Keynote lecture
+section: practice
+type: keynote
 year: 2021
 fullDate: 2021-05-13 00:00
+featured: false
+pinned: false
+summary: Uroboros Festival, Prague/CZ
 tags:
   - blockchain
   - crypto art
   - conceptual art
   - NFTs
-summary: Uroboros Festival, Prague/CZ
-images:
-featured: false
-pinned: false
----
----
-
-[Update: The video for my talk is now embedded at the bottom of the page.]
-
+images: null
 ---
 
 The amazing-looking [Uroboros Festival](https://uroboros.design/) has kicked off, and is broadcasting from the [DOX Centre for Contemporary Art](https://www.dox.cz/en) in Prague until May 18. Among the festival offerings is a thematic strand on cyrpto-related topics, featuring Laura Lotti, the dada.art platform, Sparrow, folks from Robin Hood / Economic Space Agency, Denis Roio (Jaromil), among others, and also myself.

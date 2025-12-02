@@ -14,7 +14,7 @@ summary: The next installment in our occasional series of improvised electronic
 tags:
   - electronic music
   - improvisation
-  - artificial intelligence (AI)
+  - AI
 images:
   - assets/uploads/wet-tech-5.png
 ---

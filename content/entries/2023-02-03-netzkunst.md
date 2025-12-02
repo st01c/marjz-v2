@@ -1,21 +1,21 @@
 ---
-id: 2023-02-03-netzkunst
+id: "2023-02-03-netzkunst"
 title: "'Structures of Belonging' launch event"
-slug: structures-of-belonging-launch-event
-section: research
-type: book launch
+slug: "structures-of-belonging-launch-event"
+section: "research"
+type: "event"
 year: 2023
-fullDate: 2023-02-03 00:00
+fullDate: "2023-02-03 00:00"
 featured: false
 pinned: false
 summary: ""
 tags:
-  - digital art
-  - blockchain
-  - DAOs
-  - NFTs
-  - token-gating
-images: null
+  - "digital art"
+  - "blockchain"
+  - "DAOs"
+  - "NFTs"
+  - "token-gating"
+images: "[]"
 ---
 Friday, Feb 3, 2023, Rosa-Luxemburg-Str. 35, 10178 Berlin, rosa Zentrum für Netzkunst, Berlin/Germany
 

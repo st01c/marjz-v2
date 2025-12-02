@@ -15,7 +15,7 @@ tags:
   - RPG
   - workshop
   - research network
-images: null
+images: []
 ---
 ## Join us for a critical and playful co-creation workshop about games and money!
 

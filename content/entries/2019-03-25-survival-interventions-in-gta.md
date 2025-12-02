@@ -13,6 +13,7 @@ summary: Video Game Art Reader Vol. 2
 tags:
   - performance art
   - game art
+  - agency
 images:
   - assets/uploads/old/ClintEnns-747_2.jpeg
 ---

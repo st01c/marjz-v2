@@ -1,22 +1,22 @@
 ---
 id: 2021-03-16-chaotic-lawful
 title: "‘Chaotic Lawful’: Teaching Videogames in a Licensing and Permissions Lacuna"
-section: writing
 slug: chaotic-lawful-teaching-videogames-in-a-licensing-and-permissions-lacuna
-type: Journal article
+section: research
+type: research article
 year: 2021
 fullDate: 2021-03-16 00:00
+featured: false
+pinned: false
+summary: Journal of Cinema and Media Studies (JCMS) Teaching Media Dossier
 tags:
   - game studies
   - COVID-19
   - online teaching
   - educational licensing
   - intellectual property
-summary: Journal of Cinema and Media Studies (JCMS) Teaching Media Dossier
 images:
   - assets/uploads/old/chaotic-lawful.jpg
-featured: false
-pinned: false
 ---
 Co-authored with my Abertay University colleague [Darshana Jayemanne](https://www.abertay.ac.uk/staff-search/dr-darshana-jayemanne/), and published in the special issue **"Copyright Under COVID-19 in Film and Media Studies"**, co-edited by Kirsten M. Thompson and Brendan Kredell.
 

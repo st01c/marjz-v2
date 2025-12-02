@@ -1,19 +1,20 @@
 ---
 id: 2019-11-04-PechaKucha
 title: "AI art and creative agency: Pecha Kucha lightning talk"
-section: talk
 slug: ai-art-and-creative-agency-pecha-kucha-lightning-talk
-type: invited lecture
+section: practice
+type: public lecture
 year: 2019
 fullDate: 2019-11-04 00:00
+featured: false
+pinned: false
+summary: Dundee/UK
 tags:
   - AI art
   - agency
-summary: Dundee/UK
+  - video
 images:
   - assets/uploads/old/PechaKuchaDundee.jpg
-featured: false
-pinned: false
 ---
 ![](assets/uploads/old/PechaKuchaDundee.jpg)
 

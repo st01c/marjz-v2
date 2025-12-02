@@ -15,7 +15,7 @@ tags:
   - digital commons
   - DAOs
   - NFTs
-images: null
+images: []
 ---
 The wonderful team from [Radio Web MACBA](https://rwm.macba.cat/en/about-rwm) have recorded an episode of their Son\[i]a podcast with me. The Son\[i]a expanded radio project has recorded interviews and conversations with artists, researchers, curators, and theorists since for over 15 years.
 

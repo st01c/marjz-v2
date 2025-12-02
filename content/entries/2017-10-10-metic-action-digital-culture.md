@@ -3,7 +3,7 @@ id: 2017-10-10-metic-action-digital-culture
 title: Métic Action in Digital Culture
 slug: m-tic-action-in-digital-culture
 section: research
-type: journal article
+type: research article
 year: 2017
 fullDate: 2017-10-10 00:00
 featured: false

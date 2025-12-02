@@ -16,7 +16,7 @@ tags:
   - blockchain art
   - anarchism
   - activism
-images: null
+images: []
 ---
 Nov 11, 2022, 19:30 CET
 Free live-stream from the symposium of this year's "The Only Lasting Truth Is Change" festival hosted at the Bergen Center for Electronic Art (BEK), Norway.

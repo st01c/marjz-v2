@@ -1,19 +1,20 @@
 ---
 id: 2021-05-14-synthetic-realities-panel
 title: Shaping the Future Synthetic Realities panel discussion
-section: talk
 slug: shaping-the-future-synthetic-realities-panel-discussion
-type: Panel discussion
+section: practice
+type: panel discussion
 year: 2021
 fullDate: 2021-05-14 00:00
+featured: false
+pinned: false
+summary: Uroboros Festival, Prague/CZ
 tags:
   - AI art
   - posthumanism
   - algorithmic governance
-summary: Uroboros Festival, Prague/CZ
-images:
-featured: false
-pinned: false
+  - video
+images: null
 ---
 I had the pleasure of participating in a very stimulating and insightful conversation with Chris Kore, Palo Fabuš, and Pinar Demirdag at [Uroboros Festival](https://uroboros.design/). The panel was titled 'Shaping the Future Synthetic Realities panel discussion', and excellently moderated by [Lenka Hamosova](https://hamosova.com/). Video below, and more info [here](https://uroboros.design/events/shaping-the-future-synthetic-realities-panel-discussion/).
 

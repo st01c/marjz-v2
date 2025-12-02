@@ -3,7 +3,7 @@ id: 2013-03-25-chiptuning-intellectual-property
 title: Chiptuning IP Between Creative Commons and Moral Economy
 slug: chiptuning-ip-between-creative-commons-and-moral-economy
 section: research
-type: journal article
+type: research article
 year: 2013
 fullDate: 2013-03-25 00:00
 featured: false

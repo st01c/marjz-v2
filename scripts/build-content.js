@@ -45,8 +45,15 @@ async function main() {
     const bodyMarkdown = body || "";
     const html = markdownToHtml(bodyMarkdown);
 
-    const fullDate = entry.fullDate ? String(entry.fullDate) : "";
+    const fullDate = entry.fullDate
+      ? String(entry.fullDate)
+      : entry.year
+      ? `${entry.year}-01-01`
+      : "";
     const derivedYear = entry.year || deriveYear(fullDate);
+    const derivedType = entry.newType ? String(entry.newType).trim() : entry.type;
+    const newTags = parseNewTags(entry.newTags);
+    const tags = dedupeTags([...(entry.tags || []), ...newTags]);
 
     const images = Array.isArray(entry.images)
       ? entry.images.filter(Boolean)
@@ -70,10 +77,10 @@ async function main() {
       title: entry.title,
       section: entry.section,
       slug,
-      type: entry.type,
+      type: derivedType,
       year: derivedYear,
       fullDate: fullDate || undefined,
-      tags: entry.tags,
+      tags,
       summary: entry.summary,
       images,
       featured: Boolean(entry.featured),
@@ -383,6 +390,30 @@ function stripEnclosingQuotes(str) {
     return str.slice(1, -1);
   }
   return str;
+}
+
+function parseNewTags(value) {
+  if (!value && value !== 0) return [];
+  if (Array.isArray(value)) return value.map((v) => String(v)).filter(Boolean);
+  return String(value)
+    .split(",")
+    .map((t) => t.trim())
+    .filter(Boolean);
+}
+
+function dedupeTags(list) {
+  const seen = new Set();
+  const out = [];
+  list.forEach((t) => {
+    const trimmed = String(t || "").trim();
+    if (!trimmed) return;
+    const key = trimmed.toLowerCase();
+    if (!seen.has(key)) {
+      seen.add(key);
+      out.push(trimmed);
+    }
+  });
+  return out;
 }
 
 async function ensureDir(dir) {

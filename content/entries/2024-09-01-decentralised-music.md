@@ -11,12 +11,12 @@ featured: false
 pinned: false
 summary: Decentralised Music (Eds. Paulo de Assis and Adam Lukawski)
 tags:
-  - digital art
-  - blockchain
+  - decentralisation
   - music
-  - DAOs
+  - blockchain
+  - AI
   - agency
-images: null
+images: []
 ---
 My chapter called "Integrating Generative AI and Blockchain Technologies to Create Musical Objects with Agency" has been published in the excellent volume _Decentralised Music_ co-edited by Paulo de Assis and Adam Lukawski from Orpheus Institute.
 

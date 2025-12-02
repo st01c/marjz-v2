@@ -1,11 +1,15 @@
 ---
 id: 2021-07-01-tactical-entanglements
-title: "OUT NOW: Tactical Entanglements: AI Art, Creative Agency, and the Limits of Intellectual Property"
-section: writing
+title: "OUT NOW: Tactical Entanglements: AI Art, Creative Agency, and the Limits
+  of Intellectual Property"
 slug: out-now-tactical-entanglements-ai-art-creative-agency-and-the-limits-of-intellectual-property
-type: Monograph
+section: research
+type: book
 year: 2021
 fullDate: 2021-07-01 00:00
+featured: false
+pinned: false
+summary: Meson Press · Meson Press
 tags:
   - AI
   - AI art
@@ -14,11 +18,9 @@ tags:
   - agency
   - posthumanism
   - tactical media
-summary: Meson Press · Meson Press
+  - agential assemblages
 images:
   - assets/uploads/old/TomWhite-for-cover.jpg
-featured: false
-pinned: false
 ---
 **Published June 2021 with meson press – available now as a free ebook or as paperback through online booksellers**
 
