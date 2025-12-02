@@ -7,7 +7,7 @@ type: curatorial
 year: 2025
 fullDate: 2025-12-05 00:00
 featured: true
-pinned: true
+pinned: false
 summary: The next installment in our occasional series of improvised electronic
   music and moving image events features two sets, by Jonathan Impett and Juan
   Parra (BE) and by Jung In Jung and Lynda Clark (UK)

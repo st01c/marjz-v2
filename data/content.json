@@ -17,7 +17,7 @@
       "assets/uploads/wet-tech-5.png"
     ],
     "featured": true,
-    "pinned": true,
+    "pinned": false,
     "contentPath": "content/wet-tech-5.html"
   },
   {
@@ -36,6 +36,28 @@
     "featured": true,
     "pinned": false,
     "contentPath": "content/cafe-oto-screening.html"
+  },
+  {
+    "id": "vectoral-agents",
+    "title": "AI Art and the Foreclosure of Ecological Agency: a Critique of Refik Anadol’s 'Echoes of the Earth'",
+    "section": "research",
+    "slug": "ecological-agency-anadol-critique",
+    "type": "book chapter",
+    "year": 2025,
+    "fullDate": "2025-11-28",
+    "tags": [
+      "AI art",
+      "climate change",
+      "agency",
+      "open source"
+    ],
+    "summary": "A book chapter co-authored with Deniz Johns, which critiques Refik Anadol's AI art project 'Echoes of the Earth' and its supposed focus on open source and sustainability, is now published in Vectoral Agents: Power in the Age of Planetary Computation (Eds. Jernej Markelj & Claudio Celis Bueno, Amsterdam: INC 2025)",
+    "images": [
+      "assets/uploads/vectoral-agents-2025-image.png"
+    ],
+    "featured": true,
+    "pinned": true,
+    "contentPath": "content/ecological-agency-anadol-critique.html"
   },
   {
     "id": "wet-tech-04",
