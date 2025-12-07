@@ -195,6 +195,11 @@ a:hover {
   max-width: 40rem;
 }
 
+/* Research page: keep hero lede black for readability */
+body[data-section="research"] .hero-lede {
+  color: #000000;
+}
+
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
