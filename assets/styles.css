@@ -195,6 +195,13 @@ a:hover {
   max-width: 40rem;
 }
 
+.hero-heading {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+}
+
 /* Research page: keep hero lede black for readability */
 body[data-section="research"] .hero-lede {
   color: #000000;

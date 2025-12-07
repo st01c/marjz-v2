@@ -16,9 +16,9 @@
         </div>
       </div>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="about.html" class="nav-link">_about</a>
+        <a href="about.html" class="nav-link nav-link--active">_about</a>
         <a href="research.html" class="nav-link">_research</a>
-        <a href="practice.html" class="nav-link">_practice</a>
+        <a href="practice.html" class="nav-link nav-link--tooltip" data-tooltip="Projects, exhibitions, and curatorial work">_practice</a>
         <a href="teaching.html" class="nav-link">_teaching</a>
         <a href="browse.html" class="nav-link">_browse</a>
         <a href="contact.html" class="nav-link nav-link--primary">_contact</a>
@@ -29,68 +29,19 @@
   <main class="page">
     <section class="section">
       <header class="section-header">
-        <!-- <div class="section-title">_About</div> -->
         <h1
           class="section-subtitle"
           style="font-size: 2.6rem; line-height: 1.1; font-weight: var(--about-hero-weight, 300); margin-bottom: 1.5rem;"
         >(◕‿◕)/"</h1>
       </header>
 
-      <article class="rich-text">
-        <h3>Short bio (tl;dr)</h3>
-        <p>
-          I am an Austrian researcher and curator based in Dundee, Scotland, where I work as
-          <a href="https://rke.abertay.ac.uk/en/persons/martin-zeilinger" target="_blank" rel="noopener">Reader in Computational Arts & Technology</a>
-          at Abertay University. My work focuses on artistic and activist experiments with emerging technologies such as AI and blockchain,
-          intellectual property issues in contemporary art, and aspects of experimental videogame culture.
-        </p>
-        <p>
-          I published the monograph
-          <a href="https://meson.press/books/tactical-entanglements/" target="_blank" rel="noopener">Tactical Entanglements: AI Art, Creative Agency, and the Limits of Intellectual Property</a>
-          (meson press, 2021, Open Access), and
-          <a href="https://aksioma.org/structures-of-belonging" target="_blank" rel="noopener">Structures of Belonging</a>
-          (Aksioma Postscriptum Series, 2023) on re-imagining blockchain technologies beyond digital property enclosures. I co-curated
-          <a href="http://vectorfestival.org/" target="_blank" rel="noopener">Vector Festival</a> (Toronto, 2014–2020) and led the 2018 MoneyLab symposium (London). Writing appears in books such as
-          <em>Artists Re:Thinking the Blockchain</em> and the <em>MoneyLab Reader 2</em>, in journals including <em>Leonardo</em>, <em>Philosophy &amp; Technology</em>, <em>Culture Machine</em>, and <em>Media Theory</em>, and in art magazines such as <em>Spike Art Magazine</em> and <em>Outland</em>.
-        </p>
-
-        <h3>Contact</h3>
-        <p>
-          Reach me via the <a href="/contact">contact form</a> or at <em>m [.] zeilinger [@] abertay.ac.uk</em>.
-        </p>
-
-        <h3>Longer bio</h3>
-        <p>
-          After years in Vienna, Toronto, and London, I am now based in Dundee, Scotland, holding a research and teaching role as Reader in Computational Media at Abertay University. My work spans artistic and activist experiments with AI and blockchain, digital art, appropriation-based practices, cultural ownership and IP, political economies of new media, experimental videogame culture, and more-than-human agency.
-        </p>
-        <p>
-          A common thread in my research is how concepts like authorship, creativity, originality, agency, and ownership are reconfigured in emerging tech contexts; how they become legally or algorithmically encoded in service of capital; and how artist/activist communities respond critically. My monograph
-          <a href="https://meson.press/books/tactical-entanglements/" target="_blank" rel="noopener">Tactical Entanglements</a>
-          (meson press, 2021) pulls many of these interests together. Recent contributions to discourse on creative AI and non-human agency include work in
-          <a href="https://www.onassis.org/culture/publications/chimeras-inventory-of-synthetic-cognition" target="_blank" rel="noopener">Chimeras: Inventory of Synthetic Cognition</a>
-          (Onassis Foundation, 2022). My blockchain writing includes
-          <a href="https://aksioma.org/structures-of-belonging" target="_blank" rel="noopener">Structures of Belonging</a>
-          (Aksioma Postscriptum Series, 2023).
-        </p>
-        <p>
-          Additional publications appear in <a href="https://www.distanz.de/en/metaspace-visions-of-space-from-the-middle-ages-to-the-digital-age" target="_blank" rel="noopener">Meta.space</a> (Distanz Verlag, 2022), the
-          <a href="https://networkcultures.org/blog/publication/moneylab-reader-2-overcoming-the-hype/" target="_blank" rel="noopener">MoneyLab Reader Vol. 2</a>
-          (Institute of Network Cultures, 2018),
-          <a href="https://torquetorque.net/wp-content/uploads/ArtistsReThinkingTheBlockchain.pdf" target="_blank" rel="noopener">Artists Re:Thinking the Blockchain</a>
-          (Torque Editions, 2017),
-          <a href="https://global.oup.com/academic/product/sampling-media-9780199949335" target="_blank" rel="noopener">Sampling Media</a>
-          (Oxford University Press, 2014), and in journals such as <em>Leonardo</em> (2023), <em>Culture Machine</em> (2021), <em>Media Theory</em> (2019), and <em>Philosophy &amp; Technology</em> (2018). My practice has also featured in art publications including <em>Spike Art Magazine</em> and <em>Outland</em>.
-        </p>
-        <p>
-          I frequently speak at international art organisations and festivals focused on new media and technology (Aksioma, BEK, Uroboros Festival, Zentrum für Netzkunst, among others). In curatorial work, I co-directed/co-curated Vector Festival (Toronto, 2014–2020). I also advise artists and creative practitioners on IP questions (often around fair dealing/fair use) and have served as consultant and/or expert witness on legal cases.
-        </p>
-        <p>
-          <em>This site is built with open source tools. If it misbehaves, you can find downloadable copies of most of my
-          <a href="https://rke.abertay.ac.uk/en/persons/martin-zeilinger" target="_blank" rel="noopener">publications</a>.</em>
-        </p>
+      <article id="about-content" class="rich-text" data-source="content/about.md">
+        <p>Loading about page...</p>
       </article>
     </section>
   </main>
+
+  <script src="assets/about-page.js"></script>
   <script src="assets/external-links.js"></script>
 </body>
 </html>

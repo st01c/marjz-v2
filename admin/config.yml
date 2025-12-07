@@ -206,3 +206,16 @@ collections:
         name: "body"
         widget: "markdown"
         hint: "Long-form content; will be rendered to HTML for item detail pages."
+  - name: "pages"
+    label: "Pages"
+    delete: false
+    files:
+      - name: "about"
+        label: "About page"
+        file: "content/about.md"
+        format: "frontmatter"
+        fields:
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            hint: "Content for the About page; supports rich text/Markdown."
