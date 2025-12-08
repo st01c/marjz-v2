@@ -7,7 +7,7 @@
   <meta name="description" content="Browse all work by tags and filters.">
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body>
+<body data-section="browse">
   <header class="nav-wrapper">
     <div class="nav">
       <div class="nav-left">
@@ -15,22 +15,15 @@
           <a href="index.html" class="nav-name">martin zeilinger</a>
         </div>
       </div>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="about.html" class="nav-link">_about</a>
-        <a href="research.html" class="nav-link">_research</a>
-        <a href="practice.html" class="nav-link nav-link--tooltip" data-tooltip="Projects, exhibitions, and curatorial work">_practice</a>
-        <a href="teaching.html" class="nav-link">_teaching</a>
-        <a href="browse.html" class="nav-link">_browse</a>
-        <a href="contact.html" class="nav-link nav-link--primary">_contact</a>
-      </nav>
+      <nav class="nav-links" aria-label="Main navigation" data-nav-inject></nav>
     </div>
   </header>
 
   <main class="page">
     <section id="browse" class="section">
       <header class="section-header">
-        <div class="section-title">_Browse</div>
-        <!-- <h1 class="section-subtitle">All content by tags (including type)</h1> -->
+        <!-- <div class="section-title">_Browse</div> -->
+        <h1 class="section-subtitle">Browse all entries by tags and type</h1>
       </header>
 
       <div class="browse-layout">
@@ -68,6 +61,7 @@
       </div>
     </section>
   </main>
+  <script src="assets/nav.js"></script>
   <script src="assets/main.js"></script>
   <script src="assets/external-links.js"></script>
 </body>

@@ -7,7 +7,7 @@
   <meta name="description" content="About page for Martin Zeilinger.">
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body>
+<body data-section="about">
   <header class="nav-wrapper">
     <div class="nav">
       <div class="nav-left">
@@ -15,32 +15,37 @@
           <a href="index.html" class="nav-name">Martin Zeilinger</a>
         </div>
       </div>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="about.html" class="nav-link nav-link--active">_about</a>
-        <a href="research.html" class="nav-link">_research</a>
-        <a href="practice.html" class="nav-link nav-link--tooltip" data-tooltip="Projects, exhibitions, and curatorial work">_practice</a>
-        <a href="teaching.html" class="nav-link">_teaching</a>
-        <a href="browse.html" class="nav-link">_browse</a>
-        <a href="contact.html" class="nav-link nav-link--primary">_contact</a>
-      </nav>
+      <nav class="nav-links" aria-label="Main navigation" data-nav-inject></nav>
     </div>
   </header>
 
   <main class="page">
     <section class="section">
-      <header class="section-header">
+      <!-- <header class="section-header">
         <h1
           class="section-subtitle"
           style="font-size: 2.6rem; line-height: 1.1; font-weight: var(--about-hero-weight, 300); margin-bottom: 1.5rem;"
         >(◕‿◕)/"</h1>
-      </header>
+      </header> -->
 
-      <article id="about-content" class="rich-text" data-source="content/about.md">
-        <p>Loading about page...</p>
-      </article>
+      <div class="about-grid">
+        <div class="about-column">
+          <article id="about-content" class="rich-text" data-source="content/about.md">
+            <p>Loading about page...</p>
+          </article>
+        </div>
+        <aside class="about-portrait">
+          <figure class="portrait-figure">
+            <img src="assets/uploads/MZ-portrait.jpeg" alt="Portrait of Martin Zeilinger" loading="lazy" />
+            <figcaption class="portrait-caption">Image credit Deniz Johns 2025</figcaption>
+          </figure>
+        </aside>
+      </div>
+      <div id="about-long-slot"></div>
     </section>
   </main>
 
+  <script src="assets/nav.js"></script>
   <script src="assets/about-page.js"></script>
   <script src="assets/external-links.js"></script>
 </body>

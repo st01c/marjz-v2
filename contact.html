@@ -7,7 +7,7 @@
   <meta name="description" content="Contact Martin Zeilinger.">
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body>
+<body data-section="contact">
   <header class="nav-wrapper">
     <div class="nav">
       <div class="nav-left">
@@ -15,28 +15,45 @@
           <a href="index.html" class="nav-name">martin zeilinger</a>
         </div>
       </div>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="about.html" class="nav-link">_about</a>
-        <a href="research.html" class="nav-link">_research</a>
-        <a href="practice.html" class="nav-link nav-link--tooltip" data-tooltip="Projects, exhibitions, and curatorial work">_practice</a>
-        <a href="teaching.html" class="nav-link">_teaching</a>
-        <a href="browse.html" class="nav-link">_browse</a>
-        <a href="contact.html" class="nav-link nav-link--primary">_contact</a>
-      </nav>
+      <nav class="nav-links" aria-label="Main navigation" data-nav-inject></nav>
     </div>
   </header>
 
   <main class="page">
     <section class="section">
       <header class="section-header">
-        <div class="section-title">_Contact</div>
-        <h1 class="section-subtitle">Preferred channels and notes coming soon.</h1>
+        <!-- <div class="section-title">_Get in touch</div> -->
+        <h1 class="section-subtitle" style="font-size: 2.2rem; line-height: 1.1; font-weight: 500; margin-bottom: 1.5rem;">
+          Get in touch
+        </h1>
       </header>
-      <p class="hero-lede">
-        Reach-outs, invitations, and collaboration info will be collected here once finalized.
-      </p>
+      <div class="contact-card">
+        <div>
+          <p>
+            For collaborations, invitations, supervision inquiries, or if you simply want to say hi, the best way to reach me
+            is via email. I’m always happy to hear from researchers, artists, and students with overlapping interests. I'll try to get back to you as soon as possible.
+          </p>
+          <div class="contact-links">
+            <a class="contact-pill">
+              <strong>m [dot] zeilinger [at] abertay [dot] ac [dot] uk</strong>
+              <span>Email</span>
+            </a>
+            <a class="contact-pill" href="https://rke.abertay.ac.uk/en/persons/martin-zeilinger" target="_blank" rel="noopener">
+              <strong>Academic profile</strong>
+              <span>Institutional page</span>
+            </a>
+            <a class="contact-pill" href="https://www.instagram.com/mrtnzlngr/" target="_blank" rel="noopener">
+              <strong>IG</strong>
+            </a>
+            <a class="contact-pill" href="www.linkedin.com/in/martin-zeilinger-43251b1a" target="_blank" rel="noopener">
+              <strong>LnkdIn</strong>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+  <script src="assets/nav.js"></script>
   <script src="assets/external-links.js"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@ async function initItemPage() {
 
 async function loadItem(query) {
   try {
-    const res = await fetch("data/content.json");
+    const res = await fetch("data/content.json", { cache: "no-store" });
     const items = await res.json();
     const lower = query.toLowerCase();
     return items.find(
@@ -81,7 +81,7 @@ async function renderContent(item) {
   }
 
   try {
-    const res = await fetch(item.contentPath);
+    const res = await fetch(item.contentPath, { cache: "no-store" });
     if (!res.ok) throw new Error("Failed to fetch content.");
     const html = await res.text();
     container.innerHTML = html;
@@ -108,4 +108,40 @@ function showError(message) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", initItemPage);
+function setupBackLink() {
+  const link = document.querySelector(".back-link");
+  if (!link) return;
+
+  const fallbackHref = "index.html";
+  const referrer = document.referrer;
+
+  if (window.history.length > 1) {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.history.back();
+    });
+    if (referrer) {
+      link.href = referrer;
+    }
+    return;
+  }
+
+  if (referrer) {
+    try {
+      const refUrl = new URL(referrer);
+      if (refUrl.origin === window.location.origin) {
+        link.href = referrer;
+        return;
+      }
+    } catch (err) {
+      console.warn("Could not parse referrer", err);
+    }
+  }
+
+  link.href = fallbackHref;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupBackLink();
+  initItemPage();
+});

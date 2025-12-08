@@ -15,6 +15,7 @@ async function renderAboutContent() {
     const { body } = parseFrontmatter(text);
     const html = markdownToHtml(body || "");
     container.innerHTML = html;
+    moveLongBio(container);
     markExternalLinks(container);
   } catch (err) {
     console.error("Could not load About content", err);
@@ -88,6 +89,29 @@ function markdownToHtml(md) {
   }
 
   return blocks.join("\n") || "<p></p>";
+}
+
+function moveLongBio(container) {
+  const slot = document.getElementById("about-long-slot");
+  if (!slot) return;
+
+  const heading = Array.from(container.querySelectorAll("h1, h2, h3")).find((el) =>
+    el.textContent.trim().toLowerCase().startsWith("longer bio")
+  );
+  if (!heading) return;
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "rich-text about-long";
+
+  let node = heading;
+  while (node) {
+    const next = node.nextSibling;
+    wrapper.appendChild(node);
+    node = next;
+  }
+
+  if (!wrapper.hasChildNodes()) return;
+  slot.appendChild(wrapper);
 }
 
 function renderBlock(text) {

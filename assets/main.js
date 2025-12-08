@@ -27,7 +27,7 @@ function setYear() {
 // Data loader: fetch structured content from disk.
 async function fetchContent() {
   try {
-    const res = await fetch("data/content.json");
+    const res = await fetch("data/content.json", { cache: "no-store" });
     return await res.json();
   } catch (e) {
     console.error("Could not load content.json", e);

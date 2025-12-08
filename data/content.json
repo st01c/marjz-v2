@@ -2,7 +2,7 @@
   {
     "id": "wettech5",
     "title": "Wet Tech #5",
-    "section": "practice",
+    "section": "curatorial",
     "slug": "wet-tech-5",
     "type": "curatorial",
     "year": 2025,
@@ -31,8 +31,10 @@
     "tags": [
       "video art"
     ],
-    "summary": "N/A",
-    "images": [],
+    "summary": "Returning & Turning (2024) is screening at Cafe Oto (London/UK) as part of a screening co-organised by Contact and The Thames Submarine.",
+    "images": [
+      "assets/uploads/thames-submarine-dec-25-2.jpg"
+    ],
     "featured": true,
     "pinned": false,
     "contentPath": "content/cafe-oto-screening.html"
@@ -62,7 +64,7 @@
   {
     "id": "wet-tech-04",
     "title": "Wet Tech #4",
-    "section": "practice",
+    "section": "curatorial",
     "slug": "wet-tech-04",
     "type": "curatorial",
     "year": 2025,

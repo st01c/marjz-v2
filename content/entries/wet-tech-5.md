@@ -2,7 +2,7 @@
 id: wettech5
 title: "Wet Tech #5"
 slug: wet-tech-5
-section: practice
+section: curatorial
 type: curatorial
 year: 2025
 fullDate: 2025-12-05 00:00

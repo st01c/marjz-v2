@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!section || !container) return;
 
   const items = (await fetchContent()) || [];
-  const filtered = sortByYear(items.filter((i) => i.section === section));
+  const target = section.toLowerCase();
+  const filtered = sortByYear(
+    items.filter((i) => (i.section || "").toLowerCase() === target)
+  );
 
   await renderSectionList(container, filtered, section);
 });

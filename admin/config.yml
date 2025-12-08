@@ -33,7 +33,9 @@ collections:
         options:
           - { label: "Research", value: "research" }
           - { label: "Practice", value: "practice" }
+          - { label: "Curatorial", value: "curatorial" }
           - { label: "Teaching", value: "teaching" }
+          - { label: "Cycling", value: "cycling" }
       - label: "Type"
         name: "type"
         widget: "select"
@@ -219,3 +221,21 @@ collections:
             name: "body"
             widget: "markdown"
             hint: "Content for the About page; supports rich text/Markdown."
+      - name: "cycling"
+        label: "Cycling page"
+        file: "content/cycling.md"
+        format: "frontmatter"
+        fields:
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            hint: "Content for the Cycling page; supports rich text/Markdown."
+      - name: "curatorial"
+        label: "Curatorial page"
+        file: "content/curatorial.md"
+        format: "frontmatter"
+        fields:
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            hint: "Content for the Curatorial page; supports rich text/Markdown."
