@@ -1,7 +1,9 @@
 @font-face {
-  font-family: "Breach";
-  src: url("fonts/breach.otf.woff2") format("woff2");
+  font-family: "Pixelcxx";
+  src: url("fonts/pixelcxx.otf.woff2") format("woff2");
   font-display: swap;
+  font-weight: 400;
+  font-style: normal;
 }
 
 :root {
@@ -86,16 +88,16 @@ a:hover {
 }
 
 .nav-name {
-  font-family: "Breach", system-ui, -apple-system, BlinkMacSystemFont,
-    "SF Pro Text", "Segoe UI", sans-serif;
+  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
   font-weight: 300;
-  font-size: clamp(2.8rem, 5vw, 3.1rem);
+  font-size: clamp(4rem, 5vw, 6rem);
   line-height: 1;
   min-height: 2.4rem;
   display: flex;
   align-items: center;
-  padding: 0.15rem 0.6rem;
-  border-radius: 999px;
+  padding: 0;
+  border-radius: 0;
   text-decoration: none;
   white-space: nowrap;
   letter-spacing: 0em;
@@ -111,9 +113,15 @@ a:hover {
   font-size: 0.85rem;
 }
 
+.nav-separator {
+  color: var(--muted);
+  pointer-events: none;
+  user-select: none;
+}
+
 .nav-link {
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
+  padding: 0;
+  border-radius: 0;
   /* border: 1px solid transparent; */
   color: var(--muted);
   text-decoration: none;
@@ -121,7 +129,7 @@ a:hover {
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  border-color: #000000;
+  border-color: transparent;
   color: #ffffff;
   background: var(--nav-hover);
   text-decoration: none;
@@ -149,12 +157,45 @@ a:hover {
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 0.25rem;
+  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
 }
 
 .section-subtitle {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
+}
+
+/* Global heading font */
+h1,
+h2,
+h3,
+.section-subtitle {
+  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+body[data-section="about"] .section-subtitle,
+body[data-section="about"] .rich-text h1,
+body[data-section="about"] .rich-text h2,
+body[data-section="about"] .rich-text h3 {
+  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+body[data-section="about"] .rich-text h3 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+body[data-section="curatorial"] .section-subtitle,
+body[data-section="curatorial"] .rich-text h1,
+body[data-section="curatorial"] .rich-text h2,
+body[data-section="curatorial"] .rich-text h3 {
+  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
 }
 
 /* Hero */
@@ -195,16 +236,92 @@ a:hover {
   max-width: 40rem;
 }
 
+.hero-note {
+  font-size: 1rem;
+  color: #000000;
+  margin: 0 0 1rem;
+  max-width: none;
+}
+
 .hero-heading {
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-size: 2.2rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.1;
   margin: 0 0 0.5rem;
 }
 
 /* Research page: keep hero lede black for readability */
 body[data-section="research"] .hero-lede {
   color: #000000;
+}
+
+/* Home hero: make lead text black */
+body[data-section="home"] .hero-lede,
+body[data-section="home"] .hero-heading {
+  color: #000000;
+}
+
+body[data-section="home"] .hero-heading.hero-heading--accent {
+  color: var(--nav-hover);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.about-column {
+  min-width: 0;
+}
+
+.about-portrait {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about-portrait img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  border-radius: 0;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.portrait-figure {
+  margin: 0;
+  text-align: right;
+  position: relative;
+}
+
+.portrait-caption {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--nav-hover);
+  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  text-align: right;
+  padding-top: 0.35rem;
+}
+
+.about-long {
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-portrait {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .about-portrait img {
+    max-width: 260px;
+  }
 }
 
 .hero-meta {
@@ -262,6 +379,8 @@ body[data-section="research"] .hero-lede {
   color: var(--muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
 }
 
 .hero-feature-title {
@@ -275,24 +394,23 @@ body[data-section="research"] .hero-lede {
   color: var(--muted);
   font-size: 0.95rem;
 }
-
 .hero-feature-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--nav-hover);
-  color: var(--nav-hover);
-  background: #ffffff;
+  border-radius: 0;
+  border: none;
+  color: #000000;
+  background: #ffe4ec;
   font-size: 0.85rem;
   text-decoration: none;
 }
 
 .hero-feature-pill:hover,
 .hero-feature-pill:focus-visible {
-  color: #ffffff;
-  background: var(--nav-hover);
+  color: #000000;
+  background: #ffd2e0;
   text-decoration: none;
 }
 
@@ -660,7 +778,7 @@ body[data-section="research"] .hero-lede {
 .contact-pill {
   font-size: 0.8rem;
   padding: 0.35rem 0.85rem;
-  border-radius: 999px;
+  border-radius: 0;
   border: none;
   background: #f9fafb;
   display: inline-flex;

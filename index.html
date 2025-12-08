@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body>
+<body data-section="home">
   <!-- Top navigation -->
   <header class="nav-wrapper">
     <div class="nav">
@@ -17,14 +17,7 @@
           <a href="index.html" class="nav-name">martin zeilinger</a>
         </div>
       </div>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="about.html" class="nav-link">_about</a>
-        <a href="research.html" class="nav-link">_research</a>
-        <a href="practice.html" class="nav-link nav-link--tooltip" data-tooltip="Projects, exhibitions, and curatorial work">_practice</a>
-        <a href="teaching.html" class="nav-link">_teaching</a>
-        <a href="browse.html" class="nav-link">_browse</a>
-        <a href="contact.html" class="nav-link nav-link--primary">_contact</a>
-      </nav>
+      <nav class="nav-links" aria-label="Main navigation" data-nav-inject></nav>
     </div>
   </header>
 
@@ -36,11 +29,11 @@
         <!-- <h1 class="hero-title">
           <span class="hero-highlight"> [empty] </span>
         </h1> -->
-        <h3 class="hero-lede hero-heading">
-          <i>Crossings-over between interdisciplinary research, creative practice, and curatorial work.</i>
+        <h3 class="hero-lede hero-heading hero-heading--accent">
+          Crossings-over between interdisciplinary research, creative practice, and curatorial work...
         </h3>
         <p class="hero-lede">
-          My interests include digital art, AI, critical artistic approaches to blockchain, permacomputing, IP issues in digital culture, agency and posthumanism, experimental videogame cultures, sound art, and 🚴‍♂️.
+          My interests include digital art, AI, critical approaches to blockchain, permacomputing, IP issues in digital culture, agency and posthumanism, experimental videogame cultures, sound art, and 🚴‍♂️
         </p>
         <p class="hero-lede">
           <a href="https://rke.abertay.ac.uk/en/persons/martin-zeilinger">Reader in Computational Arts and Technology</a>
@@ -53,10 +46,10 @@
           <a href="https://orpheusinstituut.be/en/projects/metamusicx">Associate Researcher</a> at the MetamusicX cluster, Orpheus Institute for Advanced Studies & Research in Music, Ghent/Belgium.
         </p>
         <p class="hero-lede">
-          <a href="https://marjz.notion.site/wet-tech">Co-organiser of the Wet Tech performance series</a>, Dundee/Scotland.
+          <a href="https://marjz.notion.site/wet-tech">Co-organiser of Wet Tech</a>, Dundee/Scotland.
         </p>
         <p class="hero-lede">
-          <a href="https://marjz.net/about">More about me...</a>
+          <a href="about.html">More about me...</a>
         </p>
         <!-- <div class="hero-meta">
           <div class="hero-meta-item">Based in: City / Country</div>
@@ -67,12 +60,13 @@
       <aside class="hero-feature" id="hero-feature" aria-label="Pinned entry">
         <div class="hero-feature-image" id="hero-feature-image" aria-hidden="true">
           <img id="hero-feature-image-el" loading="lazy" alt="" hidden />
+          <div class="hero-feature-credit" id="hero-feature-credit">Image credit Deniz Johns 2025</div>
         </div>
         <div class="hero-feature-body">
-          <div class="hero-feature-label" id="hero-feature-label">Pinned entry</div>
+          <div class="hero-feature-label" id="hero-feature-label">_Pinned entry</div>
           <div class="hero-feature-title" id="hero-feature-title">Set a pinned entry in Decap to feature it here.</div>
           <p class="hero-feature-blurb" id="hero-feature-blurb"></p>
-          <a class="hero-feature-pill" id="hero-feature-link" href="#" hidden>_more</a>
+          <a class="hero-feature-pill" id="hero-feature-link" href="#" hidden>More...</a>
         </div>
       </aside>
     </section>
@@ -128,6 +122,7 @@
     </section>
   </main>
 
+  <script src="assets/nav.js"></script>
   <script src="assets/main.js"></script>
   <script src="assets/external-links.js"></script>
 </body>
