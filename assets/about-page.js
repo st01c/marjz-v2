@@ -126,7 +126,9 @@ function renderInline(text) {
   html = html.replace(/!\[(.*?)\]\((.+?)\)/g, (match, alt, target) => {
     const { url } = parseImageTarget(target);
     if (!url) return escapeHtml(match);
-    return `<img src="${escapeAttribute(url)}" alt="${escapeAttribute(alt)}">`;
+    return `<img class="responsive-image" loading="lazy" src="${escapeAttribute(
+      url
+    )}" alt="${escapeAttribute(alt)}">`;
   });
   html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
   html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");

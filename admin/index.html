@@ -8,5 +8,22 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@3.8.0/dist/decap-cms.js"></script>
+  <script>
+    // Keep uploaded images constrained in the CMS preview to mirror the site layout.
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.CMS) {
+        const responsiveImageCss = `
+          img,
+          .responsive-image {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+        `;
+        window.CMS.registerPreviewStyle(responsiveImageCss, { raw: true });
+      }
+    });
+  </script>
 </body>
 </html>

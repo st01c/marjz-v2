@@ -60,6 +60,15 @@ a:hover {
   padding: 0 1.25rem 3rem;
 }
 
+.rich-text img,
+.responsive-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 1.25rem 0;
+}
+
 /* Nav */
 
 .nav-wrapper {
