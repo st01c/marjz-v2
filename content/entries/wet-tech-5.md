@@ -18,6 +18,8 @@ tags:
 images:
   - assets/uploads/wet-tech-5.png
 ---
+The next installment in our occasional series of improvised electronic music and moving image events features two sets, by Jonathan Impett and Juan Parra (BE) and by Jung In Jung and Lynda Clark (UK)[](https://marjz.notion.site/Wet-Tech-5-info-2abcbe89c3bc802a9408d34fcce55026)
+
 [More info](https://marjz.notion.site/Wet-Tech-5-info-2abcbe89c3bc802a9408d34fcce55026)
 
 ![](assets/uploads/wet-tech-5.png)
