@@ -1,0 +1,43 @@
+name: Build content.json
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "content/**"
+      - "content/entries/**"
+      - "content/*.md"
+      - "admin/config.yml"
+      - "scripts/build-content.js"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build content index
+        run: node scripts/build-content.js
+
+      - name: Commit generated content (if changed)
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore: rebuild content.json"
+          add: |
+            data/content.json
+            content/*.html
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
