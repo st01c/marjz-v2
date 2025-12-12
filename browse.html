@@ -25,6 +25,11 @@
         <!-- <div class="section-title">_Browse</div> -->
         <h1 class="section-subtitle">Browse all entries by tags and type</h1>
       </header>
+      <div class="filter-toggle-bar">
+        <button type="button" class="filter-toggle" id="filter-toggle" aria-expanded="false" aria-controls="browse-filters">
+          Filters
+        </button>
+      </div>
 
       <div class="browse-layout">
         <div class="browse-main">
@@ -33,7 +38,7 @@
           </div>
         </div>
 
-        <aside class="browse-sidebar">
+        <aside class="browse-sidebar is-collapsed" id="browse-filters">
           <div class="filters">
             <div class="filter-group">
               <div class="filter-label">Match</div>

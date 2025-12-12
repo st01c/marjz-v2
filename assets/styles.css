@@ -100,7 +100,7 @@ a:hover {
   font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
   font-weight: 300;
-  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
   line-height: 1;
   min-height: 2.4rem;
   display: flex;
@@ -117,8 +117,8 @@ a:hover {
 
 @media (max-width: 520px) {
   .nav-name {
-    font-size: clamp(2.2rem, 8vw, 3.6rem);
-    letter-spacing: -0.01em;
+    font-size: clamp(2.8rem, 8vw, 4rem);
+    letter-spacing: -0.008em;
   }
 }
 
@@ -943,7 +943,39 @@ footer {
   }
 
   .browse-sidebar {
+    order: -1;
+  }
+
+  .browse-sidebar {
     width: 100%;
+  }
+
+  .browse-sidebar.is-collapsed {
+    display: none;
+  }
+}
+
+.filter-toggle-bar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .filter-toggle-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.75rem;
+  }
+
+  .filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--border);
+    background: #ffffff;
+    color: var(--text);
+    font-size: 0.9rem;
+    cursor: pointer;
   }
 }
 

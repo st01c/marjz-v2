@@ -238,6 +238,9 @@ function setupBrowsingControls(items, allTags, allTypes) {
   const resultsEl = document.getElementById("browse-results");
   const typeListEl = document.getElementById("type-list");
   const modeButtons = document.querySelectorAll(".mode-button");
+  const filterToggle = document.getElementById("filter-toggle");
+  const filterPanel = document.getElementById("browse-filters");
+  const mobileQuery = window.matchMedia("(max-width: 900px)");
 
   if (!tagListEl || !resultsEl || !modeButtons.length || !typeListEl) return;
 
@@ -245,6 +248,30 @@ function setupBrowsingControls(items, allTags, allTypes) {
   const activeTags = new Set();
   const activeTypes = new Set();
   let filterMode = "any";
+
+  // Mobile: show/hide filter panel
+  if (filterToggle && filterPanel && mobileQuery) {
+    const syncFilterPanel = () => {
+      if (mobileQuery.matches) {
+        const collapsed = filterPanel.classList.contains("is-collapsed");
+        filterPanel.hidden = collapsed;
+        filterToggle.setAttribute("aria-expanded", String(!collapsed));
+      } else {
+        filterPanel.hidden = false;
+        filterPanel.classList.remove("is-collapsed");
+        filterToggle.setAttribute("aria-expanded", "true");
+      }
+    };
+
+    filterToggle.addEventListener("click", () => {
+      if (!mobileQuery.matches) return;
+      filterPanel.classList.toggle("is-collapsed");
+      syncFilterPanel();
+    });
+
+    mobileQuery.addEventListener("change", syncFilterPanel);
+    syncFilterPanel();
+  }
 
   // Mode buttons (Any / All)
   modeButtons.forEach((btn) => {

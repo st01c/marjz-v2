@@ -32,10 +32,48 @@
         <p>Loading curatorial page...</p>
       </article>
     </section>
+
+    <section class="section">
+      <header class="section-header">
+        <div class="section-title">Grid view of recent projects</div>
+        <h2 class="section-subtitle">Curatorial entries</h2>
+      </header>
+      <div id="curatorial-grid" class="practice-grid"></div>
+    </section>
   </main>
 
   <script src="assets/nav.js"></script>
+  <script src="assets/main.js"></script>
+  <script src="assets/section-page.js"></script>
   <script src="assets/about-page.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const grid = document.getElementById("curatorial-grid");
+      if (!grid) return;
+
+      grid.innerHTML = "<p>Loading curatorial entries...</p>";
+
+      try {
+        const items = (await fetchContent()) || [];
+        const curatorialItems = sortByYear(
+          items.filter(
+            (item) => (item.type || "").toLowerCase() === "curatorial"
+          )
+        );
+
+        if (!curatorialItems.length) {
+          grid.innerHTML = "<p>No curatorial entries yet.</p>";
+          return;
+        }
+
+        grid.innerHTML = "";
+        await renderPracticeGrid(grid, curatorialItems);
+      } catch (err) {
+        console.error("Could not load curatorial entries", err);
+        grid.innerHTML = "<p>Could not load curatorial entries right now.</p>";
+      }
+    });
+  </script>
   <script src="assets/external-links.js"></script>
 </body>
 </html>

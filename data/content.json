@@ -107,7 +107,7 @@
   },
   {
     "id": "wet-tech-04",
-    "title": "Wet Tech #4",
+    "title": "Wet Tech #4 (featuring Jan Mertens and Ecem Ince)",
     "section": "curatorial",
     "slug": "wet-tech-04",
     "type": "curatorial",
@@ -117,7 +117,7 @@
       "electronic music",
       "improvisation"
     ],
-    "summary": "| Wet Tech #4",
+    "summary": "> Wet Tech #4 – an evening of sounds made from and inspired by field recording, with new work by Jan Mertens (BE/UK) and Ecem Ince (TR/UK).",
     "images": [
       "assets/uploads/wet-tech-4.png"
     ],
@@ -167,6 +167,26 @@
     "featured": true,
     "pinned": false,
     "contentPath": "content/xcoax-2025-in-dundee-open-call.html"
+  },
+  {
+    "id": "drone-day-2025",
+    "title": "Drone Day 2025 live-streamed performance (with Jan Mertens)",
+    "section": "practice",
+    "slug": "drone-day-2025",
+    "type": "performance",
+    "year": 2025,
+    "fullDate": "2025-05-24",
+    "tags": [
+      "sound art",
+      "electronic music"
+    ],
+    "summary": "An improvised, live-streamed performance with Jan Mertens on the occasion of drone day 2025.",
+    "images": [
+      "assets/uploads/drone-day-2025.png"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/drone-day-2025.html"
   },
   {
     "id": "2025-02-06-techno-futures",
