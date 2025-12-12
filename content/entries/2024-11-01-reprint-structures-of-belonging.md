@@ -6,7 +6,7 @@ section: research
 type: book chapter
 year: 2024
 fullDate: 2024-11-01 00:00
-featured: true
+featured: false
 pinned: false
 summary: Published in The PostScriptUM Anthology (2010–2023) – Essays on Art,
   Technology, Society and the Environment (Aksioma 2024)
