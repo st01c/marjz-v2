@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Pixelcxx";
-  src: url("fonts/pixelcxx.otf.woff2") format("woff2");
+  font-family: "DxDynamix";
+  src: url("fonts/DxDynamix-Bold.otf") format("opentype");
   font-display: swap;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -97,7 +97,7 @@ a:hover {
 }
 
 .nav-name {
-  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
   font-weight: 300;
   font-size: clamp(4rem, 5vw, 6rem);
@@ -166,8 +166,14 @@ a:hover {
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 0.25rem;
-  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
+}
+
+/* Home: keep section labels in their written case (no forced uppercase) */
+body[data-section="home"] .section-title {
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 .section-subtitle {
@@ -181,15 +187,16 @@ h1,
 h2,
 h3,
 .section-subtitle {
-  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
+  color: var(--nav-hover);
 }
 
 body[data-section="about"] .section-subtitle,
 body[data-section="about"] .rich-text h1,
 body[data-section="about"] .rich-text h2,
 body[data-section="about"] .rich-text h3 {
-  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
 }
 
@@ -203,7 +210,7 @@ body[data-section="curatorial"] .section-subtitle,
 body[data-section="curatorial"] .rich-text h1,
 body[data-section="curatorial"] .rich-text h2,
 body[data-section="curatorial"] .rich-text h3 {
-  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
 }
 
@@ -272,6 +279,7 @@ body[data-section="home"] .hero-heading {
 
 body[data-section="home"] .hero-heading.hero-heading--accent {
   color: var(--nav-hover);
+  font-style: italic;
 }
 
 .about-grid {
@@ -310,7 +318,7 @@ body[data-section="home"] .hero-heading.hero-heading--accent {
   margin: 0;
   font-size: 0.8rem;
   color: var(--nav-hover);
-  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
   text-align: right;
   padding-top: 0.35rem;
@@ -388,8 +396,14 @@ body[data-section="home"] .hero-heading.hero-heading--accent {
   color: var(--muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-family: "Pixelcxx", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
+}
+
+/* Home: keep pinned entry label/type/date case as entered */
+body[data-section="home"] .hero-feature-label {
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 .hero-feature-title {
@@ -504,6 +518,7 @@ body[data-section="home"] .hero-heading.hero-heading--accent {
 .card h3 {
   margin: 0 0 0.3rem;
   font-size: 1rem;
+  color: var(--nav-hover);
 }
 
 .card small {
