@@ -100,7 +100,7 @@ a:hover {
   font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
   font-weight: 300;
-  font-size: clamp(4rem, 5vw, 6rem);
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
   line-height: 1;
   min-height: 2.4rem;
   display: flex;
@@ -113,6 +113,13 @@ a:hover {
   text-transform: none !important;
   font-variant: normal;
   /* color: var(--nav-hover); */
+}
+
+@media (max-width: 520px) {
+  .nav-name {
+    font-size: clamp(2.2rem, 8vw, 3.6rem);
+    letter-spacing: -0.01em;
+  }
 }
 
 .nav-links {
