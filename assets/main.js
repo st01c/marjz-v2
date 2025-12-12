@@ -180,7 +180,7 @@ function renderPinnedHero(items) {
   const imageTag = document.getElementById("hero-feature-image-el");
 
   if (titleEl) {
-    titleEl.textContent = pinned.title || pinned.id || "Pinned entry";
+    titleEl.textContent = pinned.title || pinned.id || "_Pinned Entry";
   }
 
   if (blurbEl) {
@@ -188,7 +188,7 @@ function renderPinnedHero(items) {
   }
 
   if (labelEl) {
-    const metaBits = ["Pinned entry"];
+    const metaBits = ["_Pinned Entry"];
     if (pinned.section) metaBits.push(pinned.section);
     const pinnedDate = formatFullDate(pinned.fullDate) || (pinned.year ? String(pinned.year) : "");
     if (pinnedDate) metaBits.push(pinnedDate);
@@ -199,7 +199,7 @@ function renderPinnedHero(items) {
     const heroImage = (pinned.images || []).find(Boolean);
     if (heroImage) {
       imageTag.src = heroImage;
-      imageTag.alt = pinned.title || pinned.id || "Pinned entry image";
+      imageTag.alt = pinned.title || pinned.id || "_Pinned Entry image";
       imageTag.hidden = false;
     } else {
       imageTag.removeAttribute("src");

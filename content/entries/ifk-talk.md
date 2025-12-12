@@ -1,23 +1,18 @@
 ---
-id: ifk-talk
-title: (Dis-)Continuities of Labor Exploitation in 'Arbeiterliteratur' and Video Games
-slug: ifk-talk
-section: research
-type: public lecture
+id: "ifk-talk"
+title: "(Dis-)Continuities of Labor Exploitation in 'Arbeiterliteratur' and Video Games"
+slug: "ifk-talk"
+section: "research"
+type: "public lecture"
 year: 2025
-fullDate: 2025-11-10
+fullDate: "2025-11-10"
 featured: true
 pinned: false
-summary: "This lecture presents ongoing research undertaken as part of my Senior
-  Research Fellowship at the International Center for Cultural Studies (IFK) in
-  Vienna. It focuses on the representation of labor relations in video games –
-  in particular it offers a critical analysis of work that occurs in the
-  background of narrative action, and which is carried out by 'non-player
-  characters' (NPCs). "
+summary: "This lecture presents ongoing research undertaken as part of my Senior Research Fellowship at the International Center for Cultural Studies (IFK) in Vienna. It focuses on the representation of labor relations in video games – in particular it offers a critical analysis of work that occurs in the background of narrative action, and which is carried out by 'non-player characters' (NPCs). "
 tags:
-  - game studies
-  - agency
-newTags: NPC
+  - "game studies"
+  - "agency"
+  - "NPC"
 ---
 This lecture presents ongoing research undertaken as part of my [Senior Research Fellowship](https://ifk.ac.at/fellows-detail/martin-zeilinger.html) at the International Center for Cultural Studies (IFK) in Vienna. It focuses on the representation of labor relations in video games – in particular I offer a critical analysis of work that occurs in the background of narrative action, and which is carried out by 'non-player characters' (NPCs).
 
