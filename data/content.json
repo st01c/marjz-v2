@@ -169,6 +169,28 @@
     "contentPath": "content/xcoax-2025-in-dundee-open-call.html"
   },
   {
+    "id": "golden-fleece-junction",
+    "title": "Golden Fleece Junction",
+    "section": "practice",
+    "slug": "golden-fleece-junction",
+    "type": "sound art",
+    "year": 2025,
+    "fullDate": "2025-05-25",
+    "tags": [
+      "improvisation",
+      "sound art",
+      "electronic music",
+      "drone"
+    ],
+    "summary": "A single-take improvisation recorded on the Elektron Model:Cycles for Drone Day 2025",
+    "images": [
+      "https://i1.sndcdn.com/artworks-14yAzIuM4fEGK0oT-JrymwA-t1080x1080.jpg"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/golden-fleece-junction.html"
+  },
+  {
     "id": "drone-day-2025",
     "title": "Drone Day 2025 live-streamed performance (with Jan Mertens)",
     "section": "practice",
@@ -178,7 +200,8 @@
     "fullDate": "2025-05-24",
     "tags": [
       "sound art",
-      "electronic music"
+      "drone",
+      "improvisation"
     ],
     "summary": "An improvised, live-streamed performance with Jan Mertens on the occasion of drone day 2025.",
     "images": [

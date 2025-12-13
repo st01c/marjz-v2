@@ -61,6 +61,7 @@ collections:
           - "public lecture"
           - "research article"
           - "screening"
+          - "sound art"
           - "special issue"
           - "workshop"
         # END_AUTO_TYPE_OPTIONS
@@ -129,6 +130,7 @@ collections:
           - "digital commons"
           - "digital_storytelling"
           - "distributed agency"
+          - "drone"
           - "educational licensing"
           - "electronic music"
           - "exhibition"
@@ -245,3 +247,12 @@ collections:
             name: "body"
             widget: "markdown"
             hint: "Content for the Curatorial page; supports rich text/Markdown."
+      - name: "teaching"
+        label: "Teaching page"
+        file: "content/teaching.md"
+        format: "frontmatter"
+        fields:
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            hint: "Content for the Teaching page; supports rich text/Markdown."
