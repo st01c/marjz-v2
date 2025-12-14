@@ -106,6 +106,27 @@
     "contentPath": "content/ifk-talk.html"
   },
   {
+    "id": "npc-orf-science-portal",
+    "title": "Was Nebenfiguren über die Realität erzählen (What Side Characters Tell Us about Reality)",
+    "section": "research",
+    "slug": "npc-orf-science-portal",
+    "type": "commentary",
+    "year": 2025,
+    "fullDate": "2025-11-10",
+    "tags": [
+      "NPC",
+      "game studies",
+      "agency"
+    ],
+    "summary": "Side characters, referred to in video games as ‘non-playable characters,’ make virtual worlds appear lifelike. Although their routines often run in the background and have no direct influence on the plot, the \"work\" they do is essential to the functioning of the game world, writes cultural theorist Martin Zeilinger in a guest article. Their silent, repetitive work opens up a critical view of real working conditions.",
+    "images": [
+      "https://tubestatic.orf.at/mims/2025/45/27/crops/w=800,q=60,r=1.5/2823496_body_1089827_hardlyworking-screenshot-02.jpg?s=d4298445f12dd77ece07865ec516dbfc5bc7a5a8"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/npc-orf-science-portal.html"
+  },
+  {
     "id": "wet-tech-04",
     "title": "Wet Tech #4 (featuring Jan Mertens and Ecem Ince)",
     "section": "curatorial",
@@ -148,6 +169,42 @@
     "contentPath": "content/ccs-article-published.html"
   },
   {
+    "id": "cyc-and-soc-2025",
+    "title": "Rethinking Interdisciplinarity for Cycling Scholarship (Cycling & Society 2025, Glasgow)",
+    "section": "research",
+    "slug": "cyc-and-soc-2025",
+    "type": "conference presentation",
+    "year": 2025,
+    "fullDate": "2025-09-04",
+    "tags": [
+      "CCS",
+      "cycling",
+      "interdisciplinarity"
+    ],
+    "summary": "Linked to the publication of the 'Critical Cycling Studies' position paper I co-authored with my collaborator Andrew Bricker (HSSCOMMS 2025, Springer Nature), I presented a paper called \"Rethinking Interdisciplinarity for Cycling Scholarship\" at the annual Cycling & Society conference, which this year was held in Glasgow.",
+    "images": [],
+    "featured": true,
+    "pinned": false,
+    "contentPath": "content/cyc-and-soc-2025.html"
+  },
+  {
+    "id": "daid-white-paper",
+    "title": "Doing AI Differently White Paper",
+    "section": "research",
+    "slug": "daid-white-paper",
+    "year": 2025,
+    "fullDate": "2025-07-31",
+    "tags": [
+      "AI",
+      "interdisciplinarity"
+    ],
+    "summary": "I contributed to the \"Doing AI Differently\" white paper, published as part of a Turing Institute initiative of the same name, which aims to 'rethink the foundations of AI through the humanities.'",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/daid-white-paper.html"
+  },
+  {
     "id": "2025-07-09-xcoax",
     "title": "xCoAx 2025 in Dundee!",
     "section": "research",
@@ -167,6 +224,25 @@
     "featured": true,
     "pinned": false,
     "contentPath": "content/xcoax-2025-in-dundee-open-call.html"
+  },
+  {
+    "id": "gta-essay-italian",
+    "title": "Italian translation of \"Survival Interventions in GTA & the Limits of Performance in Virtual Environments\" published in 'Videoarte Ludica'",
+    "section": "research",
+    "slug": "gta-essay-italian",
+    "type": "book chapter",
+    "year": 2025,
+    "fullDate": "2025-06-18",
+    "tags": [
+      "machinima",
+      "video art",
+      "performance art"
+    ],
+    "summary": "> An Italian translation of my essay \"Survival Interventions in GTA & the Limits of Performance in Virtual Environments\" has been published in the Open Access book 'Videoarte Ludica' (Ed. Matteo Bittanti, Mimesis Edizioni)",
+    "images": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/gta-essay-italian.html"
   },
   {
     "id": "golden-fleece-junction",
