@@ -38,3 +38,7 @@ Access:
 http://localhost:8080/ [site]
 
 http://localhost:8080/admin/ [admin UI]
+
+Full Decap test (admin-full):
+- Terminal 1: python3 -m http.server 8080
+- Browser: http://localhost:8080/admin-full/ (uses git-gateway with editorial workflow on decap-full-test; uploads in assets/uploads/full). Sign in with Netlify Identity when prompted. Do NOT use local_backend here—draft/review requires the real backend.
