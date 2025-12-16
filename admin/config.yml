@@ -1,11 +1,11 @@
-local_backend:
-  url: http://localhost:8081/api/v1
-
 backend:
-  name: git-gateway
+  name: github
+  repo: st01c/marjz-v2
   branch: main
-  identity_url: https://marjz.netlify.app/.netlify/identity
-  gateway_url: https://marjz.netlify.app/.netlify/git
+  base_url: http://localhost:8081
+  auth_endpoint: /api/auth
+
+publish_mode: editorial_workflow
 
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"

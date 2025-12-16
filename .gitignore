@@ -1,0 +1,3 @@
+# Local-only notes; keep out of git
+notes.txt
+notes.local*
