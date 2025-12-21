@@ -1,3 +1,4 @@
 # Local-only notes; keep out of git
 notes.txt
+admin/notes.txt
 notes.local*
