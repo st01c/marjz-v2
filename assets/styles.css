@@ -100,7 +100,7 @@ a:hover {
   font-family: "DxDynamix", Arial, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
   font-weight: 300;
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-size: clamp(2.8rem, 5vw, 4rem);
   line-height: 1;
   min-height: 2.4rem;
   display: flex;
