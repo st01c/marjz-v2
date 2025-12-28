@@ -9,7 +9,7 @@ In 2023 and 2024, I held a guest professorship in Digital Humanities at the [Uni
 
 I am also a co-convener of the [xCoAx School of X](https://classof23.xcoax.org/) (summer doctoral school).
 
-\---
+---
 
 I welcome **PhD Supervision inquiries** from prospective students in all of my areas of interest, both for research-based projects and (practice-based) artistic research projects. I'm happy to assist suitable candidates with preparing applications for PhD studentship funding. I am also available for co-supervising postgraduate projects at external institutions.
 
