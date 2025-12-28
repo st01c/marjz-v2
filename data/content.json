@@ -142,7 +142,7 @@
     "images": [
       "assets/uploads/wet-tech-4.png"
     ],
-    "featured": true,
+    "featured": false,
     "pinned": false,
     "contentPath": "content/wet-tech-04.html"
   },
@@ -183,7 +183,7 @@
     ],
     "summary": "Linked to the publication of the 'Critical Cycling Studies' position paper I co-authored with my collaborator Andrew Bricker (HSSCOMMS 2025, Springer Nature), I presented a paper called \"Rethinking Interdisciplinarity for Cycling Scholarship\" at the annual Cycling & Society conference, which this year was held in Glasgow.",
     "images": [],
-    "featured": true,
+    "featured": false,
     "pinned": false,
     "contentPath": "content/cyc-and-soc-2025.html"
   },
@@ -221,7 +221,7 @@
     ],
     "summary": "We're pround and excited to be hosting xCoAx 2025 in Dundee!",
     "images": [],
-    "featured": true,
+    "featured": false,
     "pinned": false,
     "contentPath": "content/xcoax-2025-in-dundee-open-call.html"
   },

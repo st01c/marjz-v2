@@ -60,20 +60,47 @@ async function renderSectionList(container, items, sectionName) {
     meta.textContent = dateLabel;
     if (dateLabel) header.appendChild(meta);
 
-    const tagsRow = document.createElement("div");
-    tagsRow.className = "pill-row";
-    (item.tags || []).forEach((t) => {
-      const pill = document.createElement("span");
-      pill.className = "pill";
-      pill.textContent = t;
-      tagsRow.appendChild(pill);
-    });
+    const typeText = (item.type || "").trim();
+    const tags = (item.tags || []).filter(Boolean);
 
     const summary = document.createElement("p");
     summary.textContent = item.summary || "";
 
     card.appendChild(header);
-    if ((item.tags || []).length) card.appendChild(tagsRow);
+    if (sectionName === "research") {
+      const metaRow = document.createElement("div");
+      metaRow.className = "pill-row";
+
+      if (typeText) {
+        const typeEl = document.createElement("span");
+        typeEl.className = "pill";
+        typeEl.style.fontWeight = "700";
+        typeEl.style.color = "#000";
+        typeEl.textContent = typeText;
+        metaRow.appendChild(typeEl);
+      }
+
+      tags.forEach((t) => {
+        const pill = document.createElement("span");
+        pill.className = "pill";
+        pill.textContent = t;
+        metaRow.appendChild(pill);
+      });
+
+      if (metaRow.children.length) {
+        card.appendChild(metaRow);
+      }
+    } else if (tags.length) {
+      const tagsRow = document.createElement("div");
+      tagsRow.className = "pill-row";
+      tags.forEach((t) => {
+        const pill = document.createElement("span");
+        pill.className = "pill";
+        pill.textContent = t;
+        tagsRow.appendChild(pill);
+      });
+      card.appendChild(tagsRow);
+    }
     if (item.summary) card.appendChild(summary);
 
     container.appendChild(card);
@@ -149,30 +176,23 @@ async function renderPracticeGrid(container, items) {
     metaRow.className = "practice-card-meta";
 
     const typeText = item.type ? String(item.type).trim() : "";
+    const tags = (item.tags || []).filter(Boolean);
+
     if (typeText) {
       const typeEl = document.createElement("span");
-      typeEl.className = "practice-card-type";
+      typeEl.className = "pill";
+      typeEl.style.fontWeight = "700";
+      typeEl.style.color = "#000";
       typeEl.textContent = typeText;
       metaRow.appendChild(typeEl);
     }
 
-    const tagsRow = document.createElement("div");
-    tagsRow.className = "pill-row";
-    (item.tags || []).forEach((t) => {
+    tags.forEach((t) => {
       const pill = document.createElement("span");
       pill.className = "pill";
       pill.textContent = t;
-      tagsRow.appendChild(pill);
+      metaRow.appendChild(pill);
     });
-    if (typeText && tagsRow.children.length) {
-      const separator = document.createElement("span");
-      separator.className = "practice-card-separator";
-      separator.textContent = "•";
-      metaRow.appendChild(separator);
-    }
-    if (tagsRow.children.length) {
-      metaRow.appendChild(tagsRow);
-    }
 
     if (metaRow.children.length) {
       body.appendChild(metaRow);

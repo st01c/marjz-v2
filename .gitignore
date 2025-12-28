@@ -2,3 +2,5 @@
 notes.txt
 admin/notes.txt
 notes.local*
+scripts/run-decap-local.private.sh
+admin/local.html

@@ -447,23 +447,33 @@ function renderBrowseResults(items, container, activeTags, activeTypes, mode) {
     yearEl.textContent = dateLabel;
     if (dateLabel) header.appendChild(yearEl);
 
-    const tagsRow = document.createElement("div");
-    tagsRow.className = "pill-row";
+    const metaRow = document.createElement("div");
+    metaRow.className = "pill-row";
 
-    const visibleTags = item.tags || [];
+    const typeText = item._type || item.type || "";
+    if (typeText) {
+      const typePill = document.createElement("span");
+      typePill.className = "pill";
+      typePill.style.fontWeight = "700";
+      typePill.style.color = "#000";
+      typePill.textContent = typeText;
+      metaRow.appendChild(typePill);
+    }
+
+    const visibleTags = (item.tags || []).filter(Boolean);
     visibleTags.forEach((t) => {
       const span = document.createElement("span");
       span.className = "pill";
       span.textContent = t;
-      tagsRow.appendChild(span);
+      metaRow.appendChild(span);
     });
 
     const summaryEl = document.createElement("p");
     summaryEl.textContent = item.summary || "";
 
     card.appendChild(header);
-    if (visibleTags.length) {
-      card.appendChild(tagsRow);
+    if (metaRow.children.length) {
+      card.appendChild(metaRow);
     }
     if (item.summary) {
       card.appendChild(summaryEl);

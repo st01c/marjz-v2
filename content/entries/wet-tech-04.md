@@ -6,7 +6,7 @@ section: curatorial
 type: curatorial
 year: 2025
 fullDate: 2025-11-03 00:00
-featured: true
+featured: false
 pinned: false
 summary: >
   Wet Tech #4 – an evening of sounds made from and inspired by field recording,

@@ -1,9 +1,10 @@
+local_backend: true
+
 backend:
   name: github
   repo: st01c/marjz-v2
   branch: main
   base_url: http://localhost:8081
-  auth_endpoint: /api/auth
 
 publish_mode: editorial_workflow
 
@@ -22,7 +23,7 @@ collections:
     slug: "{{slug}}"
     summary: "{{title}} — {{fullDate}} — {{section}}"
     sortable_fields: ["commit_date", "fullDate", "year", "title"]
-    fields:
+    fields: &entry_fields
       - { label: "ID", name: "id", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - label: "Slug"
@@ -216,6 +217,21 @@ collections:
         name: "body"
         widget: "markdown"
         hint: "Long-form content; will be rendered to HTML for item detail pages."
+  - name: "featured-entries"
+    label: "Featured entries"
+    label_singular: "Featured entry"
+    identifier_field: "id"
+    folder: "content/entries"
+    extension: "md"
+    format: "frontmatter"
+    create: false
+    slug: "{{slug}}"
+    summary: "{{title}} — {{fullDate}} — {{section}}"
+    filter:
+      field: "featured"
+      value: true
+    sortable_fields: ["commit_date", "fullDate", "year", "title"]
+    fields: *entry_fields
   - name: "pages"
     label: "Pages"
     delete: false

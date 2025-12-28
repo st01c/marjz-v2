@@ -62,7 +62,7 @@
         const items = (await fetchContent()) || [];
         const curatorialItems = sortByYear(
           items.filter(
-            (item) => (item.type || "").toLowerCase() === "curatorial"
+            (item) => (item.section || "").toLowerCase() === "curatorial"
           )
         );
 

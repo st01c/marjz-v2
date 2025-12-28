@@ -7,7 +7,7 @@ section: research
 type: conference presentation
 year: 2025
 fullDate: 2025-09-04
-featured: true
+featured: false
 pinned: false
 summary: Linked to the publication of the 'Critical Cycling Studies' position
   paper I co-authored with my collaborator Andrew Bricker (HSSCOMMS 2025,

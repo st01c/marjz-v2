@@ -285,6 +285,11 @@ body[data-section="curatorial"] .rich-text h3 {
   max-width: 40rem;
 }
 
+.hero-spacer {
+  margin: 0 0 -0.5rem;
+  min-height: -0.5rem;
+}
+
 .hero-note {
   font-size: 1rem;
   color: #000000;
@@ -682,6 +687,16 @@ body[data-section="home"] .hero-feature-label {
   color: var(--muted);
 }
 
+.browse-card .pill-row {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.browse-card .pill {
+  white-space: nowrap;
+}
+
 .practice-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -763,7 +778,7 @@ body[data-section="home"] .hero-feature-label {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .practice-card-type {
@@ -781,6 +796,10 @@ body[data-section="home"] .hero-feature-label {
 .practice-card-meta .pill-row {
   flex: 1 1 auto;
   min-width: 0;
+}
+
+.practice-card-meta .pill {
+  white-space: nowrap;
 }
 
 .practice-card-media.no-image {

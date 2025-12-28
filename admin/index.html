@@ -7,14 +7,17 @@
 </head>
 <body>
   <script>
+    // We'll manually initialize CMS to ensure the inline config is used.
+    window.CMS_MANUAL_INIT = true;
+
     // Inline Decap config to avoid fetching config.yml with incorrect MIME type from the simple HTTP server.
     window.CMS_CONFIG = {
+      local_backend: true,
       backend: {
         name: "github",
         repo: "st01c/marjz-v2",
         branch: "main",
         base_url: "http://localhost:8081",
-        auth_endpoint: "/api/auth",
       },
       publish_mode: "editorial_workflow",
       media_folder: "assets/uploads",
@@ -321,6 +324,17 @@
   </script>
   <script src="https://unpkg.com/decap-cms@3.8.0/dist/decap-cms.js"></script>
   <script>
+    // Explicit init to guarantee the inline config (with local_backend) is applied.
+    if (window.CMS && window.CMS_CONFIG) {
+      console.log("Initializing Decap CMS with local_backend:", window.CMS_CONFIG.local_backend);
+      window.CMS.init({
+        config: window.CMS_CONFIG,
+        load_config_file: false, // force use of the inline config
+      });
+    } else {
+      console.warn("CMS or CMS_CONFIG missing at init time.", { CMS: !!window.CMS, CMS_CONFIG: !!window.CMS_CONFIG });
+    }
+
     // Keep uploaded images constrained in the CMS preview to mirror the site layout.
     document.addEventListener("DOMContentLoaded", () => {
       if (window.CMS) {
