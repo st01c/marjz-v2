@@ -14,7 +14,7 @@ summary: A short track created for the 2025 Listening Festival of the Dundee
   radio station Radio FRO (previously a pirate station).
 tags:
   - sound art
-newTags: radio
+  - radio
 gridImage: assets/uploads/screenshot-2025-12-29-at-16.39.13.png
 videoEmbeds:
   - '<iframe width="100%" height="300" scrolling="no" frameborder="no"
