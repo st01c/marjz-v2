@@ -3,7 +3,7 @@ id: 2021-05-14-synthetic-realities-panel
 title: Shaping the Future Synthetic Realities panel discussion
 slug: shaping-the-future-synthetic-realities-panel-discussion
 section: practice
-type: panel discussion
+type: artist talk
 year: 2021
 fullDate: 2021-05-14 00:00
 featured: false

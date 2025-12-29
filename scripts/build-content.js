@@ -43,7 +43,8 @@ async function main() {
 
     const slug = slugify(entry.slug || entry.title || entry.id);
     const bodyMarkdown = body || "";
-    const html = markdownToHtml(bodyMarkdown);
+    const videoEmbeds = normalizeEmbeds(entry.videoEmbeds);
+    const html = buildEntryHtml(bodyMarkdown, videoEmbeds);
 
     const fullDate = entry.fullDate
       ? String(entry.fullDate)
@@ -54,6 +55,7 @@ async function main() {
     const derivedType = entry.newType ? String(entry.newType).trim() : entry.type;
     const newTags = parseNewTags(entry.newTags);
     const tags = dedupeTags([...(entry.tags || []), ...newTags]);
+    const gridImage = entry.gridImage ? String(entry.gridImage).trim() : "";
 
     const images = Array.isArray(entry.images)
       ? entry.images.filter(Boolean)
@@ -83,6 +85,8 @@ async function main() {
       tags,
       summary: entry.summary,
       images,
+      gridImage,
+      videoEmbeds,
       featured: Boolean(entry.featured),
       pinned: Boolean(entry.pinned),
       link: entry.link,
@@ -124,6 +128,47 @@ function slugify(text) {
     .trim()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function buildEntryHtml(bodyMarkdown, videoEmbeds) {
+  const bodyHtml = markdownToHtml(bodyMarkdown);
+  const embedsHtml = renderVideoEmbeds(videoEmbeds);
+  return [bodyHtml, embedsHtml].filter(Boolean).join("\n") || "<p></p>";
+}
+
+function renderVideoEmbeds(embeds) {
+  if (!Array.isArray(embeds) || !embeds.length) return "";
+  return embeds
+    .map((embed) => {
+      const trimmed = String(embed || "").trim();
+      if (!trimmed) return "";
+      return `<div class="video-embed">${trimmed}</div>`;
+    })
+    .filter(Boolean)
+    .join("\n");
+}
+
+function normalizeEmbeds(value) {
+  if (!value && value !== 0) return [];
+  if (Array.isArray(value)) return value.map(normalizeSingleEmbed).filter(Boolean);
+  const single = normalizeSingleEmbed(value);
+  return single ? [single] : [];
+}
+
+function normalizeSingleEmbed(val) {
+  if (val === null || val === undefined) return "";
+
+  if (typeof val === "object") {
+    if (val.embed) return String(val.embed).trim();
+    if (val.item) return String(val.item).trim();
+  }
+
+  const raw = String(val).trim();
+  const match = raw.match(/^embed:\s*(.*)$/i);
+  if (match) {
+    return match[1].trim();
+  }
+  return raw;
 }
 
 function markdownToHtml(md) {
@@ -308,6 +353,7 @@ function parseYamlLike(fm) {
   const obj = {};
   let currentKey = null;
   let multilineKey = null;
+  let lastListKey = null;
 
   const lines = fm.split(/\r?\n/);
   lines.forEach((line) => {
@@ -327,6 +373,7 @@ function parseYamlLike(fm) {
     if (listMatch && currentKey) {
       if (!Array.isArray(obj[currentKey])) obj[currentKey] = [];
       obj[currentKey].push(parseScalar(listMatch[1]));
+      lastListKey = currentKey;
       return;
     }
 
@@ -334,6 +381,15 @@ function parseYamlLike(fm) {
     if (/^\s+/.test(line) && currentKey && typeof obj[currentKey] === "string") {
       obj[currentKey] = `${obj[currentKey]} ${line.trim()}`.trim();
       return;
+    }
+    // Continuation of the last list item (indented line)
+    if (/^\s+/.test(line) && lastListKey && Array.isArray(obj[lastListKey]) && obj[lastListKey].length) {
+      const lastIndex = obj[lastListKey].length - 1;
+      if (typeof obj[lastListKey][lastIndex] === "string") {
+        obj[lastListKey][lastIndex] = `${obj[lastListKey][lastIndex]} ${line.trim()}`.trim();
+        currentKey = lastListKey;
+        return;
+      }
     }
 
     const kv = line.match(/^\s*([A-Za-z0-9_]+):\s*(.*)$/);

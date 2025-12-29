@@ -2,7 +2,7 @@
 id: 2019-11-04-PechaKucha
 title: "AI art and creative agency: Pecha Kucha lightning talk"
 slug: ai-art-and-creative-agency-pecha-kucha-lightning-talk
-section: practice
+section: research
 type: public lecture
 year: 2019
 fullDate: 2019-11-04 00:00

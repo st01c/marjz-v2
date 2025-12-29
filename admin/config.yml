@@ -13,7 +13,7 @@ public_folder: "assets/uploads"
 
 collections:
   - name: "entries"
-    label: "Entries"
+    label: "All entries"
     label_singular: "Entry"
     identifier_field: "id"
     folder: "content/entries"
@@ -45,7 +45,9 @@ collections:
         required: false
         # BEGIN_AUTO_TYPE_OPTIONS
         options:
+          - "A/V"
           - "art criticism"
+          - "artist talk"
           - "book"
           - "book chapter"
           - "CFP"
@@ -149,6 +151,7 @@ collections:
           - "interactive artwork"
           - "interdisciplinarity"
           - "interface"
+          - "labour"
           - "law"
           - "live coding"
           - "machine vision"
@@ -204,6 +207,22 @@ collections:
         summary: "{{fields.item}}"
         field: { label: "Image path", name: "item", widget: "string" }
         required: false
+      - label: "Grid image (for cards only)"
+        name: "gridImage"
+        widget: "image"
+        required: false
+        hint: "Optional: image shown on listing cards. Not displayed inside the entry body."
+      - label: "Video embeds"
+        name: "videoEmbeds"
+        widget: "list"
+        required: false
+        summary: "{{fields.item}}"
+        field:
+          label: "Embed HTML"
+          name: "item"
+          widget: "text"
+          hint: "Paste iframe/video embed code (YouTube, Vimeo, etc.)."
+        hint: "Optional: add one or more video embeds. Text in the Body field will render after these embeds."
       - label: "External link"
         name: "link"
         widget: "string"
@@ -217,6 +236,81 @@ collections:
         name: "body"
         widget: "markdown"
         hint: "Long-form content; will be rendered to HTML for item detail pages."
+  - name: "entries-research"
+    label: "All Research entries"
+    label_singular: "Research entry"
+    identifier_field: "id"
+    folder: "content/entries"
+    extension: "md"
+    format: "frontmatter"
+    create: false
+    slug: "{{slug}}"
+    summary: "{{title}} — {{fullDate}} — {{section}}"
+    filter:
+      field: "section"
+      value: "research"
+    sortable_fields: ["commit_date", "fullDate", "year", "title"]
+    fields: *entry_fields
+  - name: "entries-practice"
+    label: "All Practice entries"
+    label_singular: "Practice entry"
+    identifier_field: "id"
+    folder: "content/entries"
+    extension: "md"
+    format: "frontmatter"
+    create: false
+    slug: "{{slug}}"
+    summary: "{{title}} — {{fullDate}} — {{section}}"
+    filter:
+      field: "section"
+      value: "practice"
+    sortable_fields: ["commit_date", "fullDate", "year", "title"]
+    fields: *entry_fields
+  - name: "entries-curatorial"
+    label: "All Curatorial entries"
+    label_singular: "Curatorial entry"
+    identifier_field: "id"
+    folder: "content/entries"
+    extension: "md"
+    format: "frontmatter"
+    create: false
+    slug: "{{slug}}"
+    summary: "{{title}} — {{fullDate}} — {{section}}"
+    filter:
+      field: "section"
+      value: "curatorial"
+    sortable_fields: ["commit_date", "fullDate", "year", "title"]
+    fields: *entry_fields
+  - name: "entries-teaching"
+    label: "All Teaching entries"
+    label_singular: "Teaching entry"
+    identifier_field: "id"
+    folder: "content/entries"
+    extension: "md"
+    format: "frontmatter"
+    create: false
+    slug: "{{slug}}"
+    summary: "{{title}} — {{fullDate}} — {{section}}"
+    filter:
+      field: "section"
+      value: "teaching"
+    sortable_fields: ["commit_date", "fullDate", "year", "title"]
+    fields: *entry_fields
+  - name: "entries-cycling"
+    label: "All Cycling entries"
+    label_singular: "Cycling entry"
+    identifier_field: "id"
+    folder: "content/entries"
+    extension: "md"
+    format: "frontmatter"
+    create: false
+    slug: "{{slug}}"
+    summary: "{{title}} — {{fullDate}} — {{section}}"
+    filter:
+      field: "section"
+      value: "cycling"
+    sortable_fields: ["commit_date", "fullDate", "year", "title"]
+    fields: *entry_fields
   - name: "featured-entries"
     label: "Featured entries"
     label_singular: "Featured entry"

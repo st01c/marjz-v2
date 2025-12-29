@@ -16,6 +16,8 @@
     "images": [
       "assets/uploads/wet-tech-5.png"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": true,
     "pinned": false,
     "contentPath": "content/wet-tech-5.html"
@@ -35,6 +37,8 @@
     "images": [
       "assets/uploads/thames-submarine-dec-25-2.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": true,
     "pinned": false,
     "contentPath": "content/cafe-oto-screening.html"
@@ -57,6 +61,8 @@
     "images": [
       "assets/uploads/vectoral-agents-2025-image.png"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": true,
     "pinned": true,
     "contentPath": "content/ecological-agency-anadol-critique.html"
@@ -80,6 +86,8 @@
     "images": [
       "https://cdn.glue.be/https%3A%2F%2Forpheusinstituut.be%2Fvolumes%2Fgeneral%2FStifters-Dinge-01.jpg%3Fv%3D1738750519?dpr=2&w=1500&h=946&fit=crop&s=37d282d0dbe3b264c3de20f565a52228"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": true,
     "pinned": false,
     "contentPath": "content/orpheus-decent-conf.html"
@@ -101,6 +109,8 @@
     "images": [
       "https://ifk.ac.at/files/images/Fellows-Programm_WiSe25-26/Screenshot-Hardly-Working-web.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": true,
     "pinned": false,
     "contentPath": "content/ifk-talk.html"
@@ -122,6 +132,8 @@
     "images": [
       "https://tubestatic.orf.at/mims/2025/45/27/crops/w=800,q=60,r=1.5/2823496_body_1089827_hardlyworking-screenshot-02.jpg?s=d4298445f12dd77ece07865ec516dbfc5bc7a5a8"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/npc-orf-science-portal.html"
@@ -142,6 +154,8 @@
     "images": [
       "assets/uploads/wet-tech-4.png"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/wet-tech-04.html"
@@ -164,6 +178,8 @@
     "images": [
       "assets/uploads/ccs.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": true,
     "pinned": false,
     "contentPath": "content/ccs-article-published.html"
@@ -183,6 +199,8 @@
     ],
     "summary": "Linked to the publication of the 'Critical Cycling Studies' position paper I co-authored with my collaborator Andrew Bricker (HSSCOMMS 2025, Springer Nature), I presented a paper called \"Rethinking Interdisciplinarity for Cycling Scholarship\" at the annual Cycling & Society conference, which this year was held in Glasgow.",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/cyc-and-soc-2025.html"
@@ -200,6 +218,8 @@
     ],
     "summary": "I contributed to the \"Doing AI Differently\" white paper, published as part of a Turing Institute initiative of the same name, which aims to 'rethink the foundations of AI through the humanities.'",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/daid-white-paper.html"
@@ -221,6 +241,8 @@
     ],
     "summary": "We're pround and excited to be hosting xCoAx 2025 in Dundee!",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/xcoax-2025-in-dundee-open-call.html"
@@ -240,6 +262,8 @@
     ],
     "summary": "> An Italian translation of my essay \"Survival Interventions in GTA & the Limits of Performance in Virtual Environments\" has been published in the Open Access book 'Videoarte Ludica' (Ed. Matteo Bittanti, Mimesis Edizioni)",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/gta-essay-italian.html"
@@ -262,6 +286,8 @@
     "images": [
       "https://i1.sndcdn.com/artworks-14yAzIuM4fEGK0oT-JrymwA-t1080x1080.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/golden-fleece-junction.html"
@@ -283,6 +309,8 @@
     "images": [
       "assets/uploads/drone-day-2025.png"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/drone-day-2025.html"
@@ -304,6 +332,8 @@
     ],
     "summary": "null",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/reimagining-techno-futures-through-creative-practice.html"
@@ -325,6 +355,8 @@
     ],
     "summary": "Published in The PostScriptUM Anthology (2010–2023) – Essays on Art, Technology, Society and the Environment (Aksioma 2024)",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/structures-of-belonging-re-print.html"
@@ -345,6 +377,8 @@
     ],
     "summary": "Proceedings of the 75th International Astronautical Congress (IAC)",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/from-observation-to-action-integrating-space-and-satellite-data-in-an-ambulatory-experience-of-climate-change.html"
@@ -366,6 +400,8 @@
     ],
     "summary": "Decentralised Music (Eds. Paulo de Assis and Adam Lukawski)",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/integrating-generative-ai-and-blockchain-technologies-to-create-musical-objects-with-agency.html"
@@ -387,6 +423,8 @@
     ],
     "summary": "NFTs, Creativity and the Law – Within and Beyond Copyright",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/from-exclusive-ownership-to-zones-of-exclusivity.html"
@@ -406,6 +444,8 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/symposium-on-the-convergence-of-gamification-financialisation.html"
@@ -429,6 +469,8 @@
     "images": [
       "assets/uploads/old/RSE-workshop-image"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/rpg-co-creation-workshop-on-gamification-financialisation.html"
@@ -447,6 +489,8 @@
     ],
     "summary": "Spike Art Magazine",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/copies-without-originals.html"
@@ -467,9 +511,33 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/isea-2023-panel-co-organised-by-joseph-delappe-and-laura-leuzzi.html"
+  },
+  {
+    "id": "art-work",
+    "title": "Art-Work (2023)",
+    "section": "practice",
+    "slug": "art-work",
+    "type": "A/V",
+    "year": 2023,
+    "fullDate": "2023-04-13",
+    "tags": [
+      "video art",
+      "labour"
+    ],
+    "summary": "A short video created in collaboration with Deniz Johns, for the exhibition 'Harun Farocki: Consider Labour' at Cooper Gallery, Dundee University in 2023. Contributing to Antje Ehmann and Harun Farocki's long-term project \\\\\\\"Labour in a Single Shot,\\\\\\\" this work captures – in a single shot – the process of rendering an algorithmic artwork on a physical plotter as a line-drawing. The idea is to reflect on the outsourcing of artistic labour to machines.",
+    "images": [],
+    "gridImage": "assets/uploads/art-work-thumb.jpg",
+    "videoEmbeds": [
+      "<iframe width=\"1512\" height=\"663\" src=\"https://www.youtube.com/embed/hqzPBIM6Es8\" title=\"Art-Work (Deniz Johns and Martin Zeilinger, 2023)\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/art-work.html"
   },
   {
     "id": "2023-02-20-outland",
@@ -488,6 +556,8 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/taxation-without-representation.html"
@@ -509,6 +579,8 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/a-digital-art-revolution.html"
@@ -527,6 +599,8 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/rse-case-study-improving-awareness-of-issues-at-the-intersection-of-gamification-and-financialisation.html"
@@ -548,6 +622,8 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/structures-of-belonging-launch-event.html"
@@ -571,6 +647,8 @@
     "images": [
       "assets/uploads/old/zeilinger-brochure-eng.png"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/structures-of-belonging.html"
@@ -591,6 +669,8 @@
     ],
     "summary": " Radio Web MACBA Son[i]a podcast, featuring my research on artistic experimentation on/of the blockchain.",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/podcast-release-radio-web-macba-son-i-a-no-363.html"
@@ -612,6 +692,8 @@
     ],
     "summary": "Aksioma, Ljubljana/Slovenia",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/zones-of-exclusivity-structures-of-belonging.html"
@@ -632,6 +714,8 @@
     ],
     "summary": "Keynote live-streamed from the symposium of the 2022 \"The Only Lasting Truth Is Change\" festival, hosted at the Bergen Center for Electronic Art (BEK), Norway.",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/blockchain-futures-between-immutability-and-radical-change.html"
@@ -651,6 +735,8 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/blockchain-vitalism.html"
@@ -671,6 +757,8 @@
     "images": [
       "assets/uploads/old/Hon-Platform.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/platform-speaker-series-guest-lecture-adrian-hon.html"
@@ -691,6 +779,8 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/the-politics-of-visual-indeterminacy-in-abstract-ai-art.html"
@@ -711,6 +801,8 @@
     ],
     "summary": "nextmuseum.io (Online)",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/thoughts-on-free-data.html"
@@ -734,6 +826,8 @@
     "images": [
       "assets/uploads/old/chimeras.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/agential-assemblage-tactical-ai-two-contributions-to-chimeras-inventory-of-synthetic-cognition.html"
@@ -754,6 +848,8 @@
     "images": [
       "assets/uploads/old/SUP.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/joining-the-editorial-board-of-the-scottish-university-press-open-access.html"
@@ -774,6 +870,8 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/towards-a-non-totalizing-metaverse.html"
@@ -793,6 +891,8 @@
     ],
     "summary": "",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/co-convening-prospectives-2022-digital-art-and-activism-postgraduate-symposium.html"
@@ -813,6 +913,8 @@
     ],
     "summary": "xCoAx 2022",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/ai-art-as-hyperobject-like-portal-to-global-warming.html"
@@ -833,6 +935,8 @@
     ],
     "summary": "xCoAX 2022 Proceedings · xCoAx 2022",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/ai-art-as-hyperobject-like-portal-to-global-warming.html"
@@ -852,6 +956,8 @@
     ],
     "summary": "Serpentine Galleries, London/UK (& online)",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/tactical-entanglements-creative-ai-lab-in-conversation-with-martin-zeilinger.html"
@@ -873,6 +979,8 @@
     ],
     "summary": "Alberta Univ. of the Arts, Calgary/CAN",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/adversarial-images-between-abstraction-and-generalization.html"
@@ -892,6 +1000,8 @@
     ],
     "summary": "Kunstuniversität Linz/AT (& online)",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/algorithmic-adjudication-and-tactical-ai.html"
@@ -912,6 +1022,8 @@
     ],
     "summary": "Dundee University, Dundee/Scotland (& online)",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/law-ai-oracle.html"
@@ -933,6 +1045,8 @@
     ],
     "summary": "Culture Machine (special issue on machine intelligence) · Culture Machine Vol. 20",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/generative-adversarial-copy-machines.html"
@@ -942,7 +1056,7 @@
     "title": "On De/centralization: Blockchain Art & New Forms of Community-Building",
     "section": "practice",
     "slug": "on-de-centralization-blockchain-art-new-forms-of-community-building",
-    "type": "panel discussion",
+    "type": "artist talk",
     "year": 2021,
     "fullDate": "2021-07-15 00:00",
     "tags": [
@@ -953,6 +1067,10 @@
     ],
     "summary": "Vector Festival, Toronto/CAN",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [
+      "<iframe width=\"848\" height=\"477\" src=\"https://www.youtube.com/embed/krrR6SR-a0k\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    ],
     "featured": false,
     "pinned": false,
     "contentPath": "content/on-de-centralization-blockchain-art-new-forms-of-community-building.html"
@@ -979,6 +1097,8 @@
     "images": [
       "assets/uploads/old/TomWhite-for-cover.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/out-now-tactical-entanglements-ai-art-creative-agency-and-the-limits-of-intellectual-property.html"
@@ -988,7 +1108,7 @@
     "title": "Shaping the Future Synthetic Realities panel discussion",
     "section": "practice",
     "slug": "shaping-the-future-synthetic-realities-panel-discussion",
-    "type": "panel discussion",
+    "type": "artist talk",
     "year": 2021,
     "fullDate": "2021-05-14 00:00",
     "tags": [
@@ -999,6 +1119,8 @@
     ],
     "summary": "Uroboros Festival, Prague/CZ",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/shaping-the-future-synthetic-realities-panel-discussion.html"
@@ -1006,7 +1128,7 @@
   {
     "id": "2021-05-13-blockchain-art-conceptual-affordances",
     "title": "On the Conceptual Affordances of Blockchain Art",
-    "section": "practice",
+    "section": "research",
     "slug": "on-the-conceptual-affordances-of-blockchain-art",
     "type": "keynote",
     "year": 2021,
@@ -1019,6 +1141,8 @@
     ],
     "summary": "Uroboros Festival, Prague/CZ",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/on-the-conceptual-affordances-of-blockchain-art.html"
@@ -1039,6 +1163,8 @@
     ],
     "summary": "online",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/machinima-as-creative-practice-critical-intervention.html"
@@ -1062,6 +1188,8 @@
     "images": [
       "assets/uploads/old/chaotic-lawful.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/chaotic-lawful-teaching-videogames-in-a-licensing-and-permissions-lacuna.html"
@@ -1084,6 +1212,8 @@
     "images": [
       "assets/uploads/old/ccoins.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/emerging-ownership-models-on-the-blockchain.html"
@@ -1103,6 +1233,8 @@
     ],
     "summary": "Indeterminate Futures conference, Dundee University",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/ai-art-and-post-anthropocentric-agency.html"
@@ -1127,6 +1259,8 @@
     "images": [
       "assets/uploads/old/ccoins.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/unownability-on-the-blockchain.html"
@@ -1148,6 +1282,8 @@
     "images": [
       "assets/uploads/old/cashlesstooth-1024x722.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/moneylab-7-workshop-how-will-the-tooth-fairy-pay-you-on-planet-cashless.html"
@@ -1155,7 +1291,7 @@
   {
     "id": "2019-11-04-PechaKucha",
     "title": "AI art and creative agency: Pecha Kucha lightning talk",
-    "section": "practice",
+    "section": "research",
     "slug": "ai-art-and-creative-agency-pecha-kucha-lightning-talk",
     "type": "public lecture",
     "year": 2019,
@@ -1169,6 +1305,8 @@
     "images": [
       "assets/uploads/old/PechaKuchaDundee.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/ai-art-and-creative-agency-pecha-kucha-lightning-talk.html"
@@ -1191,6 +1329,8 @@
     "images": [
       "assets/uploads/old/Thomson-DTML-still.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/rethinking-affordance.html"
@@ -1212,6 +1352,8 @@
     "images": [
       "assets/uploads/old/basanta-print20.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/digital-art-research-group-talk-on-digital-art-ai-and-ip.html"
@@ -1229,6 +1371,8 @@
     "images": [
       "assets/uploads/old/re-colour.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/cfp-tacit-engagement-in-the-digital-age-crassh.html"
@@ -1250,6 +1394,8 @@
     "images": [
       "assets/uploads/old/ClintEnns-747_2.jpeg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/survival-interventions-in-gta-the-limits-of-performance-in-virtual-environments.html"
@@ -1271,6 +1417,8 @@
     "images": [
       "assets/uploads/old/color-block-green.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/ip-ai-and-digital-art.html"
@@ -1292,6 +1440,8 @@
     "images": [
       "assets/uploads/old/Twine-birdseye01.png"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/twine-resources.html"
@@ -1312,6 +1462,8 @@
     "images": [
       "assets/uploads/old/crypto-kitties-4.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/cfp-emerging-ownership-models-on-the-blockchain.html"
@@ -1331,6 +1483,8 @@
     ],
     "summary": "Photographers' Gallery, London/UK",
     "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/all-your-photo-are-belong-to-us-post-scarcity-photography-and-the-blockchain.html"
@@ -1352,6 +1506,8 @@
     "images": [
       "assets/uploads/old/parsing-digital.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/plotting-critical-research-practice-in-digital-art.html"
@@ -1373,6 +1529,8 @@
     "images": [
       "assets/uploads/old/kodakcoin.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/first-as-snapshot-then-as-decentralised-digital-asset.html"
@@ -1393,6 +1551,8 @@
     "images": [
       "assets/uploads/old/JolThompsonDMML.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/rethinking-affordance-issue-launched-on-schloss-post.html"
@@ -1413,6 +1573,8 @@
     "images": [
       "assets/uploads/old/moneylab-reader-2.png"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/digital-art-between-algomysticism-fintech-activism.html"
@@ -1436,6 +1598,8 @@
     "images": [
       "assets/uploads/old/monetised.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/digital-art-as-monetised-graphics-enforcing-ip-on-the-blockchain.html"
@@ -1458,6 +1622,8 @@
     "images": [
       "assets/uploads/old/cunning.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/m-tic-action-in-digital-culture.html"
@@ -1478,9 +1644,32 @@
     "images": [
       "assets/uploads/old/rethinking-blockchain.png"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/everything-you-ve-always-wanted-to-know.html"
+  },
+  {
+    "id": "sensordeath",
+    "title": "Sensordeath (2014)",
+    "section": "practice",
+    "slug": "sensordeath",
+    "type": "A/V",
+    "year": 2014,
+    "fullDate": "2014-05-02",
+    "tags": [
+      "video art"
+    ],
+    "summary": "DSLR sensors killed by laser light shows.",
+    "images": [],
+    "gridImage": "assets/uploads/sensordeath-thumb.jpg",
+    "videoEmbeds": [
+      "<iframe width=\"1512\" height=\"663\" src=\"https://www.youtube.com/embed/Y-bKxzJqWyE\" title=\"\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    ],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/sensordeath.html"
   },
   {
     "id": "2014-02-10-live-coding-the-law",
@@ -1500,6 +1689,8 @@
     "images": [
       "assets/uploads/old/live_coding.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/live-coding-the-law-improvisation-code-copyright.html"
@@ -1522,6 +1713,8 @@
     "images": [
       "assets/uploads/old/color-block-green.jpg"
     ],
+    "gridImage": "",
+    "videoEmbeds": [],
     "featured": false,
     "pinned": false,
     "contentPath": "content/chiptuning-ip-between-creative-commons-and-moral-economy.html"

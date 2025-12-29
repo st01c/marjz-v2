@@ -4,7 +4,7 @@
 id: 2021-05-13-blockchain-art-conceptual-affordances
 title: On the Conceptual Affordances of Blockchain Art
 slug: on-the-conceptual-affordances-of-blockchain-art
-section: practice
+section: research
 type: keynote
 year: 2021
 fullDate: 2021-05-13 00:00

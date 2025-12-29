@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const section = document.body.dataset.section;
   const container = document.getElementById("section-list");
+  const paginationEl = document.getElementById("section-pagination");
   if (!section || !container) return;
 
   const items = (await fetchContent()) || [];
@@ -10,7 +11,55 @@ document.addEventListener("DOMContentLoaded", async () => {
     items.filter((i) => (i.section || "").toLowerCase() === target)
   );
 
-  await renderSectionList(container, filtered, section);
+  const pageSize = section === "research" ? 12 : section === "practice" ? 8 : filtered.length;
+  let currentPage = 1;
+
+  const scrollToTop = () => {
+    if (typeof window === "undefined" || typeof window.scrollTo !== "function") return;
+    const doScroll = () => {
+      try {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch (e) {
+        window.scrollTo(0, 0);
+      }
+    };
+    if (typeof requestAnimationFrame === "function") {
+      requestAnimationFrame(doScroll);
+    } else {
+      doScroll();
+    }
+  };
+
+  const renderPage = async (shouldScroll = false) => {
+    const page = paginateItems(filtered, currentPage, pageSize);
+    currentPage = page.currentPage;
+    await renderSectionList(container, page.pageItems, section);
+
+    if (typeof renderPagination === "function") {
+      renderPagination(
+        paginationEl,
+        {
+          totalItems: page.totalItems,
+          totalPages: page.totalPages,
+          currentPage: page.currentPage,
+          pageStart: page.pageStart,
+          pageEnd: page.pageEnd,
+        },
+        async (nextPage) => {
+          currentPage = nextPage;
+          await renderPage(true);
+        }
+      );
+    } else if (paginationEl) {
+      paginationEl.hidden = true;
+    }
+
+    if (shouldScroll) {
+      scrollToTop();
+    }
+  };
+
+  await renderPage();
 });
 
 const contentImageCache = new Map();
@@ -215,6 +264,10 @@ function addCardHoverOverlay(card, link) {
 }
 
 async function resolveCardMedia(item) {
+  if (item.gridImage) {
+    return { src: item.gridImage };
+  }
+
   const directImage = (item.images || []).find(Boolean);
   if (directImage) {
     return { src: directImage };
@@ -254,6 +307,24 @@ async function findFirstImageInContent(contentPath) {
     contentImageCache.set(contentPath, "");
     return "";
   }
+}
+
+function paginateItems(items, currentPage, pageSize) {
+  const safeSize = Math.max(1, pageSize || items.length || 1);
+  const totalItems = items.length;
+  const totalPages = Math.max(1, Math.ceil(totalItems / safeSize));
+  const safePage = Math.min(Math.max(currentPage || 1, 1), totalPages);
+  const startIndex = (safePage - 1) * safeSize;
+  const endIndex = Math.min(startIndex + safeSize, totalItems);
+
+  return {
+    totalItems,
+    totalPages,
+    currentPage: safePage,
+    pageStart: startIndex + 1,
+    pageEnd: endIndex,
+    pageItems: items.slice(startIndex, endIndex),
+  };
 }
 
 function pickPlaceholderColor(seed) {

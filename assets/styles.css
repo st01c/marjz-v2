@@ -69,6 +69,20 @@ a:hover {
   margin: 1.25rem 0;
 }
 
+.video-embed {
+  margin: 1.25rem 0;
+}
+
+.video-embed iframe,
+.video-embed video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
 /* Nav */
 
 .nav-wrapper {
@@ -695,6 +709,46 @@ body[data-section="home"] .hero-feature-label {
 
 .browse-card .pill {
   white-space: nowrap;
+}
+
+.browse-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.browse-pagination-info {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.browse-pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.browse-pagination button {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: inherit;
+  cursor: pointer;
+}
+
+.browse-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.browse-pagination-pages {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 400;
 }
 
 .practice-grid {

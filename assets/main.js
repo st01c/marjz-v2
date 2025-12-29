@@ -1,4 +1,6 @@
 // Entry point: fetch content, render section lists, wire up browsing controls.
+const BROWSE_PAGE_SIZE = 12;
+
 async function loadContent() {
   setYear();
 
@@ -241,6 +243,7 @@ function setupBrowsingControls(items, allTags, allTypes) {
   const filterToggle = document.getElementById("filter-toggle");
   const filterPanel = document.getElementById("browse-filters");
   const mobileQuery = window.matchMedia("(max-width: 900px)");
+  const paginationEl = document.getElementById("browse-pagination");
 
   if (!tagListEl || !resultsEl || !modeButtons.length || !typeListEl) return;
 
@@ -248,6 +251,24 @@ function setupBrowsingControls(items, allTags, allTypes) {
   const activeTags = new Set();
   const activeTypes = new Set();
   let filterMode = "any";
+  let currentPage = 1;
+
+  const renderAndPaginate = () => {
+    const paginationState = renderBrowseResults(
+      items,
+      resultsEl,
+      activeTags,
+      activeTypes,
+      filterMode,
+      currentPage,
+      BROWSE_PAGE_SIZE
+    );
+    currentPage = paginationState.currentPage;
+    renderPagination(paginationEl, paginationState, (nextPage) => {
+      currentPage = nextPage;
+      renderAndPaginate();
+    });
+  };
 
   // Mobile: show/hide filter panel
   if (filterToggle && filterPanel && mobileQuery) {
@@ -280,9 +301,10 @@ function setupBrowsingControls(items, allTags, allTypes) {
       if (!mode || mode === filterMode) return;
 
       filterMode = mode;
+      currentPage = 1;
       updateModeButtons();
       updateTagButtons();
-      renderBrowseResults(items, resultsEl, activeTags, activeTypes, filterMode);
+      renderAndPaginate();
     });
   });
 
@@ -319,7 +341,8 @@ function setupBrowsingControls(items, allTags, allTypes) {
       toggleTag(t, activeTags);
 
       updateTagButtons();
-      renderBrowseResults(items, resultsEl, activeTags, activeTypes, filterMode);
+      currentPage = 1;
+      renderAndPaginate();
     });
 
     tagListEl.appendChild(btn);
@@ -351,7 +374,8 @@ function setupBrowsingControls(items, allTags, allTypes) {
       toggleTag(t, activeTypes);
       updateTypeButtons();
       updateTagButtons();
-      renderBrowseResults(items, resultsEl, activeTags, activeTypes, filterMode);
+      currentPage = 1;
+      renderAndPaginate();
     });
 
     typeListEl.appendChild(btn);
@@ -377,7 +401,7 @@ function setupBrowsingControls(items, allTags, allTypes) {
   // Initial render: no tags selected → show all
   updateTagButtons();
   updateTypeButtons();
-  renderBrowseResults(items, resultsEl, activeTags, activeTypes, filterMode);
+  renderAndPaginate();
 }
 
 /**
@@ -386,9 +410,10 @@ function setupBrowsingControls(items, allTags, allTypes) {
  * - mode: "any" (item has at least one of the tags)
  *         "all" (item has all of the tags)
  */
-function renderBrowseResults(items, container, activeTags, activeTypes, mode) {
+function renderBrowseResults(items, container, activeTags, activeTypes, mode, currentPage = 1, pageSize = BROWSE_PAGE_SIZE) {
   container.innerHTML = "";
 
+  const safePageSize = Math.max(1, pageSize || BROWSE_PAGE_SIZE);
   const selectedTags = Array.from(activeTags);
 
   let filtered = items;
@@ -412,10 +437,19 @@ function renderBrowseResults(items, container, activeTags, activeTypes, mode) {
 
   if (!filtered.length) {
     container.innerHTML = "<p>No items match these tags yet.</p>";
-    return;
+    return { totalItems: 0, totalPages: 0, currentPage: 1, pageStart: 0, pageEnd: 0 };
   }
 
-  sortByYear(filtered).forEach((item) => {
+  const sorted = sortByYear(filtered);
+  const totalItems = sorted.length;
+  const totalPages = Math.max(1, Math.ceil(totalItems / safePageSize));
+  const safePage = Math.min(Math.max(currentPage || 1, 1), totalPages);
+  const startIndex = (safePage - 1) * safePageSize;
+  const endIndex = Math.min(startIndex + safePageSize, totalItems);
+
+  const pageItems = sorted.slice(startIndex, endIndex);
+
+  pageItems.forEach((item) => {
     const card = document.createElement("article");
     card.className = "browse-card";
 
@@ -481,6 +515,83 @@ function renderBrowseResults(items, container, activeTags, activeTypes, mode) {
 
     container.appendChild(card);
   });
+
+  return {
+    totalItems,
+    totalPages,
+    currentPage: safePage,
+    pageStart: startIndex + 1,
+    pageEnd: endIndex,
+  };
+}
+
+function renderPagination(container, paginationState, onPageChange) {
+  if (!container) return;
+
+  const changePage = typeof onPageChange === "function" ? onPageChange : () => {};
+  const scrollToTop = () => {
+    if (typeof window === "undefined" || typeof window.scrollTo !== "function") return;
+    try {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (e) {
+      window.scrollTo(0, 0);
+    }
+  };
+  const scrollAfterChange = () => {
+    if (typeof requestAnimationFrame === "function") {
+      requestAnimationFrame(scrollToTop);
+    } else {
+      scrollToTop();
+    }
+  };
+  const {
+    totalItems = 0,
+    totalPages = 0,
+    currentPage = 1,
+    pageStart = 0,
+    pageEnd = 0,
+  } = paginationState || {};
+
+  container.innerHTML = "";
+
+  if (!totalItems || totalPages <= 1) {
+    container.hidden = true;
+    return;
+  }
+
+  container.hidden = false;
+
+  const info = document.createElement("div");
+  info.className = "browse-pagination-info";
+  info.textContent = `Showing ${pageStart}–${pageEnd} of ${totalItems}`;
+
+  const controls = document.createElement("div");
+  controls.className = "browse-pagination-controls";
+
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "Previous";
+  prevBtn.disabled = currentPage <= 1;
+  prevBtn.addEventListener("click", () => {
+    if (currentPage <= 1) return;
+    changePage(currentPage - 1);
+    scrollAfterChange();
+  });
+
+  const pageIndicator = document.createElement("span");
+  pageIndicator.className = "browse-pagination-pages";
+  pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
+
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next";
+  nextBtn.disabled = currentPage >= totalPages;
+  nextBtn.addEventListener("click", () => {
+    if (currentPage >= totalPages) return;
+    changePage(currentPage + 1);
+    scrollAfterChange();
+  });
+
+  controls.append(prevBtn, pageIndicator, nextBtn);
+  container.append(info, controls);
 }
 
 document.addEventListener("DOMContentLoaded", loadContent);
