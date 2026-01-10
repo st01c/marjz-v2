@@ -8,6 +8,7 @@ const NAV_ITEMS = [
     tooltip: "Projects, exhibitions, and curatorial work",
   },
   { key: "curatorial", href: "curatorial.html", label: "Curatorial" },
+  { key: "talks", href: "talks.html", label: "Talks" },
   { key: "teaching", href: "teaching.html", label: "Teaching" },
   { key: "cycling", href: "cycling.html", label: "Cycling" },
   { key: "browse", href: "browse.html", label: "Browse" },
@@ -30,6 +31,7 @@ function detectActiveKey() {
   if (name.includes("browse")) return "browse";
   if (name.includes("cycling")) return "cycling";
   if (name.includes("curatorial")) return "curatorial";
+  if (name.includes("talks")) return "talks";
   if (name.includes("contact")) return "contact";
   return null;
 }

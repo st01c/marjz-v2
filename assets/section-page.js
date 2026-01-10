@@ -11,7 +11,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     items.filter((i) => (i.section || "").toLowerCase() === target)
   );
 
-  const pageSize = section === "research" ? 12 : section === "practice" ? 8 : filtered.length;
+  const pageSize =
+    section === "research" || section === "talks"
+      ? 12
+      : section === "practice"
+      ? 8
+      : filtered.length;
   let currentPage = 1;
 
   const scrollToTop = () => {
@@ -116,7 +121,7 @@ async function renderSectionList(container, items, sectionName) {
     summary.textContent = item.summary || "";
 
     card.appendChild(header);
-    if (sectionName === "research") {
+    if (sectionName === "research" || sectionName === "talks") {
       const metaRow = document.createElement("div");
       metaRow.className = "pill-row";
 

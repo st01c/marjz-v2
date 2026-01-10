@@ -2,7 +2,7 @@
 id: 2023-01-12-sonia-podcast
 title: Podcast release – Radio Web MACBA, Son[i]a no. 363
 slug: podcast-release-radio-web-macba-son-i-a-no-363
-section: research
+section: talks
 type: podcast
 year: 2023
 fullDate: 2023-01-12 00:00

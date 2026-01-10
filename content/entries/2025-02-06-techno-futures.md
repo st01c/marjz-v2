@@ -2,13 +2,16 @@
 id: 2025-02-06-techno-futures
 title: Reimagining Techno-Futures Through Creative Practice
 slug: reimagining-techno-futures-through-creative-practice
-section: research
+section: talks
 type: public lecture
 year: 2025
 fullDate: 2025-02-06 00:00
 featured: false
 pinned: false
-summary: null
+summary: How can we rethink the futures of technology beyond the narrow visions
+  shaped by Big Tech? Join us in exploring imaginative, creative, and situated
+  technological practices that challenge the dominant narratives around emerging
+  technologies like blockchain and artificial intelligence.
 tags:
   - digital art
   - blockchain

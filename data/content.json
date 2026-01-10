@@ -95,7 +95,7 @@
   {
     "id": "ifk-talk",
     "title": "(Dis-)Continuities of Labor Exploitation in 'Arbeiterliteratur' and Video Games",
-    "section": "research",
+    "section": "talks",
     "slug": "ifk-talk",
     "type": "public lecture",
     "year": 2025,
@@ -318,7 +318,7 @@
   {
     "id": "2025-02-06-techno-futures",
     "title": "Reimagining Techno-Futures Through Creative Practice",
-    "section": "research",
+    "section": "talks",
     "slug": "reimagining-techno-futures-through-creative-practice",
     "type": "public lecture",
     "year": 2025,
@@ -330,7 +330,7 @@
       "NFTs",
       "token-gating"
     ],
-    "summary": "null",
+    "summary": "How can we rethink the futures of technology beyond the narrow visions shaped by Big Tech? Join us in exploring imaginative, creative, and situated technological practices that challenge the dominant narratives around emerging technologies like blockchain and artificial intelligence.",
     "images": [],
     "gridImage": "",
     "videoEmbeds": [],
@@ -678,7 +678,7 @@
   {
     "id": "2023-01-12-sonia-podcast",
     "title": "Podcast release – Radio Web MACBA, Son[i]a no. 363",
-    "section": "research",
+    "section": "talks",
     "slug": "podcast-release-radio-web-macba-son-i-a-no-363",
     "type": "podcast",
     "year": 2023,
@@ -700,7 +700,7 @@
   {
     "id": "2022-11-12-aksioma",
     "title": "Zones of Exclusivity & Structures of Belonging",
-    "section": "research",
+    "section": "talks",
     "slug": "zones-of-exclusivity-structures-of-belonging",
     "type": "public lecture",
     "year": 2022,
@@ -710,12 +710,15 @@
       "NFTs",
       "blockchain art",
       "activism",
-      "commons"
+      "commons",
+      "video"
     ],
     "summary": "Aksioma, Ljubljana/Slovenia",
     "images": [],
     "gridImage": "",
-    "videoEmbeds": [],
+    "videoEmbeds": [
+      "<iframe width=\"854\" height=\"480\" src=\"https://www.youtube.com/embed/y-qrnqkjX0E\" title=\"Ownership and Desire\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+    ],
     "featured": false,
     "pinned": false,
     "contentPath": "content/zones-of-exclusivity-structures-of-belonging.html"
@@ -723,7 +726,7 @@
   {
     "id": "2022-11-11-radicalfutures",
     "title": "Blockchain Futures Between Immutability and Radical Change",
-    "section": "research",
+    "section": "talks",
     "slug": "blockchain-futures-between-immutability-and-radical-change",
     "type": "keynote",
     "year": 2022,
@@ -732,12 +735,15 @@
       "DAOs",
       "blockchain art",
       "anarchism",
-      "activism"
+      "activism",
+      "video"
     ],
     "summary": "Keynote live-streamed from the symposium of the 2022 \"The Only Lasting Truth Is Change\" festival, hosted at the Bergen Center for Electronic Art (BEK), Norway.",
     "images": [],
     "gridImage": "",
-    "videoEmbeds": [],
+    "videoEmbeds": [
+      "<iframe title=\"vimeo-player\" src=\"https://player.vimeo.com/video/761878756?h=4e95bed9ec\" width=\"640\" height=\"360\" frameborder=\"0\" referrerpolicy=\"strict-origin-when-cross-origin\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\"   allowfullscreen></iframe>"
+    ],
     "featured": false,
     "pinned": false,
     "contentPath": "content/blockchain-futures-between-immutability-and-radical-change.html"
@@ -810,7 +816,7 @@
   {
     "id": "2022-08-24-freedata",
     "title": "Thoughts on Free Data",
-    "section": "research",
+    "section": "talks",
     "slug": "thoughts-on-free-data",
     "type": "panel discussion",
     "year": 2022,
@@ -965,8 +971,8 @@
   },
   {
     "id": "2021-11-15-serpentine-galleries-panel",
-    "title": "Tactical Entanglements: Creative AI Lab in conversation with Martin Zeilinger",
-    "section": "research",
+    "title": "Tactical Entanglements: Serpentine Galleries Creative AI Lab in conversation with Martin Zeilinger",
+    "section": "talks",
     "slug": "tactical-entanglements-creative-ai-lab-in-conversation-with-martin-zeilinger",
     "type": "panel discussion",
     "year": 2021,
@@ -974,12 +980,17 @@
     "tags": [
       "AI art",
       "posthumanism",
-      "creative agency"
+      "creative agency",
+      "video"
     ],
     "summary": "Serpentine Galleries, London/UK (& online)",
-    "images": [],
+    "images": [
+      "assets/uploads/serpentine-img.jpg"
+    ],
     "gridImage": "",
-    "videoEmbeds": [],
+    "videoEmbeds": [
+      "[]"
+    ],
     "featured": false,
     "pinned": false,
     "contentPath": "content/tactical-entanglements-creative-ai-lab-in-conversation-with-martin-zeilinger.html"
@@ -1010,7 +1021,7 @@
   {
     "id": "2021-09-09-kunstuni-linz-keynote",
     "title": "Algorithmic Adjudication and Tactical AI",
-    "section": "research",
+    "section": "talks",
     "slug": "algorithmic-adjudication-and-tactical-ai",
     "type": "keynote",
     "year": 2021,
@@ -1021,7 +1032,9 @@
       "algorithmic governance"
     ],
     "summary": "Kunstuniversität Linz/AT (& online)",
-    "images": [],
+    "images": [
+      "assets/uploads/kunstuni-talk-img.jpg"
+    ],
     "gridImage": "",
     "videoEmbeds": [],
     "featured": false,
@@ -1076,7 +1089,7 @@
   {
     "id": "2021-07-15-vector-festival-crypto-art-panel",
     "title": "On De/centralization: Blockchain Art & New Forms of Community-Building",
-    "section": "practice",
+    "section": "talks",
     "slug": "on-de-centralization-blockchain-art-new-forms-of-community-building",
     "type": "artist talk",
     "year": 2021,
@@ -1128,7 +1141,7 @@
   {
     "id": "2021-05-14-synthetic-realities-panel",
     "title": "Shaping the Future Synthetic Realities panel discussion",
-    "section": "practice",
+    "section": "talks",
     "slug": "shaping-the-future-synthetic-realities-panel-discussion",
     "type": "artist talk",
     "year": 2021,
@@ -1150,7 +1163,7 @@
   {
     "id": "2021-05-13-blockchain-art-conceptual-affordances",
     "title": "On the Conceptual Affordances of Blockchain Art",
-    "section": "research",
+    "section": "talks",
     "slug": "on-the-conceptual-affordances-of-blockchain-art",
     "type": "keynote",
     "year": 2021,
@@ -1159,12 +1172,15 @@
       "blockchain",
       "crypto art",
       "conceptual art",
-      "NFTs"
+      "NFTs",
+      "video"
     ],
     "summary": "Uroboros Festival, Prague/CZ",
     "images": [],
     "gridImage": "",
-    "videoEmbeds": [],
+    "videoEmbeds": [
+      "<iframe width=\"966\" height=\"543\" src=\"https://www.youtube.com/embed/88i5lON8dsw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    ],
     "featured": false,
     "pinned": false,
     "contentPath": "content/on-the-conceptual-affordances-of-blockchain-art.html"
@@ -1172,7 +1188,7 @@
   {
     "id": "2021-05-05-total-refusal-discussion-panel",
     "title": "Machinima as Creative Practice & Critical Intervention",
-    "section": "research",
+    "section": "talks",
     "slug": "machinima-as-creative-practice-critical-intervention",
     "type": "panel discussion",
     "year": 2021,
@@ -1186,7 +1202,9 @@
     "summary": "online",
     "images": [],
     "gridImage": "",
-    "videoEmbeds": [],
+    "videoEmbeds": [
+      "<iframe width=\"966\" height=\"543\" src=\"https://www.youtube.com/embed/V2YxGRS-HF8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    ],
     "featured": false,
     "pinned": false,
     "contentPath": "content/machinima-as-creative-practice-critical-intervention.html"
@@ -1264,7 +1282,7 @@
   {
     "id": "2020-06-22-money-lab-8",
     "title": "Unownability on the Blockchain",
-    "section": "research",
+    "section": "talks",
     "slug": "unownability-on-the-blockchain",
     "type": "panel discussion",
     "year": 2020,
@@ -1282,7 +1300,9 @@
       "assets/uploads/old/ccoins.jpg"
     ],
     "gridImage": "",
-    "videoEmbeds": [],
+    "videoEmbeds": [
+      "<iframe width=\"1360\" height=\"765\" src=\"https://www.youtube.com/embed/BSTbz7DMPE8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    ],
     "featured": false,
     "pinned": false,
     "contentPath": "content/unownability-on-the-blockchain.html"
@@ -1313,7 +1333,7 @@
   {
     "id": "2019-11-04-PechaKucha",
     "title": "AI art and creative agency: Pecha Kucha lightning talk",
-    "section": "research",
+    "section": "talks",
     "slug": "ai-art-and-creative-agency-pecha-kucha-lightning-talk",
     "type": "public lecture",
     "year": 2019,
@@ -1328,7 +1348,9 @@
       "assets/uploads/old/PechaKuchaDundee.jpg"
     ],
     "gridImage": "",
-    "videoEmbeds": [],
+    "videoEmbeds": [
+      "<iframe src=\"https://player.vimeo.com/video/372379613?color=ff0179&title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen></iframe>"
+    ],
     "featured": false,
     "pinned": false,
     "contentPath": "content/ai-art-and-creative-agency-pecha-kucha-lightning-talk.html"
@@ -1360,7 +1382,7 @@
   {
     "id": "2019-05-16-digital-art-research-group-talk-on-ai-ip-and-digital-art",
     "title": "Digital Art Research Group talk on digital art, AI, and IP",
-    "section": "research",
+    "section": "talks",
     "slug": "digital-art-research-group-talk-on-digital-art-ai-and-ip",
     "type": "public lecture",
     "year": 2019,
@@ -1493,7 +1515,7 @@
   {
     "id": "2018-11-28-post-scarcity-photography-and-the-blockchain",
     "title": "'All Your Photo Are Belong To Us': Post-Scarcity Photography and the Blockchain",
-    "section": "talk",
+    "section": "talks",
     "slug": "all-your-photo-are-belong-to-us-post-scarcity-photography-and-the-blockchain",
     "type": "conference presentation",
     "year": 2018,
@@ -1506,7 +1528,9 @@
     "summary": "Photographers' Gallery, London/UK",
     "images": [],
     "gridImage": "",
-    "videoEmbeds": [],
+    "videoEmbeds": [
+      "<iframe width=\"966\" height=\"543\" src=\"https://www.youtube.com/embed/qP0J-8pxnl8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    ],
     "featured": false,
     "pinned": false,
     "contentPath": "content/all-your-photo-are-belong-to-us-post-scarcity-photography-and-the-blockchain.html"

@@ -37,6 +37,7 @@ collections:
           - { label: "Research", value: "research" }
           - { label: "Practice", value: "practice" }
           - { label: "Curatorial", value: "curatorial" }
+          - { label: "Talks", value: "talks" }
           - { label: "Teaching", value: "teaching" }
           - { label: "Cycling", value: "cycling" }
       - label: "Type"
@@ -280,6 +281,21 @@ collections:
     filter:
       field: "section"
       value: "curatorial"
+    sortable_fields: ["commit_date", "fullDate", "year", "title"]
+    fields: *entry_fields
+  - name: "entries-talks"
+    label: "All Talks entries"
+    label_singular: "Talks entry"
+    identifier_field: "id"
+    folder: "content/entries"
+    extension: "md"
+    format: "frontmatter"
+    create: false
+    slug: "{{slug}}"
+    summary: "{{title}} — {{fullDate}} — {{section}}"
+    filter:
+      field: "section"
+      value: "talks"
     sortable_fields: ["commit_date", "fullDate", "year", "title"]
     fields: *entry_fields
   - name: "entries-teaching"
