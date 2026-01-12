@@ -1,5 +1,26 @@
 [
   {
+    "id": "kunstuni-permacomputing-talk",
+    "title": "For a Permacomputing Perspective in Creative Computing",
+    "section": "talks",
+    "slug": "kunstuni-permacomputing-talk",
+    "type": "public lecture",
+    "year": 2026,
+    "fullDate": "2026-01-15",
+    "tags": [
+      "game art",
+      "digital art",
+      "permacomputing"
+    ],
+    "summary": "Against the backdrop of a cultural landscape dominated by heavy reliance on exploitative, extractivist, and unsustainable uses of technology, what opportunities do media artists have for countering maximalist computational paradigms? This talk explores the concept of permacomputing as a critical framework for interactive, computer-based art-making.",
+    "images": [],
+    "gridImage": "assets/uploads/kunstuni-talk.jpg",
+    "videoEmbeds": [],
+    "featured": true,
+    "pinned": false,
+    "contentPath": "content/kunstuni-permacomputing-talk.html"
+  },
+  {
     "id": "wettech5",
     "title": "Wet Tech #5",
     "section": "curatorial",
@@ -1104,7 +1125,7 @@
     "images": [],
     "gridImage": "",
     "videoEmbeds": [
-      "<iframe width=\"848\" height=\"477\" src=\"https://www.youtube.com/embed/krrR6SR-a0k\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+      "<iframe width=\\\"848\\\" height=\\\"477\\\""
     ],
     "featured": false,
     "pinned": false,
