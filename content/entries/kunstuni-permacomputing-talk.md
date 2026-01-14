@@ -16,10 +16,12 @@ summary: Against the backdrop of a cultural landscape dominated by heavy
 tags:
   - game art
   - digital art
-newTags: permacomputing
+  - permacomputing
 gridImage: assets/uploads/kunstuni-talk.jpg
 ---
 15.01.2026 | 11:00 - 14:00 at Interface Cultures Lecture Room, Hauptplatz 23
+
+[Link](https://www.kunstuni-linz.at/aktuelles/termine-news/newsdetail/for-a-permacomputing-perspective-in-creative-computing) to the art university info.
 
 ### Blurb
 
