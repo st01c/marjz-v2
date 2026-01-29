@@ -1,5 +1,53 @@
 [
   {
+    "id": "bunker-down",
+    "title": "Performance at 'Bunker Down' in Edinburgh",
+    "section": "practice",
+    "slug": "bunker-down",
+    "type": "performance",
+    "year": 2026,
+    "fullDate": "2026-02-07",
+    "tags": [
+      "sound art",
+      "performances"
+    ],
+    "summary": "> I will perform two new sample-based sound improvisations at the 'Bunker Down' event in Edinburgh on Feb 7, on invitation from the event curators Laura Leuzzi and Joe DeLappe. The event takes place in the Cold War era Barnton Bunker.",
+    "images": [
+      "assets/uploads/photo_2026-01-21-11.44.01.jpeg"
+    ],
+    "gridImage": "assets/uploads/photo_2026-01-21-11.44.01.jpeg",
+    "videoEmbeds": [],
+    "featured": true,
+    "pinned": false,
+    "contentPath": "content/bunker-down.html"
+  },
+  {
+    "id": "becoming-curatorial",
+    "title": "Smart Contracts and the Becoming-Curatorial of Digital Works of Art",
+    "section": "research",
+    "slug": "becoming-curatorial",
+    "type": "book chapter",
+    "year": 2026,
+    "fullDate": "2026-01-29",
+    "tags": [
+      "digital art",
+      "blockchain art",
+      "agency",
+      "smart contracts",
+      "curation",
+      "Web3"
+    ],
+    "summary": "Published in Vol. 10 of the excellent Data Browser series, this essay examines a “becoming-curatorial” of digital artworks that are augmented with blockchain-enabled smart contracts. I argue that embedding executable code in digital objects enables artworks to exhibit quasi-autonomous, self-governing behaviours that can displace the curatorial agency of human intermediaries and redistribute it to computational agents. This programmability is a curatorial instrument for imagining more-than-human art ecologies, but also makes visible the ways in which speculative tendencies can short-circuit such ambitions.",
+    "images": [
+      "assets/uploads/db_cover10.jpg"
+    ],
+    "gridImage": "assets/uploads/db_cover10.jpg",
+    "videoEmbeds": [],
+    "featured": true,
+    "pinned": true,
+    "contentPath": "content/becoming-curatorial.html"
+  },
+  {
     "id": "kunstuni-permacomputing-talk",
     "title": "For a Permacomputing Perspective in Creative Computing",
     "section": "talks",
@@ -85,7 +133,7 @@
     "gridImage": "",
     "videoEmbeds": [],
     "featured": true,
-    "pinned": true,
+    "pinned": false,
     "contentPath": "content/ecological-agency-anadol-critique.html"
   },
   {

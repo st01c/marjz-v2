@@ -8,7 +8,7 @@ type: book chapter
 year: 2025
 fullDate: 2025-11-28
 featured: true
-pinned: true
+pinned: false
 summary: "A book chapter co-authored with Deniz Johns, which critiques Refik
   Anadol's AI art project 'Echoes of the Earth' and its supposed focus on open
   source and sustainability, is now published in Vectoral Agents: Power in the
