@@ -10,18 +10,17 @@ featured: true
 pinned: true
 summary: Published in Vol. 10 of the excellent Data Browser series, this essay
   examines a “becoming-curatorial” of digital artworks that are augmented with
-  blockchain-enabled smart contracts. I argue that embedding executable code in
-  digital objects enables artworks to exhibit quasi-autonomous, self-governing
-  behaviours that can displace the curatorial agency of human intermediaries and
-  redistribute it to computational agents. This programmability is a curatorial
-  instrument for imagining more-than-human art ecologies, but also makes visible
-  the ways in which speculative tendencies can short-circuit such ambitions.
+  blockchain-enabled smart contracts. This programmability is a curatorial
+  instrument for experimenting with more-than-human art ecologies, but it also
+  makes visible the ways in which speculative tendencies can short-circuit such
+  ambitions.
 tags:
   - digital art
   - blockchain art
   - agency
   - smart contracts
-newTags: curation, Web3
+  - curation
+  - Web3
 gridImage: assets/uploads/db_cover10.jpg
 ---
 My essay "Smart Contracts and the Becoming-Curatorial of Digital Works of Art" has been published in Vol. 10 of the open access *Data Browser* series, co-edited by Joasia Krysa and Magdalena Tyżlik-Carver. I wrote this about 4 years ago, but I hope that these ideas on 'smart' art objects and my critique of of speculative tendencies in the consumption of digital art will still hold some interest.

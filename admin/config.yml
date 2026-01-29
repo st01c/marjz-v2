@@ -126,6 +126,7 @@ collections:
           - "critical finance"
           - "crypto art"
           - "cunning"
+          - "curation"
           - "cycling"
           - "DAOs"
           - "decentralisation"
@@ -195,6 +196,7 @@ collections:
           - "video art"
           - "visual indeterminacy"
           - "VR"
+          - "Web3"
           - "workshop"
         # END_AUTO_TAG_OPTIONS
         allow_add: true
