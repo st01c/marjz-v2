@@ -22,6 +22,27 @@
     "contentPath": "content/bunker-down.html"
   },
   {
+    "id": "ifk-fellowship",
+    "title": "IFK Senior Fellowship: The Work of Others",
+    "section": "research",
+    "slug": "ifk-fellowship",
+    "year": 2025,
+    "fullDate": "2026-01-31",
+    "tags": [
+      "game studies",
+      "NPC",
+      "labour",
+      "media theory"
+    ],
+    "summary": "Senior Fellowship at the International Research Center for Cultural Studies (IFK) at the University of Art & Design Linz: The Work of Others. Exploring Marginalized Representations of Labor in Video Games (2025-2026)",
+    "images": [],
+    "gridImage": "",
+    "videoEmbeds": [],
+    "featured": false,
+    "pinned": false,
+    "contentPath": "content/ifk-fellowship.html"
+  },
+  {
     "id": "becoming-curatorial",
     "title": "Smart Contracts and the Becoming-Curatorial of Digital Works of Art",
     "section": "research",
