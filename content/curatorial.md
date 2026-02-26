@@ -10,9 +10,14 @@ I am particularly interested in appropriation-based uses of emerging technologie
 
 ## Details
 
+### 2026:
+
+- Member of the Jury, Milan Machinima Festival (MMF)
+
 ### 2025:
 
-SIGGRAPH Art Gallery Program 'Triage' Reviewer.
+- Member of the Jury, Milan Machinima Festival (MMF)
+- SIGGRAPH Art Gallery Program 'Triage' Reviewer.
 
 ### 2024-2025:
 
