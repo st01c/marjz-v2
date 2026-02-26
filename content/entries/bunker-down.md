@@ -12,12 +12,14 @@ summary: >
   I will perform two new sample-based sound improvisations at the 'Bunker Down'
   event in Edinburgh on Feb 7, on invitation from the event curators Laura
   Leuzzi and Joe DeLappe. The event takes place in the Cold War era Barnton
-  Bunker.
+  Bunker. [CANCELLED]
 tags:
   - sound art
   - performances
 gridImage: assets/uploads/photo_2026-01-21-11.44.01.jpeg
 ---
+NOTE: This event was cancelled and will be organised at a different location later in the summer.
+
 I will perform two new sample-based sound improvisations at the 'Bunker Down' event in Edinburgh on Feb 7, on invitation from the event curators Laura Leuzzi and Joe DeLappe. The event takes place in the Cold War era Barnton Bunker. Recordings will be available here after the live event.
 
 ***Sketch for a Meditation on Coltrane***, 2026, improvised electronic sound
